@@ -17,9 +17,6 @@ Added support for a `--subtitle` command-line argument via `argparse`, allowing 
 pip install -r requirements.txt
 ```
 ## Preview
+<img width="1126" height="222" alt="tests1" src="https://github.com/user-attachments/assets/d6fd1a08-1d6a-4fc6-af9c-4af328c7798c" />
+<img width="796" height="865" alt="test_book" src="https://github.com/user-attachments/assets/d8b4b876-0bfa-492c-8cac-72578b4a8708" />
 
-### PDF Title Page
-![Vehicle Maintenance Logbook Title Page](assets/test_book.png)
-
-### Automated Test Results
-![PowerShell Test Results](assets/tests1.png)
