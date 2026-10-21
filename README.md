@@ -15,5 +15,8 @@ Added support for a `--subtitle` command-line argument via `argparse`, allowing 
 ### 1. Install Dependencies
 ```powershell
 pip install -r requirements.txt
-<img width="813" height="901" alt="image" src="https://github.com/user-attachments/assets/658639c1-f362-41b7-b0f8-d1d5ef232e6a" />
-<img width="1144" height="262" alt="image" src="https://github.com/user-attachments/assets/352bfeb9-8976-4376-b721-e37ebda0fb44" />
+```
+## Preview
+
+![Vehicle Maintenance Logbook Title Page](assets/test_book.pdf)
+![PowerShell Tests](assests/tests1.png)
