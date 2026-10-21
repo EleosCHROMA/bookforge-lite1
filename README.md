@@ -18,5 +18,5 @@ pip install -r requirements.txt
 ```
 ## Preview
 
-![Vehicle Maintenance Logbook Title Page](assets/test_book.pdf)
+![Vehicle Maintenance Logbook Title Page](assets/test_book.png)
 ![PowerShell Tests](assests/tests1.png)
