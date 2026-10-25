@@ -275,3 +275,16 @@ py -m bookforge_v3.native_book repair132.json --lessons bookforge_v3/data/guided
 ```
 
 The new five repair themes are percent discount confusion, the boundary in `at most` inequalities, reflection across the x-axis, multiplication versus addition in prism volume, and finding a mean. The structural renderer fits two repair tickets on one chapter page; locally tested both styles using the extended 132-question manuscript. The final *chapter-guided* production build still requires its GitHub Actions test to pass before treating it as verified. All explanations and standards tags await independent editorial review.
+
+## Repair-ticket inventory verification
+
+The fraction-enriched 132-exercise book contains **12 repair tickets, two in each of six chapters**: six original chapter tickets, one fraction-division ticket, and five new misconception-focused tickets. An earlier claim of 11 was incorrect; a mismatched test and CI assertion have been corrected.
+
+Run:
+
+```powershell
+py -m bookforge_v3.build_repair_draft bookforge_v3/data/mistake_mechanics_six_chapters.json --output draft-repair.json
+py -m bookforge_v3.ticket_inventory draft-repair.json --expected-per-chapter 2 --output ticket-inventory.json
+```
+
+The inventory catches duplicate IDs, missing or empty fields, and unexpectedly missing tickets. It is a **structural content check** and deliberately labels the tickets `UNREVIEWED`; it cannot certify misconception pedagogy or the quality of explanations. KDP publication remains blocked pending proper editorial review.
