@@ -55,9 +55,11 @@ def draw(c,text,x,y,width,size=9,leading=14,bold=False,color='#18283A',limit=4):
         c.drawString(x,y,line);y-=leading
     return y
 
-def render(data,output,theme='clean-premium',font_dir=None):
+def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None):
     validate_lessons(data)
     if theme not in PALETTES:raise ValueError('Invalid lesson theme')
+    if page_numbers is not None and (len(page_numbers)!=len(data['lessons']) or any(type(n) is not int or n<1 for n in page_numbers)):
+        raise ValueError('page_numbers must be positive integers matching lessons')
     fonts(font_dir)
     primary,accent,surface,ink=PALETTES[theme]
     output=Path(output);output.parent.mkdir(parents=True,exist_ok=True)
@@ -90,7 +92,7 @@ def render(data,output,theme='clean-premium',font_dir=None):
             y-=62
         if y<54:raise ValueError('Guided answers exceed safe area')
         draw(c,'DRAFT • Educational and typesetting review required',M,29,W-2*M,7,color=ink)
-        draw(c,str(i),W-M-15,29,15,8,bold=True,color=primary)
+        draw(c,str(page_numbers[i-1] if page_numbers is not None else i),W-M-15,29,15,8,bold=True,color=primary)
         c.showPage()
     c.save()
     reader=PdfReader(str(output));writer=PdfWriter()
