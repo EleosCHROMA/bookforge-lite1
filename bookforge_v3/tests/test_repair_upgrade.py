@@ -11,7 +11,7 @@ class RepairUpgradeTests(unittest.TestCase):
     def test_repaired_draft(self):
         book=create(self.original)
         self.assertEqual(sum(len(c["problems"]) for c in book["chapters"]),132)
-        self.assertEqual(sum(len(c["repair_tickets"]) for c in book["chapters"]),11)
+        self.assertEqual(sum(len(c["repair_tickets"]) for c in book["chapters"]),12)
         self.assertEqual(audit(book)["checked"],5)
         validate_project(book)
         quality=analyze(book)
