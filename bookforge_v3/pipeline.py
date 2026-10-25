@@ -32,6 +32,8 @@ def validate_project(data):
 
 def build(project_path, output_path, theme=None):
     project = validate_project(json.loads(Path(project_path).read_text(encoding="utf-8")))
+    if str(ROOT.parent) not in sys.path:
+        sys.path.insert(0, str(ROOT.parent))
     from bookforge_v3.math_audit import audit
     audit(project)
     theme = theme or project.get("theme", THEMES[0])
