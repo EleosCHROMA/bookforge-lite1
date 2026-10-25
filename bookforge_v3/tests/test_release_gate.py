@@ -14,6 +14,10 @@ class ReleaseGateTests(unittest.TestCase):
         self.assertEqual(outcome["exercise_reviews_required"],132)
         self.assertTrue(any("human attestation" in x for x in outcome["blockers"]))
         self.assertTrue(any("No final interior PDF" in x for x in outcome["blockers"]))
+    def test_cover_is_required_for_release(self):
+        result=evaluate(self.draft)
+        self.assertIn("No matching cover PDF provided",result["blockers"])
+        self.assertIsNone(result["cover_preflight"])
     def test_full_curriculum_claim_must_be_supported(self):
         outcome=evaluate(self.draft,require_full_curriculum=True)
         self.assertTrue(any("Comprehensive Grade 6" in x for x in outcome["blockers"]))
