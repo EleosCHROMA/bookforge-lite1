@@ -288,3 +288,19 @@ py -m bookforge_v3.ticket_inventory draft-repair.json --expected-per-chapter 2 -
 ```
 
 The inventory catches duplicate IDs, missing or empty fields, and unexpectedly missing tickets. It is a **structural content check** and deliberately labels the tickets `UNREVIEWED`; it cannot certify misconception pedagogy or the quality of explanations. KDP publication remains blocked pending proper editorial review.
+
+
+## Finished-PDF manuscript audit and repair-ticket privacy (latest)
+
+**Important fix:** Earlier repair-ticket student pages printed the filled-in diagnosis, unintentionally giving away the intended misconception. The renderer now uses **YOUR DIAGNOSIS** with a neutral question in the student workbook. Correct solutions remain in the answer-key section at the back. Older generated samples still contain the outdated diagnosis text and must be regenerated.
+
+Run this post-render audit (both styles) after generating a revised workbook:
+
+```powershell
+py -m bookforge_v3.manuscript_audit --pdf repair-playful.pdf --project draft-repair.json --lessons bookforge_v3/data/guided_lessons.json --output manuscript-playful-audit.json
+py -m bookforge_v3.manuscript_audit --pdf repair-clean.pdf --project draft-repair.json --lessons bookforge_v3/data/guided_lessons.json --output manuscript-clean-audit.json
+```
+
+The audit checks chapter/answer-key order, contiguous numbered answers in each chapter, repair-ticket solution ID presence, expected guided-lesson locations, and unintended diagnosis disclosure. The older 60-page Playful Illustrated PDF produced before the fix failed the new audit with six diagnosis disclosures, one in each chapter. It otherwise passed the structural answer-key order and answer count checks.
+
+This audit is based on PDF text extraction; it does **not** detect visual overlap, cropped vector art, accessibility issues, typos, print color problems, incorrect math reasoning, or incomplete CCSS coverage. Use image inspection and real editorial review in addition. CI now runs this audit against both re-generated 132-exercise repair-ticket workbooks.
