@@ -1,0 +1,58 @@
+{
+  "lessons": [
+    {
+      "title": "Fraction Division: Reciprocal Repair",
+      "concept": "To divide by a nonzero fraction, multiply by its reciprocal.",
+      "examples": [
+        {
+          "problem": "3/4 divided by 1/2",
+          "steps": [
+            "Start with 3/4 divided by 1/2.",
+            "Multiply 3/4 by 2/1: 6/4.",
+            "Simplify 6/4 to 3/2, or 1 1/2."
+          ]
+        }
+      ],
+      "guided": [
+        "Find 2/3 divided by 1/6.",
+        "A mechanic has 3/4 liter of coolant; each bottle holds 1/4 liter. How many bottles?"
+      ]
+    },
+    {
+      "title": "Inequalities: Weight Limits",
+      "concept": "At most includes the boundary; greater than does not include it.",
+      "examples": [
+        {
+          "problem": "A lift supports at most 2,000 pounds.",
+          "steps": [
+            "Let w represent vehicle weight in pounds.",
+            "Write w <= 2000 because 2,000 is permitted.",
+            "On a number line, use a filled circle at 2,000 and shade left."
+          ]
+        }
+      ],
+      "guided": [
+        "A workshop tool requires more than 12 volts. Write an inequality for v.",
+        "Decide whether 2,000 pounds is allowed by w <= 2000 and explain."
+      ]
+    },
+    {
+      "title": "Statistics: Read the Repair Times",
+      "concept": "The median is the middle sorted value; the mean is the sum divided by the count.",
+      "examples": [
+        {
+          "problem": "Repair times: 10, 15, 15, 20, 25 minutes",
+          "steps": [
+            "The values are sorted: 10, 15, 15, 20, 25.",
+            "The middle value (median) is 15 minutes.",
+            "The mean is (10+15+15+20+25)/5 = 17 minutes."
+          ]
+        }
+      ],
+      "guided": [
+        "Find the range of 10, 15, 15, 20, 25.",
+        "Explain why a very long repair may make the mean larger than the median."
+      ]
+    }
+  ]
+}
