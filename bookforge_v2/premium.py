@@ -47,7 +47,7 @@ def worksheet(c,d,p):
         x=MARGIN+(i%2)*(cw+gap);top=top0-(i//2)*(cardh+12);bottom=top-cardh
         c.setFillColor(WHITE);c.setStrokeColor(BORDER);c.setLineWidth(1);c.roundRect(x,bottom,cw,cardh,12,fill=1,stroke=1)
         pill(c,x+13,top-36,32,24,a)
-        c.setFillColor(WHITE);c.setFont('BFBold',9);c.drawCentredString(x+29,top-28,f'{i+1:02}')
+        c.setFillColor(WHITE);c.setFont('BFBold',9);c.drawCentredString(x+29,top-28,f"{i+1+d.get('_practice_offset', 0):02}")
         wrapped(c,q['prompt'],x+14,top-54,cw-28,'BFBold',9.1,13,INK,bottom=top-104,max_lines=4)
         if q.get('hint'):
             wrapped(c,q['hint'],x+14,top-107,cw-28,size=7.2,leading=10,color=MUTED,bottom=top-130,max_lines=2)
