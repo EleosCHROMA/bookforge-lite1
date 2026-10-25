@@ -82,6 +82,10 @@ jobs:
           python -m bookforge_v3.cover_pipeline --interior final-playful-132.pdf --config bookforge_v3/data/cover_config.json --output matched-playful-cover.pdf --report matched-cover-report.json
           python -m bookforge_v3.paired_cover_preflight --interior final-playful-132.pdf --cover matched-playful-cover.pdf --report paired-cover-preflight.json
           python -c "import json; d=json.load(open('paired-cover-preflight.json')); assert d['ok']"
+      - name: Fingerprint final interior and matching cover
+        run: |
+          python -m bookforge_v3.release_manifest --project draft132.json --interior final-playful-132.pdf --cover matched-playful-cover.pdf --config bookforge_v3/data/cover_config.json --output production-handoff.json
+          python -c "import json; r=json.load(open('production-handoff.json')); assert r['ready_for_structural_review']; assert not r['ready_for_publication']; assert len(r['files']) == 4"
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -111,6 +115,7 @@ jobs:
             matched-playful-cover.pdf
             matched-cover-report.json
             paired-cover-preflight.json
+            production-handoff.json
             draft132.json
             clean-132.pdf
             playful-132.pdf
