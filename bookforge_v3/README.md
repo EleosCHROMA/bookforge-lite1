@@ -187,3 +187,26 @@ py -m bookforge_v3.release_gate draft132.json --pdf final-clean-132.pdf --output
 This command exits with a nonzero status until the draft has signed editorial attestations, individually documented exercise reviews, a supplied interior PDF, and passing structural PDF preflight. Optional `--full-curriculum` also demands evidence of individually reviewed standards tags before claiming comprehensive Grade 6 coverage. Nobody should programmatically fabricate reviewer names, approvals, or review dates to bypass it.
 
 The current draft is **not publication ready**. KDP's own Previewer, print specification checks, and substantive editorial verification remain required before upload.
+
+
+## Original 15 non-decimal answers: automated verification
+
+`foundation_audit.py` independently computes the remaining 15 seed exercises (ratios, rates, expressions, coordinate geometry, integer comparisons and medians) and rejects changed prompts or answers. `quality.py` combines 93 decimal check records + 12 exact fraction checks + 12 contextual result checks + 15 foundation checks for **132 automated answer checks on a 132-exercise draft**. This is not an independent human educational review; worked explanations, diagrams, misleading problem phrasing, standards and all individual tasks still require editorial sign-off. `review_queue.py` now reports automated-answer gaps separately from missing individual human reviews.
+
+```powershell
+py -m unittest discover -s bookforge_v3/tests -v
+py -m bookforge_v3.review_queue draft132.json --output review132.json
+```
+
+## Paperback cover prototypes
+
+KDP geometry is calculated from final page count, trim size, bleed and paper stock. At 60 pages, 8.5 × 11-inch trim, Premium Color stock, the calculated wrap cover is **17.39082 × 11.25 inches** with a 0.14082-inch spine. No spine text is permitted for this short book.
+
+```powershell
+py -m bookforge_v3.cover_draft --pages 60 --theme playful-illustrated --output playful-cover-draft.pdf
+py -m bookforge_v3.cover_draft --pages 60 --theme clean-premium --output clean-cover-draft.pdf
+```
+
+These are vector cover **drafts**, not KDP-approved covers. They have a reserved back-cover barcode region and embedded fonts. Confirm the page count, selected paper type, cover dimensions, all title/author metadata, actual text safe areas, illustration/print color requirements, and barcode position with KDP's official template generator and Print Previewer before uploading. Recalculate spine after every interior page-count change. Consult: https://kdp.amazon.com/en_US/help/topic/G201953020 .
+
+Do not automatically claim completed human reviews or bypass the manual publication gate.
