@@ -16,7 +16,8 @@
       "guided": [
         "Find 2/3 divided by 1/6.",
         "A mechanic has 3/4 liter of coolant; each bottle holds 1/4 liter. How many bottles?"
-      ]
+      ],
+      "chapter_number": 1
     },
     {
       "title": "Inequalities: Weight Limits",
@@ -34,7 +35,8 @@
       "guided": [
         "A workshop tool requires more than 12 volts. Write an inequality for v.",
         "Decide whether 2,000 pounds is allowed by w <= 2000 and explain."
-      ]
+      ],
+      "chapter_number": 3
     },
     {
       "title": "Statistics: Read the Repair Times",
@@ -52,7 +54,8 @@
       "guided": [
         "Find the range of 10, 15, 15, 20, 25.",
         "Explain why a very long repair may make the mean larger than the median."
-      ]
+      ],
+      "chapter_number": 6
     }
   ]
 }
