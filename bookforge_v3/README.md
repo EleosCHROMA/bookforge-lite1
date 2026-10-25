@@ -148,3 +148,21 @@ py -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters
 ```
 
 Preflight checks file dimensions and embedded fonts. A separate KDP Previewer inspection and independent educational review are still required.
+
+
+## Native page numbering and complete guided-book assembly
+
+Use this **new** production-oriented path instead of overlay-based `chapter_guided.py`:
+
+```powershell
+py -m bookforge_v3.build_132 bookforge_v3/data/mistake_mechanics_six_chapters.json --output draft132.json
+py -m bookforge_v3.native_book draft132.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output playful132.pdf
+py -m bookforge_v3.native_book draft132.json --lessons bookforge_v3/data/guided_lessons.json --theme clean-premium --output clean132.pdf
+py -m bookforge_v3.review_queue draft132.json --output editorial-review-queue.json
+```
+
+This assembler renders openers, worksheets, repair tickets, guided lessons and answer keys in final order with **native continuous page numbers**. It does not use an opaque post-render page-number overlay, so duplicate hidden number text is avoided. Lessons are placed directly after their corresponding chapter opener. The sample lessons cover Chapters 1, 3 and 6. The earlier `build_guided.py` now calls the same native assembler.
+
+In local tests using a 132-exercise representative data set, both themes produced 60 pages with answer keys beginning on page 42. A full clean GitHub CI run for the exact repository-generated 132-question draft remains to be confirmed.
+
+The editorial worklist identifies exercises not covered by the two automated arithmetic check types. It does **not** imply that checked questions have passed independent pedagogical review. Keep all KDP and editorial approvals manual until those checks have been completed.
