@@ -29,9 +29,21 @@ jobs:
         run: |
           python bookforge_v3/pipeline.py bookforge_v3/data/mistake_mechanics_six_chapters.json --theme clean-premium --output clean.pdf
           python bookforge_v3/pipeline.py bookforge_v3/data/mistake_mechanics_six_chapters.json --theme playful-illustrated --output playful.pdf
+      - name: Expand to 108 draft exercises
+        run: |
+          python -m bookforge_v3.expand_workbook bookforge_v3/data/mistake_mechanics_six_chapters.json --output draft108.json
+          python bookforge_v3/pipeline.py draft108.json --theme clean-premium --output clean-108.pdf
+          python bookforge_v3/pipeline.py draft108.json --theme playful-illustrated --output playful-108.pdf
+      - name: KDP structural preflight
+        run: |
+          python bookforge_v3/kdp_preflight.py clean-108.pdf
+          python bookforge_v3/kdp_preflight.py playful-108.pdf
       - uses: actions/upload-artifact@v4
         with:
           name: bookforge-v3-samples
           path: |
             clean.pdf
             playful.pdf
+            clean-108.pdf
+            playful-108.pdf
+            draft108.json
