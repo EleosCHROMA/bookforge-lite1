@@ -32,4 +32,4 @@ class RepairUpgradeTests(unittest.TestCase):
     def test_bank_size_and_location(self):
         book=create(self.original)
         self.assertEqual(len(CASES),5)
-        self.assertEqual([len(c["repair_tickets"]) for c in book["chapters"]],[2,2,2,2,2,1] if False else [2,2,2,2,2,2])
+        self.assertEqual([len(c["repair_tickets"]) for c in book["chapters"]],[2,2,2,2,2,2])
