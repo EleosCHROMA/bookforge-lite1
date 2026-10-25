@@ -134,3 +134,17 @@ py -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters
 ```
 
 The three supplemental pages are inserted **before the first answer-key page**, not alongside the answer keys. This initial milestone is a reusable lesson supplement, not yet automatic placement immediately after each chapter opener. The renderer refuses oversized lesson text and uses embedded DejaVu Sans for print-safe, editable text. Generated sample lessons remain draft instructional material, not approved curriculum.
+
+## Chapter-local lessons and page numbering (latest)
+
+Guided lesson JSON now includes a required `chapter_number` in each lesson. During assembly, `build_guided.py` inserts each lesson immediately after its matching chapter opener. The insertion routine verifies the calculated chapter body-page count against the first answer-key page and aborts rather than silently misplacing content.
+
+After insertion, it overlays sequential visible physical page numbers. The older numbers underneath the opaque overlay may still be returned by raw PDF text extraction; this is a **visual renumbering workaround**, not a structural replacement of the old content. Future versions should number pages during initial rendering rather than stamping them afterward.
+
+Three sample lessons are assigned to chapters 1, 3, and 6. The demonstration book contains 27 pages, and answers begin on physical page 22. Run:
+
+```powershell
+py -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output chapter-guided-playful.pdf
+```
+
+Preflight checks file dimensions and embedded fonts. A separate KDP Previewer inspection and independent educational review are still required.
