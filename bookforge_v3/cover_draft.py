@@ -92,3 +92,16 @@ def draft(output,pages=60,theme="playful-illustrated",title="MISTAKE MECHANICS",
     writer.add_page(page)
     with path.open("wb") as out:writer.write(out)
     return config
+
+if __name__=="__main__":
+    import argparse
+    import json
+    p=argparse.ArgumentParser(description="Generate a KDP paperback cover draft")
+    p.add_argument("--output",required=True,type=Path)
+    p.add_argument("--pages",type=int,default=60)
+    p.add_argument("--theme",choices=tuple(STYLES),default="playful-illustrated")
+    p.add_argument("--paper",choices=tuple(SPINE_PER_PAGE),default="premium-color")
+    p.add_argument("--title",default="MISTAKE MECHANICS")
+    p.add_argument("--subtitle",default="GRADE 6 MATH")
+    opts=p.parse_args()
+    print(json.dumps(draft(opts.output,opts.pages,opts.theme,opts.title,opts.subtitle,opts.paper),indent=2))
