@@ -9,7 +9,7 @@ from pathlib import Path
 from .quality import analyze, REQUIRED_REVIEWS
 from .kdp_preflight import audit_pdf
 
-def evaluate(project,pdf_path=None,require_full_curriculum=False):
+def evaluate(project,pdf_path=None,require_full_curriculum=False,cover_path=None,stock='premium-color'):
     qa=analyze(project)
     blockers=list(qa["errors"])
     approvals=project.get("release_approvals",{})
@@ -42,9 +42,23 @@ def evaluate(project,pdf_path=None,require_full_curriculum=False):
     else:
         preflight=audit_pdf(pdf_path)
         blockers.extend(preflight["errors"])
+    if cover_path is None:
+        blockers.append("No matching cover PDF provided")
+        paired=None
+    elif pdf_path is None:
+        blockers.append("Cannot validate cover without final interior PDF")
+        paired=None
+    else:
+        from .paired_cover_preflight import paired_preflight
+        try:
+            paired=paired_preflight(pdf_path,cover_path,stock)
+            blockers.extend(paired["errors"])
+        except (ValueError,OSError,TypeError,KeyError) as exc:
+            paired={"ok":False,"errors":[str(exc)]}
+            blockers.append("Paired cover preflight failed: "+str(exc))
     return {"ready_for_release":not blockers,
             "blockers":blockers,"exercise_reviews_required":len(unreviewed),
-            "print_preflight":preflight,
+            "print_preflight":preflight, "cover_preflight":paired,
             "warning":"Approval metadata represents editor attestations and is not automatically verified against reviewer identity or PDF content."}
 
 if __name__=="__main__":
@@ -52,9 +66,11 @@ if __name__=="__main__":
     p.add_argument("project",type=Path)
     p.add_argument("--pdf",type=Path)
     p.add_argument("--full-curriculum",action="store_true")
+    p.add_argument("--cover",type=Path)
+    p.add_argument("--stock",default="premium-color")
     p.add_argument("--output",type=Path)
     args=p.parse_args()
-    result=evaluate(json.loads(args.project.read_text(encoding="utf-8")),args.pdf,args.full_curriculum)
+    result=evaluate(json.loads(args.project.read_text(encoding="utf-8")),args.pdf,args.full_curriculum,args.cover,args.stock)
     doc=json.dumps(result,indent=2)+"\n"
     if args.output:args.output.write_text(doc,encoding="utf-8")
     print(doc)
