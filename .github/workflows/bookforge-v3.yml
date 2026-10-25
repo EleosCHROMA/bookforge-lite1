@@ -86,6 +86,14 @@ jobs:
         run: |
           python -m bookforge_v3.release_manifest --project draft132.json --interior final-playful-132.pdf --cover matched-playful-cover.pdf --config bookforge_v3/data/cover_config.json --output production-handoff.json
           python -c "import json; r=json.load(open('production-handoff.json')); assert r['ready_for_structural_review']; assert not r['ready_for_publication']; assert len(r['files']) == 4"
+      - name: Build mistake-analysis enhanced workbook
+        run: |
+          python -m bookforge_v3.build_repair_draft bookforge_v3/data/mistake_mechanics_six_chapters.json --output draft-repair.json
+          python -m bookforge_v3.native_book draft-repair.json --lessons bookforge_v3/data/guided_lessons.json --theme clean-premium --output repair-clean.pdf
+          python -m bookforge_v3.native_book draft-repair.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output repair-playful.pdf
+          python bookforge_v3/kdp_preflight.py repair-clean.pdf
+          python bookforge_v3/kdp_preflight.py repair-playful.pdf
+          python -c "import json; from bookforge_v3.repair_upgrade import audit; d=json.load(open('draft-repair.json')); assert audit(d)['checked'] == 5; assert sum(len(c['repair_tickets']) for c in d['chapters']) == 11"
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -115,6 +123,9 @@ jobs:
             matched-playful-cover.pdf
             matched-cover-report.json
             paired-cover-preflight.json
+            draft-repair.json
+            repair-clean.pdf
+            repair-playful.pdf
             production-handoff.json
             draft132.json
             clean-132.pdf
