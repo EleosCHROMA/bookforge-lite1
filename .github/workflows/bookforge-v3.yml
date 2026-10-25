@@ -38,6 +38,9 @@ jobs:
         run: |
           python bookforge_v3/kdp_preflight.py clean-108.pdf
           python bookforge_v3/kdp_preflight.py playful-108.pdf
+      - name: Export standards review report
+        run: |
+          python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
       - uses: actions/upload-artifact@v4
         with:
           name: bookforge-v3-samples
@@ -47,3 +50,4 @@ jobs:
             clean-108.pdf
             playful-108.pdf
             draft108.json
+            standards-review.json
