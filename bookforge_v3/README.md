@@ -266,7 +266,7 @@ When any PDF or project bytes change, regenerate the manifest and redo the relev
 
 ## Misconception-focused repair tickets
 
-`repair_upgrade.py` adds five draft mistake-analysis tickets to Chapters 2–6, complementing the existing six chapter tickets (including the fraction-division ticket in Chapter 1). The resulting 132-exercise manuscript has **11 repair tickets**, two in Chapters 1–6 except where source variants differ. The audit recomputes discount, reflection, volume and mean corrections and preserves canonical error statements. It does not certify instructional quality.
+`repair_upgrade.py` adds five draft mistake-analysis tickets to Chapters 2–6, complementing the existing six chapter tickets (including the fraction-division ticket in Chapter 1). The resulting 132-exercise manuscript has **12 repair tickets**, two in Chapters 1–6 except where source variants differ. The audit recomputes discount, reflection, volume and mean corrections and preserves canonical error statements. It does not certify instructional quality.
 
 ```powershell
 py -m bookforge_v3.build_repair_draft bookforge_v3/data/mistake_mechanics_six_chapters.json --output repair132.json
