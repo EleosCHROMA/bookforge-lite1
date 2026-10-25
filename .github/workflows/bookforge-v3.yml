@@ -95,6 +95,8 @@ jobs:
           python bookforge_v3/kdp_preflight.py repair-playful.pdf
           python -c "import json; from bookforge_v3.repair_upgrade import audit; d=json.load(open('draft-repair.json')); assert audit(d)['checked'] == 5; assert sum(len(c['repair_tickets']) for c in d['chapters']) == 12"
           python -m bookforge_v3.ticket_inventory draft-repair.json --expected-per-chapter 2 --output repair-ticket-inventory.json
+          python -m bookforge_v3.manuscript_audit --pdf repair-clean.pdf --project draft-repair.json --lessons bookforge_v3/data/guided_lessons.json --output manuscript-clean-audit.json
+          python -m bookforge_v3.manuscript_audit --pdf repair-playful.pdf --project draft-repair.json --lessons bookforge_v3/data/guided_lessons.json --output manuscript-playful-audit.json
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -126,6 +128,8 @@ jobs:
             paired-cover-preflight.json
             draft-repair.json
             repair-ticket-inventory.json
+            manuscript-clean-audit.json
+            manuscript-playful-audit.json
             repair-clean.pdf
             repair-playful.pdf
             production-handoff.json
