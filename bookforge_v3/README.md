@@ -28,3 +28,17 @@ py bookforge_v3/pipeline.py bookforge_v3/data/mistake_mechanics_six_chapters.jso
 ```
 
 The demonstration has 36 exercises; only 21 have independent arithmetic checks. Remaining questions need other forms of review. Sign-off fields (`mathematics`, `pedagogy`, `proofreading`, `print_preview`) are for real human/editor confirmation, not for automated approval. Passing PDF preflight alone is insufficient for KDP publication.
+
+## October 2026 layout hardening
+
+The v3 branch now uses measured answer-key rows rather than fixed 9-question chunks. Long explanations paginate earlier, preserve the original problem numbers, and reserve space for repair-ticket solutions. Answers that cannot fit on one page produce explicit errors instead of silent text clipping.
+
+Run the regression suites:
+```powershell
+cd bookforge_v2
+py -m unittest discover -s tests -v
+cd ..
+py -m unittest discover -s bookforge_v3/tests -v
+```
+
+Verified locally: 21 v2 tests + 18 v3 tests; original six-chapter sample renders as 24 pages in each theme. Synthetic long-answer stress inputs render as 30 pages in each theme. The stress inputs are **not publishable educational content**.
