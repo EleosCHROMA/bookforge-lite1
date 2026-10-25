@@ -104,3 +104,16 @@ py -m bookforge_v3.visual_book draft120-playful.pdf --output draft120-with-visua
 The output has three additional pages: a fraction bar showing `3/4 ÷ 1/2 = 1 1/2`, a number line for `x > -2`, and a dot plot of inspection times `2,3,3,4,4,4,5`. Each includes a student task. These are vector-drawn, not AI-generated math labels.
 
 The insertion tool refuses to run if it cannot locate the answer-key section, preventing silent placement of lessons behind the answers. **This is draft teaching material** and still requires editorial review. It currently supplements, rather than replacing, the predominantly computation-based question bank.
+
+## Contextual enrichment: 132-exercise draft
+
+The optional enrichment adds 12 instructor-authored **draft** questions (two per chapter) with explanation-style answer entries. Topics include decimal/fraction interpretation, ratios and discounts, equations and inequalities, coordinate moves, geometry in realistic shop settings, and statistical interpretation.
+
+```powershell
+py -m bookforge_v3.build_132 bookforge_v3/data/mistake_mechanics_six_chapters.json --output draft132.json
+py bookforge_v3/pipeline.py draft132.json --theme playful-illustrated --output draft132-playful.pdf
+py bookforge_v3/pipeline.py draft132.json --theme clean-premium --output draft132-clean.pdf
+py -m unittest discover -s bookforge_v3/tests -v
+```
+
+**Important:** The contextual prompts and explanations are human-authored draft content, not independently verified answers. All 132 tasks require review for learning progression, clarity, standards alignment, and suitability for print. The earlier 93 decimal arithmetic checks and 12 exact fraction-bank checks remain separate. Do not automatically mark `standard_reviewed` or editorial approvals true.
