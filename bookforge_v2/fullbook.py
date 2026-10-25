@@ -50,7 +50,7 @@ def ticket_page(c, data, page_number=3, theme='clean-premium'):
     wrapped(c, 'Inspect the mistake, explain the failure, then make your repair.', MARGIN, H-112, W-2*MARGIN, size=9)
     top = H-145
     for i, t in enumerate(data['repair_tickets']):
-        h = 250
+        h = 420 if len(data['repair_tickets']) == 1 else 250
         bottom = top-h
         if bottom < 52:
             raise ValueError('repair tickets overflow page')
@@ -77,7 +77,7 @@ def ticket_page(c, data, page_number=3, theme='clean-premium'):
             wrapped(c, text_value, MARGIN+118, y, W-2*MARGIN-132, size=8.2, leading=11, bottom=y-30, max_lines=3)
         c.setStrokeColor(accent)
         c.setDash(2, 3)
-        c.roundRect(MARGIN+15, bottom+14, W-2*MARGIN-30, 41, 5, stroke=1, fill=0)
+        c.roundRect(MARGIN+15, bottom+14, W-2*MARGIN-30, max(41, h-204), 5, stroke=1, fill=0)
         c.setDash()
         top = bottom-20
     c.showPage()
