@@ -11,6 +11,9 @@ def _ratio(a,b):
     g=gcd(a,b)
     return f"{a//g}:{b//g}"
 
+def _number(value):
+    return str(int(value)) if float(value).is_integer() else str(value)
+
 def _linear_value(a,b,total):
     return (total-b)/a
 
@@ -28,8 +31,8 @@ CASES = {
     "c4p4": ("Reflect (2,-4) across x-axis",lambda:f"({2},{-(-4)})"),
     "c4p5": ("Quadrant of (-6,-3)",lambda:"Quadrant III" if -6<0 and -3<0 else "Unknown"),
     "c4p6": ("Reflect (-3,7) across y-axis",lambda:f"({-(-3)},{7})"),
-    "c6p1": ("Median: 12, 18, 11, 15, 20, 14",lambda:str(median([12,18,11,15,20,14]))),
-    "c6p3": ("Median: 3, 9, 2, 7, 11, 5",lambda:str(median([3,9,2,7,11,5]))),
+    "c6p1": ("Median: 12, 18, 11, 15, 20, 14",lambda:_number(median([12,18,11,15,20,14]))),
+    "c6p3": ("Median: 3, 9, 2, 7, 11, 5",lambda:_number(median([3,9,2,7,11,5]))),
 }
 
 def verify(project):
