@@ -66,7 +66,7 @@ def ticket_page(c, data, page_number=3, theme='clean-premium'):
         c.drawRightString(W-MARGIN-12, top-22, t['topic'][:47].upper())
         for label, text_value, y, bg in [
             ('FAULTY WORK', t['faulty_work'], top-53, HexColor('#FFF5E8')),
-            ('DIAGNOSIS', t['diagnosis'], top-101, HexColor('#F3F6FB')),
+            ('YOUR DIAGNOSIS', 'What went wrong? Explain the mistake in your own words.', top-101, HexColor('#F3F6FB')),
             ('YOUR REPAIR', t['instruction'], top-149, HexColor('#EDF9F3')),
         ]:
             c.setFillColor(bg)
