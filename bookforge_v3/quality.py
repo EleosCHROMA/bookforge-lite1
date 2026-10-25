@@ -59,6 +59,16 @@ def analyze(project):
         errors.append(f"Math audit failed: {exc}")
     if count > checked:
         warnings.append(f"{count - checked} exercises lack independent arithmetic checks; non-numeric questions require human review")
+    from .standards_audit import report as standards_report
+    standards = standards_report(project)
+    if standards["invalid_or_unreviewed_standard_tags"]:
+        errors.append("Invalid/unreviewed standard tags: " + ", ".join(standards["invalid_or_unreviewed_standard_tags"]))
+    if standards["duplicate_prompt_pairs"]:
+        warnings.append(f'{len(standards["duplicate_prompt_pairs"])} identical question prompts found')
+    if standards["standards_verified_in_metadata"] < standards["standards_total"]:
+        warnings.append(f'Standards mapping incomplete: {standards["standards_verified_in_metadata"]} of {standards["standards_total"]} codes have reviewed question tags')
+    if standards["exercises_missing_kind"]:
+        warnings.append(f'{len(standards["exercises_missing_kind"])} exercises lack an exercise-kind label')
     review = project.get("editorial_review", {})
     if not isinstance(review, dict):
         review = {}
@@ -68,7 +78,7 @@ def analyze(project):
     return {"ready_for_build": not errors,
             "ready_for_publication": not errors and not missing,
             "errors": errors, "warnings": warnings,
-            "statistics": {"chapters": len(chapters), "exercises": count,
+            "standards_audit": standards, "statistics": {"chapters": len(chapters), "exercises": count,
                            "repair_tickets": tickets, "math_checks": checked,
                            "math_checks_remaining": max(0, count - checked),
                            "editorial_signoffs_remaining": missing}}
