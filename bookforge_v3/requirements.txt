@@ -1,0 +1,2 @@
+-r ../bookforge_v2/requirements.txt
+Pillow>=10,<13
