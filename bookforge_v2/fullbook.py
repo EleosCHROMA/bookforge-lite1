@@ -111,13 +111,14 @@ def answer_page(c, data, page_number=4, theme="clean-premium"):
         c.drawString(MARGIN+10, y-18, f"{i+1+data.get('_answer_offset', 0)}.")
         wrapped(c, a, MARGIN+43, y-17, W-2*MARGIN-60, size=9, leading=15, bottom=y-rowh+1)
         y -= rowh+4
-    y -= 15
-    if y < 85:
-        raise ValueError('repair answer section overflow')
-    c.setFillColor(GREEN)
-    c.setFont('BFBold', 12)
-    c.drawString(MARGIN, y, 'REPAIR TICKET SOLUTIONS')
-    y -= 23
+    if data['repair_tickets']:
+        y -= 15
+        if y < 85:
+            raise ValueError('repair answer section overflow')
+        c.setFillColor(GREEN)
+        c.setFont('BFBold', 12)
+        c.drawString(MARGIN, y, 'REPAIR TICKET SOLUTIONS')
+        y -= 23
     for t in data['repair_tickets']:
         if y < 64:
             raise ValueError('repair answers overflow')
