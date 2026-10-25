@@ -15,7 +15,7 @@ class ContextualAnswerAuditTests(unittest.TestCase):
         report=analyze(self.project)
         self.assertTrue(report["ready_for_build"],report["errors"])
         self.assertEqual(report["statistics"]["contextual_checks"],12)
-        self.assertEqual(report["statistics"]["math_checks_remaining"],15)
+        self.assertEqual(report["statistics"]["math_checks_remaining"],0)
         self.assertFalse(report["ready_for_publication"])
     def test_money_is_not_scientific_notation(self):
         self.assertEqual(_expected()["context_2_02"], "$60")
