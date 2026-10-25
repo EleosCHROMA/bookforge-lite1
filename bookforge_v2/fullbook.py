@@ -100,7 +100,7 @@ def answer_page(c, data, page_number=4, theme="clean-premium"):
     for i, p in enumerate(data['problems']):
         a = data['answers'][p['id']]
         lines = __import__('reportlab').lib.utils.simpleSplit(a, 'BFRegular', 9, W-2*MARGIN-65)
-        rowh = max(33, 15*len(lines)+12)
+        rowh = max(33, 15*len(lines)+18)
         if y-rowh < 100:
             raise ValueError('answer key overflow; shorten answers or split into more pages')
         if i % 2 == 0:
