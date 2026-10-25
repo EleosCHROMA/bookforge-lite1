@@ -36,6 +36,10 @@ def build(project_path, output_path, theme=None):
         sys.path.insert(0, str(ROOT.parent))
     from bookforge_v3.math_audit import audit
     audit(project)
+    from bookforge_v3.quality import analyze
+    quality = analyze(project)
+    if not quality['ready_for_build']:
+        raise ValueError('Content QA failed: ' + '; '.join(quality['errors']))
     theme = theme or project.get("theme", THEMES[0])
     if theme not in THEMES:
         raise ValueError("Unknown theme")
