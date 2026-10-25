@@ -11,7 +11,7 @@ This is a **model-assisted editorial pass**, not a human-reviewed curriculum sig
 ## Editorial findings
 
 1. **Geometry problem units fixed**: Contextual triangle-area error analysis previously gave base = 10 and height = 6 without stating units, but the answer was in square inches. The prompt now specifies a 10-inch base and a 6-inch height.
-2. **Currency-language polishing still needed**: Change “A sale reduces a $80 inspection by 25%” to “An $80 inspection is discounted by 25%” for clarity; preserve the $60 result.
+2. **Currency-language polishing fixed**: The original awkward phrase has been replaced with “An $80 inspection is discounted by 25%”; the calculated $60 answer is unchanged.
 3. **Inequality typesetting remains basic**: Some text uses `<=` rather than `≤`. In the final renderer prefer a correctly embedded Unicode symbol or typeset math if the font supports it.
 4. **Worked explanations need human review**: Current step strings are author fixtures; automated exact matching only detects changed text, not incomplete reasoning or misleading pedagogy.
 5. **Coverage is not certified**: Only 6 chapters and some Grade 6 topic areas are represented. Per-question Common Core tags remain candidate metadata until independently reviewed; do not advertise comprehensive standards alignment.
