@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "source_note": "Curated demonstration examples adapted from uploaded Mistake Mechanics interior; not a complete transcription or independent educational audit.",
+  "theme": "playful-illustrated",
+  "chapters": [
+    {
+      "series": "Mistake Mechanics",
+      "grade": "Grade 6 Math",
+      "chapter_number": 1,
+      "chapter_title": "Decimal Diagnostics",
+      "introduction": "Align, multiply and divide decimals as you diagnose garage calculations.",
+      "objectives": [
+        "Align decimal place values.",
+        "Multiply and divide decimals.",
+        "Repair incorrect decimal calculations."
+      ],
+      "problems": [
+        {
+          "id": "c1p1",
+          "prompt": "12.4 + 8.75"
+        },
+        {
+          "id": "c1p2",
+          "prompt": "15 - 4.62"
+        },
+        {
+          "id": "c1p3",
+          "prompt": "2.5 x 0.48"
+        },
+        {
+          "id": "c1p4",
+          "prompt": "9.36 / 0.3"
+        },
+        {
+          "id": "c1p5",
+          "prompt": "0.85 + 14.392"
+        },
+        {
+          "id": "c1p6",
+          "prompt": "20 - 7.84"
+        }
+      ],
+      "answers": {
+        "c1p1": "21.15",
+        "c1p2": "10.38",
+        "c1p3": "1.2",
+        "c1p4": "31.2",
+        "c1p5": "15.242",
+        "c1p6": "12.16"
+      },
+      "repair_tickets": [
+        {
+          "id": "1.1",
+          "topic": "Subtraction alignment",
+          "faulty_work": "5 - 2.3 = 3.3",
+          "diagnosis": "The student did not regroup correctly.",
+          "instruction": "Calculate after aligning decimal places.",
+          "answer": "5.0 - 2.3 = 2.7"
+        }
+      ]
+    },
+    {
+      "series": "Mistake Mechanics",
+      "grade": "Grade 6 Math",
+      "chapter_number": 2,
+      "chapter_title": "Ratios, Rates & Percents",
+      "introduction": "Compare parts, prices and speeds just like a service shop.",
+      "objectives": [
+        "Simplify ratios.",
+        "Find unit rates.",
+        "Calculate percentages."
+      ],
+      "problems": [
+        {
+          "id": "c2p1",
+          "prompt": "Simplify the ratio 8:12"
+        },
+        {
+          "id": "c2p2",
+          "prompt": "120 dollars for 3 hours; hourly rate?"
+        },
+        {
+          "id": "c2p3",
+          "prompt": "240 miles in 4 hours; distance in 7 hours?"
+        },
+        {
+          "id": "c2p4",
+          "prompt": "40 percent of 150"
+        },
+        {
+          "id": "c2p5",
+          "prompt": "Simplify 18:24"
+        },
+        {
+          "id": "c2p6",
+          "prompt": "35 percent of 200"
+        }
+      ],
+      "answers": {
+        "c2p1": "2:3",
+        "c2p2": "$40 per hour",
+        "c2p3": "420 miles",
+        "c2p4": "60",
+        "c2p5": "3:4",
+        "c2p6": "70"
+      },
+      "repair_tickets": [
+        {
+          "id": "2.1",
+          "topic": "Unit rates",
+          "faulty_work": "6 tires for $510 cost less each than 4 for $320.",
+          "diagnosis": "The student did not compare unit prices.",
+          "instruction": "Calculate dollars per tire.",
+          "answer": "4 tires: $80 each; 6 tires: $85 each."
+        }
+      ]
+    },
+    {
+      "series": "Mistake Mechanics",
+      "grade": "Grade 6 Math",
+      "chapter_number": 3,
+      "chapter_title": "Expressions & Equations",
+      "introduction": "Keep formulas running smoothly with variables and arithmetic rules.",
+      "objectives": [
+        "Use order of operations.",
+        "Combine like terms.",
+        "Solve one-step equations."
+      ],
+      "problems": [
+        {
+          "id": "c3p1",
+          "prompt": "5^2 - (3 x 4)"
+        },
+        {
+          "id": "c3p2",
+          "prompt": "Simplify 7m + 4 - 2m + 5"
+        },
+        {
+          "id": "c3p3",
+          "prompt": "Expand 6(2r + 5)"
+        },
+        {
+          "id": "c3p4",
+          "prompt": "Solve p - 14 = 28"
+        },
+        {
+          "id": "c3p5",
+          "prompt": "Solve 8w = 96"
+        },
+        {
+          "id": "c3p6",
+          "prompt": "18 - 2 x 3 + 5"
+        }
+      ],
+      "answers": {
+        "c3p1": "13",
+        "c3p2": "5m + 9",
+        "c3p3": "12r + 30",
+        "c3p4": "p = 42",
+        "c3p5": "w = 12",
+        "c3p6": "17"
+      },
+      "repair_tickets": [
+        {
+          "id": "3.1",
+          "topic": "Distributive property",
+          "faulty_work": "5(y + 4) = 5y + 4",
+          "diagnosis": "The 5 was not multiplied by both terms.",
+          "instruction": "Distribute 5 correctly.",
+          "answer": "5y + 20"
+        }
+      ]
+    },
+    {
+      "series": "Mistake Mechanics",
+      "grade": "Grade 6 Math",
+      "chapter_number": 4,
+      "chapter_title": "Rational Numbers & Coordinate Plane",
+      "introduction": "Map garage coordinates and understand negative measurements.",
+      "objectives": [
+        "Compare negatives.",
+        "Understand absolute value.",
+        "Use points in all four quadrants."
+      ],
+      "problems": [
+        {
+          "id": "c4p1",
+          "prompt": "|-12| + |7|"
+        },
+        {
+          "id": "c4p2",
+          "prompt": "Compare -8 and -3"
+        },
+        {
+          "id": "c4p3",
+          "prompt": "Distance between (5,-2) and (5,6)"
+        },
+        {
+          "id": "c4p4",
+          "prompt": "Reflect (2,-4) across x-axis"
+        },
+        {
+          "id": "c4p5",
+          "prompt": "Quadrant of (-6,-3)"
+        },
+        {
+          "id": "c4p6",
+          "prompt": "Reflect (-3,7) across y-axis"
+        }
+      ],
+      "answers": {
+        "c4p1": "19",
+        "c4p2": "-8 < -3",
+        "c4p3": "8 units",
+        "c4p4": "(2,4)",
+        "c4p5": "Quadrant III",
+        "c4p6": "(3,7)"
+      },
+      "repair_tickets": [
+        {
+          "id": "4.1",
+          "topic": "Negative numbers",
+          "faulty_work": "-7 > -2 because 7 > 2.",
+          "diagnosis": "Larger absolute magnitude does not mean larger signed value.",
+          "instruction": "Correct the inequality.",
+          "answer": "-7 < -2"
+        }
+      ]
+    },
+    {
+      "series": "Mistake Mechanics",
+      "grade": "Grade 6 Math",
+      "chapter_number": 5,
+      "chapter_title": "Area, Surface Area & Volume",
+      "introduction": "Measure floors, storage bins and vehicle parts with geometry.",
+      "objectives": [
+        "Calculate area.",
+        "Find prism volume.",
+        "Use surface area nets."
+      ],
+      "problems": [
+        {
+          "id": "c5p1",
+          "prompt": "Parallelogram: base 8 in, height 5 in. Area?"
+        },
+        {
+          "id": "c5p2",
+          "prompt": "Box: 4 x 2.5 x 3 cm. Volume?"
+        },
+        {
+          "id": "c5p3",
+          "prompt": "Trapezoid: bases 6 m and 10 m, height 4 m. Area?"
+        },
+        {
+          "id": "c5p4",
+          "prompt": "Cube: edge 4 cm. Surface area?"
+        },
+        {
+          "id": "c5p5",
+          "prompt": "Triangle: base 14 in, height 7 in. Area?"
+        },
+        {
+          "id": "c5p6",
+          "prompt": "Box: 5 x 3.5 x 2 in. Volume?"
+        }
+      ],
+      "answers": {
+        "c5p1": "40 sq in",
+        "c5p2": "30 cubic cm",
+        "c5p3": "32 sq m",
+        "c5p4": "96 sq cm",
+        "c5p5": "49 sq in",
+        "c5p6": "35 cubic in"
+      },
+      "repair_tickets": [
+        {
+          "id": "5.1",
+          "topic": "Triangle area",
+          "faulty_work": "Base 12 ft and height 5 ft gives 60 sq ft.",
+          "diagnosis": "Forgot to multiply by one-half.",
+          "instruction": "Compute triangle area correctly.",
+          "answer": "30 sq ft"
+        }
+      ]
+    },
+    {
+      "series": "Mistake Mechanics",
+      "grade": "Grade 6 Math",
+      "chapter_number": 6,
+      "chapter_title": "Statistics & Data Analysis",
+      "introduction": "Explore variation in repair times and diagnostic measurements.",
+      "objectives": [
+        "Identify statistical questions.",
+        "Find center and spread.",
+        "Summarize data."
+      ],
+      "problems": [
+        {
+          "id": "c6p1",
+          "prompt": "Median: 12, 18, 11, 15, 20, 14"
+        },
+        {
+          "id": "c6p2",
+          "prompt": "Mean: 10, 15, 20, 25, 30"
+        },
+        {
+          "id": "c6p3",
+          "prompt": "Median: 3, 9, 2, 7, 11, 5"
+        },
+        {
+          "id": "c6p4",
+          "prompt": "Range: 45, 12, 88, 34, 62"
+        },
+        {
+          "id": "c6p5",
+          "prompt": "IQR: Q1=42, Q3=68"
+        },
+        {
+          "id": "c6p6",
+          "prompt": "Mean: 4, 8, 2, 10, 6"
+        }
+      ],
+      "answers": {
+        "c6p1": "14.5",
+        "c6p2": "20",
+        "c6p3": "6",
+        "c6p4": "76",
+        "c6p5": "26",
+        "c6p6": "6"
+      },
+      "repair_tickets": [
+        {
+          "id": "6.1",
+          "topic": "Median",
+          "faulty_work": "Median of 5, 12, 3, 8, 20 is 3.",
+          "diagnosis": "The values were not sorted.",
+          "instruction": "Order the values then find the middle.",
+          "answer": "Ordered: 3, 5, 8, 12, 20. Median: 8"
+        }
+      ]
+    }
+  ]
+}
