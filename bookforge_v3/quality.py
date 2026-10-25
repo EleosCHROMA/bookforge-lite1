@@ -54,6 +54,12 @@ def analyze(project):
                     warnings.append(f"Long answer needs layout inspection: {pid}")
     checked = 0
     fraction_checked = 0
+    contextual_checked = 0
+    try:
+        from .contextual_audit import verify
+        contextual_checked = verify(project)["checked"]
+    except (ValueError, TypeError, KeyError, ArithmeticError) as exc:
+        errors.append(f"Contextual audit failed: {exc}")
     try:
         from .fraction_audit import audit_fraction_bank
         fraction_checked = audit_fraction_bank(project)["checked"]
@@ -63,8 +69,10 @@ def analyze(project):
         checked = audit(project)["checked"]
     except (ValueError, TypeError, KeyError, ArithmeticError) as exc:
         errors.append(f"Math audit failed: {exc}")
-    if count > checked + fraction_checked:
-        warnings.append(f"{count - checked - fraction_checked} exercises lack independent arithmetic checks; non-numeric questions require human review")
+    if count > checked + fraction_checked + contextual_checked:
+        warnings.append(f"{count - checked - fraction_checked - contextual_checked} exercises lack automated answer checks")
+    if contextual_checked:
+        warnings.append(f"{contextual_checked} contextual answer keys checked mathematically; explanatory reasoning still requires editorial review")
     from .standards_audit import report as standards_report
     standards = standards_report(project)
     if standards["invalid_or_unreviewed_standard_tags"]:
@@ -85,6 +93,6 @@ def analyze(project):
             "ready_for_publication": not errors and not missing,
             "errors": errors, "warnings": warnings,
             "standards_audit": standards, "statistics": {"chapters": len(chapters), "exercises": count,
-                           "repair_tickets": tickets, "math_checks": checked, "fraction_checks": fraction_checked,
-                           "math_checks_remaining": max(0, count - checked - fraction_checked),
+                           "repair_tickets": tickets, "math_checks": checked, "fraction_checks": fraction_checked, "contextual_checks": contextual_checked,
+                           "math_checks_remaining": max(0, count - checked - fraction_checked - contextual_checked),
                            "editorial_signoffs_remaining": missing}}
