@@ -12,3 +12,19 @@ py -m unittest discover -s bookforge_v3/tests -v
 ```
 
 Install DejaVu Sans regular and bold according to the v2 README. Dataset exercises are curated examples adapted from the original workbook, **not a complete transcription** and **not independently curriculum-audited**. Publishing is not automated.
+
+## Content QA and release gate
+
+Audit without generating a PDF:
+
+```powershell
+py bookforge_v3/pipeline.py bookforge_v3/data/mistake_mechanics_six_chapters.json --audit-only
+```
+
+To require editorial sign-offs before producing a release candidate:
+
+```powershell
+py bookforge_v3/pipeline.py bookforge_v3/data/mistake_mechanics_six_chapters.json --require-editorial-signoff --output reviewed.pdf
+```
+
+The demonstration has 36 exercises; only 21 have independent arithmetic checks. Remaining questions need other forms of review. Sign-off fields (`mathematics`, `pedagogy`, `proofreading`, `print_preview`) are for real human/editor confirmation, not for automated approval. Passing PDF preflight alone is insufficient for KDP publication.
