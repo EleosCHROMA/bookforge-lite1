@@ -245,3 +245,20 @@ must be visually inspected using the official KDP cover calculator/template.
 Never automatically publish on the strength of these automated checks alone.
 
 KDP cover requirements: https://kdp.amazon.com/en_US/help/topic/G201953020
+
+
+## Fingerprinted production handoff (latest)
+
+Use `release_manifest.py` after building an interior and matching cover. The command computes SHA-256 hashes of the project JSON, interior PDF, cover PDF and optional cover configuration, records file sizes, and runs paired structural preflight.
+
+```powershell
+py -m bookforge_v3.release_manifest --project draft132.json --interior final-playful-132.pdf --cover matched-playful-cover.pdf --config bookforge_v3/data/cover_config.json --output production-handoff.json
+```
+
+A structural pass is not a publication approval. The manifest **always** records `ready_for_publication: false` because a local script cannot certify KDP Previewer approval, artwork rights, print proof, or truthful human editorial attestations. The strict `release_gate.py` command now also **requires a paired cover PDF** (`--cover`) and checks it against the interior page count/stock rather than checking the interior alone.
+
+```powershell
+py -m bookforge_v3.release_gate draft132.json --pdf final-playful-132.pdf --cover matched-playful-cover.pdf --output release-blockers.json
+```
+
+When any PDF or project bytes change, regenerate the manifest and redo the relevant reviews; an earlier SHA-256 fingerprint is not evidence that a later file was inspected. Test cases cover matching and stale covers, content fingerprints, and paper-stock mismatches. KDP submission remains intentionally manual.
