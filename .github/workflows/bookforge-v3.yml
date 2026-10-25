@@ -62,6 +62,13 @@ jobs:
         run: |
           python -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters.json --lessons bookforge_v3/data/guided_lessons.json --theme clean-premium --output guided-clean.pdf
           python -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output guided-playful.pdf
+      - name: Build 132-question native-numbered books and review inventory
+        run: |
+          python -m bookforge_v3.native_book draft132.json --lessons bookforge_v3/data/guided_lessons.json --theme clean-premium --output final-clean-132.pdf
+          python -m bookforge_v3.native_book draft132.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output final-playful-132.pdf
+          python -m bookforge_v3.review_queue draft132.json --output draft132-review-queue.json
+          python bookforge_v3/kdp_preflight.py final-clean-132.pdf
+          python bookforge_v3/kdp_preflight.py final-playful-132.pdf
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -82,6 +89,9 @@ jobs:
             standards-review.json
             guided-clean.pdf
             guided-playful.pdf
+            final-clean-132.pdf
+            final-playful-132.pdf
+            draft132-review-queue.json
             draft132.json
             clean-132.pdf
             playful-132.pdf
