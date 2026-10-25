@@ -38,6 +38,13 @@ jobs:
         run: |
           python bookforge_v3/kdp_preflight.py clean-108.pdf
           python bookforge_v3/kdp_preflight.py playful-108.pdf
+      - name: Build enriched fraction-division draft
+        run: |
+          python -m bookforge_v3.build_120 bookforge_v3/data/mistake_mechanics_six_chapters.json --output draft120.json
+          python bookforge_v3/pipeline.py draft120.json --theme clean-premium --output clean-120.pdf
+          python bookforge_v3/pipeline.py draft120.json --theme playful-illustrated --output playful-120.pdf
+          python bookforge_v3/kdp_preflight.py clean-120.pdf
+          python bookforge_v3/kdp_preflight.py playful-120.pdf
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -50,4 +57,7 @@ jobs:
             clean-108.pdf
             playful-108.pdf
             draft108.json
+            draft120.json
+            clean-120.pdf
+            playful-120.pdf
             standards-review.json
