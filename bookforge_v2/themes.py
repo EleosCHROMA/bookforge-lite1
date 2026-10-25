@@ -84,9 +84,8 @@ def render_section(ch,path,theme,section,page_start):
             else: playful_worksheet(c,part,page_start+1+n)
         ticket_page(c,ch,page_start+section_page_count(ch)-1,theme)
     else:
-        for index, start in enumerate(range(0, len(ch['problems']), ANSWERS_PER_PAGE)):
-            batch = ch['problems'][start:start + ANSWERS_PER_PAGE]
-            is_last = start + ANSWERS_PER_PAGE >= len(ch['problems'])
+        for index, (start, batch) in enumerate(answer_batches(ch)):
+            is_last = start + len(batch) >= len(ch['problems'])
             section_data = dict(ch, problems=batch,
                                 answers={p['id']: ch['answers'][p['id']] for p in batch},
                                 repair_tickets=ch['repair_tickets'] if is_last else [],
