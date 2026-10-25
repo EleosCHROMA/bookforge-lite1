@@ -86,3 +86,21 @@ py -m unittest discover -s bookforge_v3/tests -v
 ```
 
 The enriched draft has 120 exercises. Of these, 93 have decimal arithmetic records and another 12 have separate exact-fraction verification, leaving 15 with no independent numeric check. This does **not** certify standards alignment or lesson quality. Question metadata only identifies 6.NS.1 as a *candidate*; human review remains required. The bank is calculation-heavy and still needs fraction models and contextual word problems.
+
+## Visual mini-lessons (fraction bars, inequalities and statistics)
+
+Generate 3 print-sharp pages with DejaVu Sans embedded:
+
+```powershell
+py -m bookforge_v3.visual_lessons --output visual-lessons.pdf
+```
+
+Insert them into any existing BookForge workbook immediately **before the Master Mechanic Guide**:
+
+```powershell
+py -m bookforge_v3.visual_book draft120-playful.pdf --output draft120-with-visuals.pdf
+```
+
+The output has three additional pages: a fraction bar showing `3/4 ÷ 1/2 = 1 1/2`, a number line for `x > -2`, and a dot plot of inspection times `2,3,3,4,4,4,5`. Each includes a student task. These are vector-drawn, not AI-generated math labels.
+
+The insertion tool refuses to run if it cannot locate the answer-key section, preventing silent placement of lessons behind the answers. **This is draft teaching material** and still requires editorial review. It currently supplements, rather than replacing, the predominantly computation-based question bank.
