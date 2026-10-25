@@ -1,15 +1,9 @@
 # BookForge v2 — dual-theme workbook generator
 
-This directory is the staging area for the JSON-driven workbook engine. The full tested Python prototype is available in the source bundle generated in ChatGPT; the complete implementation has **not yet been committed** to this branch.
+Creates PDF educational workbooks with two themes, multi-page practice, repair tickets and answers at the back. Uses embedded DejaVu Sans fonts and ReportLab.
 
-## Implemented in the local prototype
-- `clean-premium` and `playful-illustrated` themes.
-- Chapter opener, practice pages, premium-colored repair tickets and answer-key pages.
-- Six problems per worksheet page; supports multi-page practice.
-- Multiple chapters, with answer sections collected after all chapter bodies.
-- Automated validation and tests.
+## Windows setup
 
-## Installation (after placing the source bundle here)
 ```powershell
 py -m pip install -r requirements.txt
 py -m unittest discover -s tests -v
@@ -17,6 +11,14 @@ py themes.py sample/chapter_full.json --theme playful-illustrated --output playf
 py themes.py sample/chapter_full.json --theme clean-premium --output clean.pdf
 ```
 
-Requires free DejaVuSans.ttf and DejaVuSans-Bold.ttf in `fonts/` or in an available system fonts folder. Do not commit font files without appropriate licensing.
+Place free `DejaVuSans.ttf` and `DejaVuSans-Bold.ttf` inside `fonts/` or make them available in the system font directory. Font files are not included.
 
-**Scope:** prototypes only; publishing, content accuracy verification and Amazon KDP preflight remain separate steps.
+`sample/chapter_full.json` is the workbook schema example. For multiple chapters, use a JSON object containing `chapters: [<chapter objects>]` and optional `theme`. Each chapter supports six or more practice problems; tested up to twelve per chapter with short answers. Layout validation raises errors for overflow rather than silently clipping. KDP publication requires separate review and preflight.
+
+## V2 release candidate: October 24, 2026
+
+Two selectable themes, practice pagination (6 questions per worksheet page), and answer-key pagination (9 short answers per answer page) are working locally. All answers appear after chapter bodies. Numbering continues correctly across answer pages.
+
+Run `py preflight.py your-output.pdf` after generating a PDF. This currently checks US Letter page size and embedded font resources; it does **not** certify content accuracy, clipping-free pages, margin compliance, or KDP acceptance. Long narrative answers can still trigger a controlled overflow error and need additional pagination logic.
+
+The standalone code ZIP is newer than the partially synced GitHub branch. Do not merge `main` until the complete source is committed and tests pass on a fresh checkout.
