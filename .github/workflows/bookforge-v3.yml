@@ -58,6 +58,10 @@ jobs:
           python bookforge_v3/pipeline.py draft132.json --theme playful-illustrated --output playful-132.pdf
           python bookforge_v3/kdp_preflight.py clean-132.pdf
           python bookforge_v3/kdp_preflight.py playful-132.pdf
+      - name: Generate editable guided-lesson workbook in both themes
+        run: |
+          python -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters.json --lessons bookforge_v3/data/guided_lessons.json --theme clean-premium --output guided-clean.pdf
+          python -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output guided-playful.pdf
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -76,6 +80,8 @@ jobs:
             playful-visual-120.pdf
             clean-visual-120.pdf
             standards-review.json
+            guided-clean.pdf
+            guided-playful.pdf
             draft132.json
             clean-132.pdf
             playful-132.pdf
