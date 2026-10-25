@@ -17,6 +17,9 @@ class ContextualAnswerAuditTests(unittest.TestCase):
         self.assertEqual(report["statistics"]["contextual_checks"],12)
         self.assertEqual(report["statistics"]["math_checks_remaining"],15)
         self.assertFalse(report["ready_for_publication"])
+    def test_money_is_not_scientific_notation(self):
+        self.assertEqual(_expected()["context_2_02"], "$60")
+        self.assertEqual(_expected()["context_5_01"], "7.5 cubic feet")
     def test_tampered_answer_blocked(self):
         self.project["chapters"][1]["answers"]["context_2_02"]="$80. A faulty calculation."
         with self.assertRaisesRegex(ValueError,"computed answer mismatch"):
