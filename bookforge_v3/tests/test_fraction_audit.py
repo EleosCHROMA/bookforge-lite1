@@ -17,7 +17,7 @@ class FractionAuditTests(unittest.TestCase):
         self.assertTrue(report["ready_for_build"],report["errors"])
         self.assertEqual(report["statistics"]["fraction_checks"],12)
         self.assertEqual(report["statistics"]["math_checks"],93)
-        self.assertEqual(report["statistics"]["math_checks_remaining"],15)
+        self.assertEqual(report["statistics"]["math_checks_remaining"],0)
     def test_corrupt_fraction_answer_rejected(self):
         self.draft["chapters"][0]["answers"]["fraction_division_01"]="3/8"
         with self.assertRaisesRegex(ValueError,"mismatch"):
