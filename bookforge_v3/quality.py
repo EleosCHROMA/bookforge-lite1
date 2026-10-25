@@ -52,6 +52,12 @@ def analyze(project):
                     errors.append(f"Empty answer for: {pid}")
                 elif len(answer) > 250:
                     warnings.append(f"Long answer needs layout inspection: {pid}")
+    repair_checked = 0
+    try:
+        from .repair_upgrade import audit as audit_repairs
+        repair_checked = audit_repairs(project)["checked"]
+    except (ValueError, TypeError, KeyError) as exc:
+        errors.append(f"Repair-ticket audit failed: {exc}")
     checked = 0
     fraction_checked = 0
     contextual_checked = 0
@@ -99,6 +105,6 @@ def analyze(project):
             "ready_for_publication": not errors and not missing,
             "errors": errors, "warnings": warnings,
             "standards_audit": standards, "statistics": {"chapters": len(chapters), "exercises": count,
-                           "repair_tickets": tickets, "math_checks": checked, "fraction_checks": fraction_checked, "contextual_checks": contextual_checked, "foundation_checks": foundation_checked,
+                           "repair_tickets": tickets, "repair_ticket_checks": repair_checked, "math_checks": checked, "fraction_checks": fraction_checked, "contextual_checks": contextual_checked, "foundation_checks": foundation_checked,
                            "math_checks_remaining": max(0, count - checked - fraction_checked - contextual_checked - foundation_checked),
                            "editorial_signoffs_remaining": missing}}
