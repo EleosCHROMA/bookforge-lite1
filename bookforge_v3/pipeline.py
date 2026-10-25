@@ -32,6 +32,8 @@ def validate_project(data):
 
 def build(project_path, output_path, theme=None):
     project = validate_project(json.loads(Path(project_path).read_text(encoding="utf-8")))
+    from bookforge_v3.math_audit import audit
+    audit(project)
     theme = theme or project.get("theme", THEMES[0])
     if theme not in THEMES:
         raise ValueError("Unknown theme")
