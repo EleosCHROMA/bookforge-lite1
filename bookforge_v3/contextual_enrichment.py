@@ -10,7 +10,7 @@ CONTEXTUAL = (
  (1,"word_problem","A repair shop has 3/4 liter of coolant. Each refill uses 1/8 liter. How many complete refills can it make?","6","3/4 divided by 1/8 = 3/4 x 8/1 = 6.","6.NS.1"),
  (1,"error_analysis","A technician claims 2/3 divided by 1/3 equals 2/9. Explain the error and find the correct quotient.","2","Instead of multiplying the fractions, multiply 2/3 by the reciprocal 3/1 to get 2.","6.NS.1"),
  (2,"word_problem","A shop sells 3 identical filters for $27. What would 7 filters cost at the same rate?","$63","The unit price is $27 divided by 3 = $9. Multiply $9 by 7 = $63.","6.RP.3"),
- (2,"explanation","A sale reduces a $80 inspection by 25%. What is the final price? Explain both steps.","$60","25% of $80 is $20. Subtract the discount: $80 - $20 = $60.","6.RP.3"),
+ (2,"explanation","An $80 inspection is discounted by 25%. What is the final price? Explain both steps.","$60","25% of $80 is $20. Subtract the discount: $80 - $20 = $60.","6.RP.3"),
  (3,"word_problem","A technician earns $18 per hour. Write the total earnings for h hours, then evaluate when h = 4.","18h; $72 when h = 4","The variable expression is 18h. Substituting h = 4 gives 18 x 4 = 72.","6.EE.6"),
  (3,"explanation","A lift can safely hold at most 2,000 pounds. Write an inequality for vehicle weight w and explain whether 2,000 is allowed.","w <= 2000; yes","At most includes the boundary: w <= 2000. Equality means 2,000 pounds is permitted.","6.EE.8"),
  (4,"modeling","A car is parked at (-3, 2). It moves 5 units right. What are its new coordinates?","(2, 2)","Increase the x-coordinate by 5: -3 + 5 = 2. The y-coordinate remains 2.","6.NS.8"),
