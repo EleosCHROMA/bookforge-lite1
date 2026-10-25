@@ -64,7 +64,7 @@ def playful_worksheet(c,d,page):
         c.setFillColor(WHITE);c.setStrokeColor(color);c.setLineWidth(1.2)
         c.roundRect(x,bottom,cw,cardh,15,fill=1,stroke=1)
         c.setFillColor(color);c.circle(x+24,top-25,15,fill=1,stroke=0)
-        c.setFillColor(WHITE);c.setFont('BFBold',12);c.drawCentredString(x+24,top-29,str(i+1))
+        c.setFillColor(WHITE);c.setFont('BFBold',12);c.drawCentredString(x+24,top-29,str(i+1+d.get('_practice_offset', 0)))
         wrapped(c,q['prompt'],x+46,top-22,cw-58,'BFBold',8.5,12,navy,bottom=top-85,max_lines=5)
         if q.get('hint'):
             wrapped(c,q['hint'],x+15,top-94,cw-30,size=7.3,leading=10,color=navy,bottom=top-121,max_lines=2)
