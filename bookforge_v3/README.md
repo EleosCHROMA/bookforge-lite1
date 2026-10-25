@@ -72,3 +72,17 @@ py -m bookforge_v3.curriculum_report expanded108.json --output curriculum-review
 The audit tracks 29 Grade 6 CCSS standard codes, detects duplicate question text, and identifies missing exercise-type labels. **Chapter candidate standards are not proof of coverage.** Only an individually reviewed question carrying `verified_standards` and `standard_reviewed: true` contributes to verified alignment. Reference: https://www.thecorestandards.org/Math/Content/6/ .
 
 The current 108-question draft is arithmetic-heavy. Before publication, add varied error-analysis tasks, visual representations, explanations, fraction division, equations and inequalities, coordinate geometry, and statistical displays where needed. Avoid presenting the book as comprehensive Grade 6 standards coverage until independently audited.
+
+
+## New draft: fraction division (6.NS.1)
+
+The optional enrichment adds 12 exact fraction-division computations and one repair ticket to the first chapter. It updates that chapter title to *Number Operations: Decimals & Fractions* and retains the other five chapters.
+
+```powershell
+py -m bookforge_v3.build_120 bookforge_v3/data/mistake_mechanics_six_chapters.json --output draft120.json
+py bookforge_v3/pipeline.py draft120.json --theme playful-illustrated --output draft120-playful.pdf
+py bookforge_v3/pipeline.py draft120.json --theme clean-premium --output draft120-clean.pdf
+py -m unittest discover -s bookforge_v3/tests -v
+```
+
+The enriched draft has 120 exercises. Of these, 93 have decimal arithmetic records and another 12 have separate exact-fraction verification, leaving 15 with no independent numeric check. This does **not** certify standards alignment or lesson quality. Question metadata only identifies 6.NS.1 as a *candidate*; human review remains required. The bank is calculation-heavy and still needs fraction models and contextual word problems.
