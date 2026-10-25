@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from pypdf import PdfReader
-from pipeline import build, validate_project, ROOT
+from bookforge_v3.pipeline import build, validate_project, ROOT
 SAMPLE = ROOT / "data/mistake_mechanics_six_chapters.json"
 
 class PipelineTests(unittest.TestCase):
