@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "series": "Mistake Mechanics",
+  "grade": 6,
+  "subtitle": "Find the error. Fix the math.",
+  "theme": "playful-illustrated",
+  "reference_interior": "Mistake_Mechanics_Styled_Interior(2).pdf",
+  "chapters": [
+    {"number": 1, "title": "Decimal Diagnostics", "reference_pages": [1, 5], "accent": "#F36B21"},
+    {"number": 2, "title": "Ratios, Rates & Percents", "reference_pages": [6, 9], "accent": "#168DCC"},
+    {"number": 3, "title": "Expressions & Equations", "reference_pages": [10, 12], "accent": "#8B55B6"},
+    {"number": 4, "title": "Rational Numbers & Coordinate Plane", "reference_pages": [13, 15], "accent": "#159F6D"},
+    {"number": 5, "title": "Area, Surface Area & Volume", "reference_pages": [16, 18], "accent": "#DB4C85"},
+    {"number": 6, "title": "Statistics & Data Analysis", "reference_pages": [19, 21], "accent": "#14A8A9"}
+  ],
+  "answers_reference_pages": [22, 26],
+  "requirements": {
+    "answers_only_at_back": true,
+    "repair_tickets": true,
+    "math_review_required": true,
+    "two_themes_supported": true,
+    "no_automatic_publishing": true
+  }
+}
