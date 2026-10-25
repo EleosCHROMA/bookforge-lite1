@@ -17,7 +17,7 @@ jobs:
       - name: Install runtime dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r bookforge_v2/requirements.txt
+          pip install -r bookforge_v3/requirements.txt
           sudo apt-get update
           sudo apt-get install -y fonts-dejavu-core
       - name: Test v2
@@ -77,6 +77,11 @@ jobs:
         run: |
           python -m bookforge_v3.cover_draft --pages 60 --theme playful-illustrated --output cover-playful-draft.pdf
           python -m bookforge_v3.cover_draft --pages 60 --theme clean-premium --output cover-clean-draft.pdf
+      - name: Build covers from the final interior page count
+        run: |
+          python -m bookforge_v3.cover_pipeline --interior final-playful-132.pdf --config bookforge_v3/data/cover_config.json --output matched-playful-cover.pdf --report matched-cover-report.json
+          python -m bookforge_v3.paired_cover_preflight --interior final-playful-132.pdf --cover matched-playful-cover.pdf --report paired-cover-preflight.json
+          python -c "import json; d=json.load(open('paired-cover-preflight.json')); assert d['ok']"
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -103,6 +108,9 @@ jobs:
             release-blockers.json
             cover-playful-draft.pdf
             cover-clean-draft.pdf
+            matched-playful-cover.pdf
+            matched-cover-report.json
+            paired-cover-preflight.json
             draft132.json
             clean-132.pdf
             playful-132.pdf
