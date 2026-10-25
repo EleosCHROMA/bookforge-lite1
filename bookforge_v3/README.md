@@ -166,3 +166,24 @@ This assembler renders openers, worksheets, repair tickets, guided lessons and a
 In local tests using a 132-exercise representative data set, both themes produced 60 pages with answer keys beginning on page 42. A full clean GitHub CI run for the exact repository-generated 132-question draft remains to be confirmed.
 
 The editorial worklist identifies exercises not covered by the two automated arithmetic check types. It does **not** imply that checked questions have passed independent pedagogical review. Keep all KDP and editorial approvals manual until those checks have been completed.
+
+
+## Independent contextual checks and release blocking (October 2026)
+
+The `contextual_audit.py` module recomputes the numeric outcomes of the 12 instructor-authored garage problems from fixed scenario inputs. It also detects changed prompts, answer prefixes, or explanatory text. These checks protect the answer-key data; they do **not** independently establish that every explanation is pedagogically correct.
+
+The content QA report now distinguishes:
+- arithmetic checks from `math_audit.py`
+- exact fraction checks from `fraction_audit.py`
+- 12 contextual result/fixture integrity checks from `contextual_audit.py`
+- individual questions still lacking automated mathematical coverage
+
+**Strict release gate** (expected to reject current drafts):
+
+```powershell
+py -m bookforge_v3.release_gate draft132.json --pdf final-clean-132.pdf --output release-blockers.json
+```
+
+This command exits with a nonzero status until the draft has signed editorial attestations, individually documented exercise reviews, a supplied interior PDF, and passing structural PDF preflight. Optional `--full-curriculum` also demands evidence of individually reviewed standards tags before claiming comprehensive Grade 6 coverage. Nobody should programmatically fabricate reviewer names, approvals, or review dates to bypass it.
+
+The current draft is **not publication ready**. KDP's own Previewer, print specification checks, and substantive editorial verification remain required before upload.
