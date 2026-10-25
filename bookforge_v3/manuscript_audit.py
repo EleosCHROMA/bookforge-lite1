@@ -50,7 +50,12 @@ def audit(pdf_path,project=None,expected_lessons=None):
             expected=list(range(1,len(chapter["problems"])+1))
             if numbers!=expected:
                 errors.append(f"Chapter {number}: answer numbers do not match {len(expected)} exercises (found {len(numbers)})")
+            student_text=" ".join(texts[i] for i,summary in enumerate(summaries[:index]) if summary["chapter"]==number)
+            student_text=" ".join(student_text.split())
             for ticket in chapter.get("repair_tickets",[]):
+                diagnosis=" ".join(str(ticket.get("diagnosis","")).split())
+                if diagnosis and diagnosis in student_text:
+                    errors.append(f"Chapter {number}: student repair ticket reveals the supplied diagnosis")
                 key=str(ticket.get("id",""))
                 if not re.search(r"(?<![\w.])"+re.escape(key)+r"(?=\s|\.|$)",content):
                     errors.append(f"Chapter {number}: no back-of-book solution ID for repair ticket {key}")
