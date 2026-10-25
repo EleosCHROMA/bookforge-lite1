@@ -69,6 +69,10 @@ jobs:
           python -m bookforge_v3.review_queue draft132.json --output draft132-review-queue.json
           python bookforge_v3/kdp_preflight.py final-clean-132.pdf
           python bookforge_v3/kdp_preflight.py final-playful-132.pdf
+      - name: Generate blocked-release QA report
+        run: |
+          python -m bookforge_v3.release_gate draft132.json --pdf final-clean-132.pdf --output release-blockers.json || test $? -eq 1
+          python -c "import json; r=json.load(open('release-blockers.json')); assert not r['ready_for_release']; assert r['blockers']"
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -92,6 +96,7 @@ jobs:
             final-clean-132.pdf
             final-playful-132.pdf
             draft132-review-queue.json
+            release-blockers.json
             draft132.json
             clean-132.pdf
             playful-132.pdf
