@@ -117,3 +117,20 @@ py -m unittest discover -s bookforge_v3/tests -v
 ```
 
 **Important:** The contextual prompts and explanations are human-authored draft content, not independently verified answers. All 132 tasks require review for learning progression, clarity, standards alignment, and suitability for print. The earlier 93 decimal arithmetic checks and 12 exact fraction-bank checks remain separate. Do not automatically mark `standard_reviewed` or editorial approvals true.
+
+
+## Configurable guided lessons
+
+Use `bookforge_v3/data/guided_lessons.json` as a template. Each lesson has:
+- `title`, `concept`
+- `examples`: one or two worked examples with a `problem` and 1–3 `steps`
+- `guided`: one or two prompts with writing space
+
+Example commands (run from repository root):
+
+```powershell
+py -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output guided-playful.pdf
+py -m bookforge_v3.build_guided bookforge_v3/data/mistake_mechanics_six_chapters.json --lessons bookforge_v3/data/guided_lessons.json --theme clean-premium --output guided-clean.pdf
+```
+
+The three supplemental pages are inserted **before the first answer-key page**, not alongside the answer keys. This initial milestone is a reusable lesson supplement, not yet automatic placement immediately after each chapter opener. The renderer refuses oversized lesson text and uses embedded DejaVu Sans for print-safe, editable text. Generated sample lessons remain draft instructional material, not approved curriculum.
