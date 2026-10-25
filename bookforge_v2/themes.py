@@ -10,6 +10,7 @@ from generate import W,H,MARGIN,fonts,wrapped,header_footer
 from fullbook import validate_book, ticket_page, answer_page
 from premium import opener as premium_opener, worksheet as premium_worksheet
 from layout import worksheet_batches, section_page_count
+from answer_layout import answer_batches
 
 ANSWERS_PER_PAGE = 9
 
