@@ -60,3 +60,15 @@ The expanded draft has **108 exercises / 6 chapters** (72 new generated draft ex
 Current KDP preflight checks PDF trim-size dimensions, minimum/maximum paperback page counts, and font embedding; it reports required gutter and outside margins based on page count. It does **not** inspect actual glyph geometry, illustration DPI, text safe areas or cover dimensions. KDP Previewer and substantive editorial review remain mandatory before publication. See https://kdp.amazon.com/en_US/help/topic/G201857950 .
 
 Local verification: 21 v2 tests + 24 v3 tests passed. A GitHub Actions workflow also runs these tests and generates sample PDFs; confirm its run status in Actions rather than assuming it passed.
+
+## Grade 6 standards and question mix audit
+
+Run after generating the 108-question JSON draft:
+
+```powershell
+py -m bookforge_v3.curriculum_report expanded108.json --output curriculum-review.json
+```
+
+The audit tracks 29 Grade 6 CCSS standard codes, detects duplicate question text, and identifies missing exercise-type labels. **Chapter candidate standards are not proof of coverage.** Only an individually reviewed question carrying `verified_standards` and `standard_reviewed: true` contributes to verified alignment. Reference: https://www.thecorestandards.org/Math/Content/6/ .
+
+The current 108-question draft is arithmetic-heavy. Before publication, add varied error-analysis tasks, visual representations, explanations, fraction division, equations and inequalities, coordinate geometry, and statistical displays where needed. Avoid presenting the book as comprehensive Grade 6 standards coverage until independently audited.
