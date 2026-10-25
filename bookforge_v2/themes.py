@@ -79,7 +79,7 @@ def render_section(ch,path,theme,section,page_start):
         if theme=='clean-premium': premium_opener(c,ch,page_start)
         else: playful_opener(c,ch,page_start)
         for n, batch in enumerate(worksheet_batches(ch['problems'])):
-            part = dict(ch, problems=batch)
+            part = dict(ch, problems=batch, _practice_offset=6*n)
             if theme=='clean-premium': premium_worksheet(c,part,page_start+1+n)
             else: playful_worksheet(c,part,page_start+1+n)
         ticket_page(c,ch,page_start+section_page_count(ch)-1,theme)
