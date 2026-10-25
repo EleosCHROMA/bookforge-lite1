@@ -27,11 +27,13 @@ def enrich_context(project):
     if len(book.get("chapters", []))!=6:
         raise ValueError("Expected exactly six existing chapters")
     existing={p["id"] for ch in book["chapters"] for p in ch["problems"]}
+    per_chapter_counter = {}
     for chapter_number,kind,prompt,answer,steps,standard in CONTEXTUAL:
         chapter=book["chapters"][chapter_number-1]
         if chapter.get("chapter_number")!=chapter_number:
             raise ValueError("Chapters must be sequential")
-        item_id=f"context_{chapter_number}_{sum(1 for x in CONTEXTUAL if x[0]==chapter_number and CONTEXTUAL.index(x)<=CONTEXTUAL.index((chapter_number,kind,prompt,answer,steps,standard))):02d}"
+        per_chapter_counter[chapter_number] = per_chapter_counter.get(chapter_number, 0) + 1
+        item_id=f"context_{chapter_number}_{per_chapter_counter[chapter_number]:02d}"
         if item_id in existing:raise ValueError("Contextual content already added")
         existing.add(item_id)
         chapter["problems"].append({
