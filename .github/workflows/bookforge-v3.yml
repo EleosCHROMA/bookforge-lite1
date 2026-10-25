@@ -73,6 +73,10 @@ jobs:
         run: |
           python -m bookforge_v3.release_gate draft132.json --pdf final-clean-132.pdf --output release-blockers.json || test $? -eq 1
           python -c "import json; r=json.load(open('release-blockers.json')); assert not r['ready_for_release']; assert r['blockers']"
+      - name: Generate matching 60-page paperback cover drafts
+        run: |
+          python -m bookforge_v3.cover_draft --pages 60 --theme playful-illustrated --output cover-playful-draft.pdf
+          python -m bookforge_v3.cover_draft --pages 60 --theme clean-premium --output cover-clean-draft.pdf
       - name: Export standards review report
         run: |
           python -m bookforge_v3.curriculum_report draft108.json --output standards-review.json
@@ -97,6 +101,8 @@ jobs:
             final-playful-132.pdf
             draft132-review-queue.json
             release-blockers.json
+            cover-playful-draft.pdf
+            cover-clean-draft.pdf
             draft132.json
             clean-132.pdf
             playful-132.pdf
