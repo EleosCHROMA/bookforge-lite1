@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "default_theme": "clean-premium",
+  "themes": {
+    "clean-premium": {
+      "label": "Clean Premium",
+      "palette": {"primary": "#286E9C", "accent": "#8B72C9", "surface": "#F5F8FC", "text": "#18283A"},
+      "corner_radius_pt": 12,
+      "illustration_mode": "minimal",
+      "workspace_style": "dotted",
+      "description": "Clean typography, subtle color, spacious writing areas"
+    },
+    "playful-illustrated": {
+      "label": "Playful Illustrated",
+      "palette": {"primary": "#F16B32", "accent": "#21A9A4", "surface": "#FFF9EE", "text": "#17335A"},
+      "corner_radius_pt": 18,
+      "illustration_mode": "decorative-assets",
+      "workspace_style": "grid",
+      "description": "Garage-themed illustration assets, bright headers, friendly rounded cards"
+    }
+  }
+}
