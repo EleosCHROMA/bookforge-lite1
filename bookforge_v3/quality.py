@@ -53,12 +53,18 @@ def analyze(project):
                 elif len(answer) > 250:
                     warnings.append(f"Long answer needs layout inspection: {pid}")
     checked = 0
+    fraction_checked = 0
+    try:
+        from .fraction_audit import audit_fraction_bank
+        fraction_checked = audit_fraction_bank(project)["checked"]
+    except (ValueError, TypeError, KeyError) as exc:
+        errors.append(f"Fraction audit failed: {exc}")
     try:
         checked = audit(project)["checked"]
     except (ValueError, TypeError, KeyError, ArithmeticError) as exc:
         errors.append(f"Math audit failed: {exc}")
-    if count > checked:
-        warnings.append(f"{count - checked} exercises lack independent arithmetic checks; non-numeric questions require human review")
+    if count > checked + fraction_checked:
+        warnings.append(f"{count - checked - fraction_checked} exercises lack independent arithmetic checks; non-numeric questions require human review")
     from .standards_audit import report as standards_report
     standards = standards_report(project)
     if standards["invalid_or_unreviewed_standard_tags"]:
@@ -79,6 +85,6 @@ def analyze(project):
             "ready_for_publication": not errors and not missing,
             "errors": errors, "warnings": warnings,
             "standards_audit": standards, "statistics": {"chapters": len(chapters), "exercises": count,
-                           "repair_tickets": tickets, "math_checks": checked,
-                           "math_checks_remaining": max(0, count - checked),
+                           "repair_tickets": tickets, "math_checks": checked, "fraction_checks": fraction_checked,
+                           "math_checks_remaining": max(0, count - checked - fraction_checked),
                            "editorial_signoffs_remaining": missing}}
