@@ -262,3 +262,16 @@ py -m bookforge_v3.release_gate draft132.json --pdf final-playful-132.pdf --cove
 ```
 
 When any PDF or project bytes change, regenerate the manifest and redo the relevant reviews; an earlier SHA-256 fingerprint is not evidence that a later file was inspected. Test cases cover matching and stale covers, content fingerprints, and paper-stock mismatches. KDP submission remains intentionally manual.
+
+
+## Misconception-focused repair tickets
+
+`repair_upgrade.py` adds five draft mistake-analysis tickets to Chapters 2–6, complementing the existing six chapter tickets (including the fraction-division ticket in Chapter 1). The resulting 132-exercise manuscript has **11 repair tickets**, two in Chapters 1–6 except where source variants differ. The audit recomputes discount, reflection, volume and mean corrections and preserves canonical error statements. It does not certify instructional quality.
+
+```powershell
+py -m bookforge_v3.build_repair_draft bookforge_v3/data/mistake_mechanics_six_chapters.json --output repair132.json
+py -m bookforge_v3.native_book repair132.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output repair-playful.pdf
+py -m bookforge_v3.native_book repair132.json --lessons bookforge_v3/data/guided_lessons.json --theme clean-premium --output repair-clean.pdf
+```
+
+The new five repair themes are percent discount confusion, the boundary in `at most` inequalities, reflection across the x-axis, multiplication versus addition in prism volume, and finding a mean. The structural renderer fits two repair tickets on one chapter page; locally tested both styles using the extended 132-question manuscript. The final *chapter-guided* production build still requires its GitHub Actions test to pass before treating it as verified. All explanations and standards tags await independent editorial review.
