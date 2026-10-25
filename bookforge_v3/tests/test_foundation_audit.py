@@ -18,6 +18,9 @@ class FoundationAuditTests(unittest.TestCase):
         self.assertEqual(stats["foundation_checks"],15)
         self.assertEqual(stats["math_checks_remaining"],0)
         self.assertFalse(analyze(draft)["ready_for_publication"])
+    def test_integral_median_formatted_without_decimal(self):
+        self.assertEqual(CASES["c6p3"][1](),"6")
+        self.assertEqual(CASES["c6p1"][1](),"14.5")
     def test_corrupted_ratio_answer_fails(self):
         self.base["chapters"][1]["answers"]["c2p1"]="8:12"
         with self.assertRaisesRegex(ValueError,"mismatch"):
