@@ -36,4 +36,5 @@ class GuidedLessonTests(unittest.TestCase):
             self.assertEqual(result['answer_key_page'],22)
             pdf=PdfReader(str(result['output']))
             self.assertIn('MASTER MECHANIC GUIDE',pdf.pages[-1].extract_text())
-            self.assertIn('Fraction Division',pdf.pages[18].extract_text())
+            self.assertIn('Fraction Division',pdf.pages[1].extract_text())
+            self.assertIn('Statistics: Read the Repair Times',pdf.pages[18].extract_text())
