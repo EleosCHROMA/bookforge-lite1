@@ -6,8 +6,8 @@ from pathlib import Path
 from pypdf import PdfReader
 
 HEADER="MASTER MECHANIC GUIDE"
-CHAPTER=re.compile(r"CHAPTER\\s+(\\d+)\\s*[•|:–-]",re.I)
-ANSWER=re.compile(r"^\\s*(\\d+)\\.\\s+\\S",re.M)
+CHAPTER=re.compile(r"CHAPTER\s+(\d+)\s*[•|:–-]",re.I)
+ANSWER=re.compile(r"^\s*(\d+)\.\s+\S",re.M)
 
 def audit(pdf_path,project=None,expected_lessons=None):
     pdf=PdfReader(str(pdf_path))
@@ -45,14 +45,14 @@ def audit(pdf_path,project=None,expected_lessons=None):
             if not answers:
                 errors.append(f"Chapter {number}: missing answer page")
                 continue
-            content="\\n".join(texts[i] for i in answers)
+            content="\n".join(texts[i] for i in answers)
             numbers=[int(x) for x in ANSWER.findall(content)]
             expected=list(range(1,len(chapter["problems"])+1))
             if numbers!=expected:
                 errors.append(f"Chapter {number}: answer numbers do not match {len(expected)} exercises (found {len(numbers)})")
             for ticket in chapter.get("repair_tickets",[]):
                 key=str(ticket.get("id",""))
-                if not re.search(r"(?<![\\w.])"+re.escape(key)+r"(?=\\s|\\.|$)",content):
+                if not re.search(r"(?<![\w.])"+re.escape(key)+r"(?=\s|\.|$)",content):
                     errors.append(f"Chapter {number}: no back-of-book solution ID for repair ticket {key}")
             if not any(s["chapter"]==number for s in summaries[:index]):
                 errors.append(f"Chapter {number}: missing student pages")
@@ -75,7 +75,7 @@ if __name__=="__main__":
     lesson_data=json.loads(a.lessons.read_text(encoding="utf-8")) if a.lessons else None
     titles=[x["title"] for x in lesson_data["lessons"]] if lesson_data else None
     result=audit(a.pdf,project,titles)
-    output=json.dumps(result,indent=2)+"\\n"
+    output=json.dumps(result,indent=2)+"\n"
     if a.output:
         a.output.parent.mkdir(parents=True,exist_ok=True)
         a.output.write_text(output,encoding="utf-8")
