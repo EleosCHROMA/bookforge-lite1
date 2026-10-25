@@ -339,5 +339,133 @@
         }
       ]
     }
+  ],
+  "math_checks": [
+    {
+      "problem_id": "c1p1",
+      "expression": "12.4+8.75",
+      "expected": "21.15",
+      "answer_text": "21.15"
+    },
+    {
+      "problem_id": "c1p2",
+      "expression": "15-4.62",
+      "expected": "10.38",
+      "answer_text": "10.38"
+    },
+    {
+      "problem_id": "c1p3",
+      "expression": "2.5*0.48",
+      "expected": "1.2",
+      "answer_text": "1.2"
+    },
+    {
+      "problem_id": "c1p4",
+      "expression": "9.36/0.3",
+      "expected": "31.2",
+      "answer_text": "31.2"
+    },
+    {
+      "problem_id": "c1p5",
+      "expression": "0.85+14.392",
+      "expected": "15.242",
+      "answer_text": "15.242"
+    },
+    {
+      "problem_id": "c1p6",
+      "expression": "20-7.84",
+      "expected": "12.16",
+      "answer_text": "12.16"
+    },
+    {
+      "problem_id": "c2p4",
+      "expression": "150*0.4",
+      "expected": "60",
+      "answer_text": "60"
+    },
+    {
+      "problem_id": "c2p6",
+      "expression": "200*0.35",
+      "expected": "70",
+      "answer_text": "70"
+    },
+    {
+      "problem_id": "c3p1",
+      "expression": "5*5-3*4",
+      "expected": "13",
+      "answer_text": "13"
+    },
+    {
+      "problem_id": "c3p6",
+      "expression": "18-2*3+5",
+      "expected": "17",
+      "answer_text": "17"
+    },
+    {
+      "problem_id": "c4p1",
+      "expression": "12+7",
+      "expected": "19",
+      "answer_text": "19"
+    },
+    {
+      "problem_id": "c5p1",
+      "expression": "8*5",
+      "expected": "40",
+      "answer_text": "40 sq in"
+    },
+    {
+      "problem_id": "c5p2",
+      "expression": "4*2.5*3",
+      "expected": "30",
+      "answer_text": "30 cubic cm"
+    },
+    {
+      "problem_id": "c5p3",
+      "expression": "(6+10)*4/2",
+      "expected": "32",
+      "answer_text": "32 sq m"
+    },
+    {
+      "problem_id": "c5p4",
+      "expression": "6*4*4",
+      "expected": "96",
+      "answer_text": "96 sq cm"
+    },
+    {
+      "problem_id": "c5p5",
+      "expression": "14*7/2",
+      "expected": "49",
+      "answer_text": "49 sq in"
+    },
+    {
+      "problem_id": "c5p6",
+      "expression": "5*3.5*2",
+      "expected": "35",
+      "answer_text": "35 cubic in"
+    },
+    {
+      "problem_id": "c6p2",
+      "expression": "(10+15+20+25+30)/5",
+      "expected": "20",
+      "answer_text": "20"
+    },
+    {
+      "problem_id": "c6p4",
+      "expression": "88-12",
+      "expected": "76",
+      "answer_text": "76"
+    },
+    {
+      "problem_id": "c6p5",
+      "expression": "68-42",
+      "expected": "26",
+      "answer_text": "26"
+    },
+    {
+      "problem_id": "c6p6",
+      "expression": "(4+8+2+10+6)/5",
+      "expected": "6",
+      "answer_text": "6"
+    }
   ]
 }
