@@ -210,3 +210,38 @@ py -m bookforge_v3.cover_draft --pages 60 --theme clean-premium --output clean-c
 These are vector cover **drafts**, not KDP-approved covers. They have a reserved back-cover barcode region and embedded fonts. Confirm the page count, selected paper type, cover dimensions, all title/author metadata, actual text safe areas, illustration/print color requirements, and barcode position with KDP's official template generator and Print Previewer before uploading. Recalculate spine after every interior page-count change. Consult: https://kdp.amazon.com/en_US/help/topic/G201953020 .
 
 Do not automatically claim completed human reviews or bypass the manual publication gate.
+
+
+## Cover pipeline paired to actual interior
+
+New production-oriented draft tool: \`cover_pipeline.py\` (requires Pillow) and
+\`paired_cover_preflight.py\`. Unlike the earlier fixed 60-page \`cover_draft.py\`,
+this tool reads the interior PDF to determine the page count and recalculates spine
+width from the chosen stock. The optional \`expected_pages\` metadata guards
+against accidentally using an older cover configuration.
+
+From repository root:
+
+\`\`\`powershell
+py -m pip install -r bookforge_v3/requirements.txt
+py -m bookforge_v3.build_132 bookforge_v3/data/mistake_mechanics_six_chapters.json --output draft132.json
+py -m bookforge_v3.native_book draft132.json --lessons bookforge_v3/data/guided_lessons.json --theme playful-illustrated --output interior.pdf
+py -m bookforge_v3.cover_pipeline --interior interior.pdf --config bookforge_v3/data/cover_config.json --output cover.pdf --report cover_report.json
+py -m bookforge_v3.paired_cover_preflight --interior interior.pdf --cover cover.pdf --report paired.json
+\`\`\`
+
+Add \`--artwork path/to/high_resolution_artwork.png\` to use optional JPG/PNG
+artwork. The generator rejects an image if the crop-to-fill size results in less
+than 300 effective PPI. It also rejects unexpected page counts, unsupported
+trim sizes, and incomplete cover configuration. The metadata example does not
+invent an author name; if supplied, the \`author\` field is shown on the cover.
+
+**Current limitations:** no-bleed 8.5 × 11-inch interior only, draft cover PDF
+only, not color-managed CMYK output, no spine text, reserved blank barcode
+region rather than an ISBN/barcode. The matching checker inspects dimensions
+and embedded fonts but does not guarantee text/safe-zone compliance, rights,
+metadata accuracy, flattening, or Print Previewer approval. The final cover
+must be visually inspected using the official KDP cover calculator/template.
+Never automatically publish on the strength of these automated checks alone.
+
+KDP cover requirements: https://kdp.amazon.com/en_US/help/topic/G201953020
