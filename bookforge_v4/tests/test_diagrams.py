@@ -27,6 +27,7 @@ class DiagramTests(unittest.TestCase):
         self.assertEqual(models[4]['volume'],24)
         self.assertEqual(models[5]['mean'],'17')
         self.assertEqual(models[5]['median'],15)
+        self.assertEqual(Fraction(models[5]['mad']),Fraction(22,5))
         self.assertEqual(sum(models[5]['frequencies'].values()),5)
 
     def test_fraction_grid_uses_common_denominator(self):

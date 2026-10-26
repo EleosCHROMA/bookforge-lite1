@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-review-browser`. Resume this branch,
+Current working branch: `development/v4-statistical-spread`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -170,3 +170,14 @@ requests are included. The reviewer page is hashed in each handoff.
 29 v4 tests pass including full candidate integration and hostile-markup escaping.
 Student PDF generation is unchanged; no new PDF visual inspection is claimed.
 Next: substantive statistics instruction. V4 remains in progress.
+
+## Statistical spread checkpoint
+
+Parent: 2108b18a96da060f3569dec7004d66e78dda023e. Added explicit MAD
+instruction and a guided distance-from-mean task with a complete back-of-book
+solution. The diagram model independently computes MAD = 22/5 for the repair
+data, while the lesson explains 4.4 minutes. Both 64-page candidates pass all
+structural, glyph/artwork, and guided-solution checks; 29 v4 tests pass. Both
+revised lesson pages were rendered and visually inspected. All 174 reviews
+remain pending. Full completion is blocked on real editorial/print review;
+no human approvals may be fabricated. V4 remains a development candidate.

@@ -176,25 +176,25 @@
     },
     {
       "title": "Statistics: Read the Repair Times",
-      "concept": "The median is the middle sorted value; the mean is the sum divided by the count.",
+      "concept": "The mean is the average. Mean absolute deviation (MAD) is the average distance of the data values from the mean.",
       "examples": [
         {
           "problem": "Repair times: 10, 15, 15, 20, 25 minutes",
           "steps": [
             "The values are sorted: 10, 15, 15, 20, 25.",
             "The middle value (median) is 15 minutes.",
-            "The mean is (10+15+15+20+25)/5 = 17 minutes."
+            "Mean: (10+15+15+20+25)/5 = 17. Distances from 17 are 7, 2, 2, 3, 8; their average (MAD) is 22/5 = 4.4 minutes."
           ]
         }
       ],
       "guided": [
         "Read the dot plot above: how many repairs took 15 minutes? Find the range and give its unit.",
-        "Explain why a very long repair may make the mean larger than the median."
+        "Use the mean of 17 minutes to find MAD. List the five absolute distances and explain what MAD measures."
       ],
       "chapter_number": 6,
       "guided_answers": [
         "2 repairs took 15 minutes: count the two dots above 15. The range is 25 - 10 = 15 minutes.",
-        "An unusually long repair adds to the total used for the mean. The median depends on the middle position, so it may change less."
+        "4.4 minutes. The absolute distances from 17 are 7, 2, 2, 3, 8. Their mean is 22/5 = 4.4, the average distance of a repair time from the mean."
       ],
       "diagram": {
         "kind": "dot_plot",

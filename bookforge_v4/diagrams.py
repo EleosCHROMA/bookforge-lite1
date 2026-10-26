@@ -74,6 +74,7 @@ def model(spec):
     if len(differences) != 1:
         raise ValueError('Dot plot values must form uniformly spaced ticks')
     return dict(kind=kind, values=values, ticks=unique, mean=str(Fraction(sum(values),len(values))),
+                mad=str(sum(abs(Fraction(v)-Fraction(sum(values),len(values))) for v in values)/len(values)),
                 median=median(values), frequencies={str(v):values.count(v) for v in unique})
 
 
