@@ -25,7 +25,10 @@ def audit(root):
         result['content_checks']=quality
         if not quality['ready_for_build']:
             result['blockers'].extend(quality['errors'])
-        reviews=review_audit(create(project,lessons),load('review-attestations.json'))
+        packet=create(project,lessons)
+        from .model_review import report as model_review_report
+        result['model_assisted_review']=model_review_report(packet)
+        reviews=review_audit(packet,load('review-attestations.json'))
         result['editorial_review']=reviews
         for theme in ('clean-premium','playful-illustrated'):
             interior,cover=root/theme/'interior.pdf',root/theme/'cover.pdf'

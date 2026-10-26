@@ -136,3 +136,10 @@ Run `python -m bookforge_v4.readiness DIRECTORY --output readiness.json` to
 recheck integrity, content QA, manuscript answers, print geometry and paired
 covers together. A zero exit means engineering checks passed, not publication
 approval. The report separately lists outstanding editorial and print work.
+
+
+The candidate includes `model-editorial-review.json`: fixed findings for all
+174 inspected source items, separate from human review status. Source changes
+make findings stale; they do not trigger automatic model reapproval. All 132
+exercise kinds and proposed standard codes are present. Proposals are not
+verified alignment and the book is not certified comprehensive Grade6 coverage.

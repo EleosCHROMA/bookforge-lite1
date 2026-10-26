@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-content-metadata`. Resume this branch,
+Current working branch: `development/v4-model-review-complete`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -234,3 +234,26 @@ Then integrate fixed model review findings into the reviewer package, treating
 source-hash mismatches as stale. Improve per-item standards rationale and
 partial-coverage notes. Do not regenerate model review pass labels for changed
 unread source. No human approvals are recorded; publication stays blocked.
+
+## All-source model-assisted editorial inspection complete
+
+Parent: 0f76327a588440e15c2d1cca778506bfb186a6e2. All 174 current
+review-item sources have now been inspected by the model. Fixed per-item notes
+are bound to source hashes; changed items become STALE_MODEL_REVIEW and never
+receive an automatic renewed pass. The candidate includes model-editorial-
+review.json and hashes it in each handoff. Readiness distinguishes current
+model findings from independently supplied human attestations.
+
+36 v4 tests pass. Both rebuilt 64-page candidates pass all structural, arithmetic,
+guided-solution and geometry checks. PDFs are unchanged from the visually
+reviewed statistics build. All 132 exercise types are labeled and candidate
+standard codes proposed; none are declared editor-verified. Remaining scope
+limitations include isolated surface-area items without nets and restricted
+statistical representations. Repair diagnosis1.1 is plausible, not uniquely
+inferable; weight-domain context is implicit. Findings are not hidden.
+
+Agreed model-review/metadata scope is complete for this source version. No human
+approvals have been generated. Remaining external work: independent review of
+findings, official KDP Previewer, print proof, metadata/rights/barcode checks,
+and explicit publication approval. Continue other feasible improvements under
+the standing instruction; do not ask for continue at routine checkpoints.

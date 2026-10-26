@@ -1,6 +1,6 @@
 {
   "reviewed_on": "2026-10-26",
-  "method": "Model inspection of all 132 prompt/answer pairs, supported by existing automated arithmetic checks. Not independent human approval.",
+  "method": "Model-assisted inspection of all 174 current source items, supported by numeric tests and prior PDF visual review. Not independent human approval; limitations remain explicit.",
   "items": [
     {
       "id": "practice:c1p1",
@@ -925,50 +925,301 @@
       "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
       "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
       "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "repair:1:1.1",
+      "content_sha256": "5be8214f48b214ac42ef27472173f3f3b17d6d459e932ec82760074074d46251",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "2.7 is correct. Regrouping is a plausible diagnosis, but the faulty final answer alone cannot establish the exact mental error."
+    },
+    {
+      "id": "repair:1:1.F",
+      "content_sha256": "c190c525df307dab3a1e6e39809fa52fa349a3a2dc5fa969f6b8a8a85b6b75c3",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "3/2 is correct; multiplying by divisor produces3/8, matching stated misconception."
+    },
+    {
+      "id": "repair:2:2.1",
+      "content_sha256": "63a7b93f2264a28e41d4630251e25729c16fe6960db285248451e361f2608484",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "$510/6=$85 and $320/4=$80: four-tire offer is cheaper per tire."
+    },
+    {
+      "id": "repair:2:2.P",
+      "content_sha256": "6dbe8ff76314220fe7add3af2ddcef916aea56946d893d1e90fe2888fc5e460c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Discount $20; final price $60; rate/price confusion correctly distinguished."
+    },
+    {
+      "id": "repair:3:3.1",
+      "content_sha256": "d490802f51f2904a3e28eef0dd4c7f2b10619d9912a585ef91e23a45107fc2f4",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Distribution gives5y+20."
+    },
+    {
+      "id": "repair:3:3.I",
+      "content_sha256": "95fac38dd4d81344d56ecee59b2515998c676117cc98481765bb046e1994f62a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Inclusive bound w<=2000 includes2000; nonnegative weight domain is implicit."
+    },
+    {
+      "id": "repair:4:4.1",
+      "content_sha256": "e21fcb719f51fef6c225c2d7f0db966d9eccba0de1ea36f28c58f188439a9a2f",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "-7<-2; absolute size is not signed order."
+    },
+    {
+      "id": "repair:4:4.C",
+      "content_sha256": "37d43e60002b3959e235ad1d30469197365c7f5a0516ca5d278bf675499971b7",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Reflection across x-axis keeps2 and negates-4 to4."
+    },
+    {
+      "id": "repair:5:5.1",
+      "content_sha256": "5f3697557084e1e9da4f34663b3f2ca2f549792939cc11755cfb9ebfc49155f3",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Triangle area=12*5/2=30 square feet."
+    },
+    {
+      "id": "repair:5:5.V",
+      "content_sha256": "1e909518901900582acd741afda97d295598bb0ac296d438bc10991a4254c7f0",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Volume=2*3*4=24 cubic inches; adding lengths is incorrect."
+    },
+    {
+      "id": "repair:6:6.1",
+      "content_sha256": "66b9c52b2af6e699ca1f5ac5fa80c644f15ac16ea00133c96cab173d916ae9d2",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Sorted3,5,8,12,20 has median8."
+    },
+    {
+      "id": "repair:6:6.S",
+      "content_sha256": "e1fae1e8cfa81d221651bd16b1f77e6fc4dd28f7963a3739ddb86a1049b35250",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Mean=(5+10+15)/3=10, not the maximum15."
+    },
+    {
+      "id": "lesson:1:concept",
+      "content_sha256": "c8928cf1925df7f5e6de0c576f004d9bca0ce033e91b6cd703360182fa0fe6f5",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Reciprocal rule and group counts checked: 3/4 divided by 1/2 = 3/2; 2/3 divided by 1/6 = 4; three quarter-liter bottles fit."
+    },
+    {
+      "id": "lesson:1:example:1",
+      "content_sha256": "ee43a1bae3dc17aa8a8e24ca44fc71d9673260f41096650c33717655d216db10",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Reciprocal rule and group counts checked: 3/4 divided by 1/2 = 3/2; 2/3 divided by 1/6 = 4; three quarter-liter bottles fit."
+    },
+    {
+      "id": "lesson:1:guided:1",
+      "content_sha256": "12670901eb4a6b746caac98e6d2e968d664e5e65f6dfde1aae6a9b1909e7b630",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Reciprocal rule and group counts checked: 3/4 divided by 1/2 = 3/2; 2/3 divided by 1/6 = 4; three quarter-liter bottles fit."
+    },
+    {
+      "id": "lesson:1:guided:2",
+      "content_sha256": "820fceb5001ab58b28ad683ab0141b10779d86733161961d5883f8762887008c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Reciprocal rule and group counts checked: 3/4 divided by 1/2 = 3/2; 2/3 divided by 1/6 = 4; three quarter-liter bottles fit."
+    },
+    {
+      "id": "lesson:1:diagram",
+      "content_sha256": "e3e41d2c7c7157fc5c68e1e7d895412530cc1f9a53c48bd6f372db3d3cbde248",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Reciprocal rule and group counts checked: 3/4 divided by 1/2 = 3/2; 2/3 divided by 1/6 = 4; three quarter-liter bottles fit."
+    },
+    {
+      "id": "lesson:2:concept",
+      "content_sha256": "8b0bc54ae064d8b3527ffe7dbb40e341ef1ebbadb3fcf50903b6fa2d75101dc5",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Unit rates checked: $9 per filter, five cost $45, six cost $54; seven $8 belts cost $56."
+    },
+    {
+      "id": "lesson:2:example:1",
+      "content_sha256": "c98d598db5add2ba9f67bc19d2de9a8798df79c7cec8efbfd8eb42d8b974cbf7",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Unit rates checked: $9 per filter, five cost $45, six cost $54; seven $8 belts cost $56."
+    },
+    {
+      "id": "lesson:2:guided:1",
+      "content_sha256": "9d70bd6bc236f441a67dfc605a99d9af44666c71961635d9bf842d7f3730fa7c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Unit rates checked: $9 per filter, five cost $45, six cost $54; seven $8 belts cost $56."
+    },
+    {
+      "id": "lesson:2:guided:2",
+      "content_sha256": "5ffb75cc12f888986e63690d2d8ead7d073281f5972e2c487a457e6c278bb45a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Unit rates checked: $9 per filter, five cost $45, six cost $54; seven $8 belts cost $56."
+    },
+    {
+      "id": "lesson:2:diagram",
+      "content_sha256": "d4f11e7228a5df755bcbb1386b7a77405efb2533f10419ae2be51d9f30b99951",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Unit rates checked: $9 per filter, five cost $45, six cost $54; seven $8 belts cost $56."
+    },
+    {
+      "id": "lesson:3:concept",
+      "content_sha256": "bf048ea186049d1ad48b4b1b95e2dd776f134a84fd4f631aa49f1d7c4b7025db",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+    },
+    {
+      "id": "lesson:3:example:1",
+      "content_sha256": "82d9a8a04c28ece457540e8ac8cfa558370298c82b2d811790d459e19817ca14",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+    },
+    {
+      "id": "lesson:3:guided:1",
+      "content_sha256": "b21b671a43191a3cd444957849ab6cea61c3664d241d14ddd24dad6accd57492",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+    },
+    {
+      "id": "lesson:3:guided:2",
+      "content_sha256": "475b6bd92cfa1aefaaf33f5976f7b351caf182b727d16474fb3015d851d6f51f",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+    },
+    {
+      "id": "lesson:3:diagram",
+      "content_sha256": "05813a5ed12ab0d88f45353f3ef27bb59d00cf9145d97cb43d9d8dc2deb44663",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+    },
+    {
+      "id": "lesson:4:concept",
+      "content_sha256": "aee432339f60e92c40b4bfad19f92e9bb54efa4c8581d70a312d48f31c747de8",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Translation and reflection checked: (-3,2) moves to (2,2) then reflects to (2,-2); (-4,3)+6 right gives (2,3); x-axis reflection of (-2,-5) is (-2,5)."
+    },
+    {
+      "id": "lesson:4:example:1",
+      "content_sha256": "2671d7e060a1768746634ebf8bb6fda95949ab06599b7d0273adc17cf596e51a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Translation and reflection checked: (-3,2) moves to (2,2) then reflects to (2,-2); (-4,3)+6 right gives (2,3); x-axis reflection of (-2,-5) is (-2,5)."
+    },
+    {
+      "id": "lesson:4:guided:1",
+      "content_sha256": "45b14f134b48b8c05ada63c48cd7211afa62084074831a7e31115caffed3674e",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Translation and reflection checked: (-3,2) moves to (2,2) then reflects to (2,-2); (-4,3)+6 right gives (2,3); x-axis reflection of (-2,-5) is (-2,5)."
+    },
+    {
+      "id": "lesson:4:guided:2",
+      "content_sha256": "31a8d398a2cc9876ddc2e1f8f2b7efc329c4fdfca2dde2f1fe9aac0b350500ca",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Translation and reflection checked: (-3,2) moves to (2,2) then reflects to (2,-2); (-4,3)+6 right gives (2,3); x-axis reflection of (-2,-5) is (-2,5)."
+    },
+    {
+      "id": "lesson:4:diagram",
+      "content_sha256": "eb3d0c83f424f36b6b8f4f8ec0b41929cb33d86b9bd13c83d6d4b38de7a99a60",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Translation and reflection checked: (-3,2) moves to (2,2) then reflects to (2,-2); (-4,3)+6 right gives (2,3); x-axis reflection of (-2,-5) is (-2,5)."
+    },
+    {
+      "id": "lesson:5:concept",
+      "content_sha256": "062615c0355315539b3643ffcf45432364eff93ac4186a28d604c480a285a69e",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Face areas, net pairing and units checked: 4x3x2 prism has surface area52 and volume24; 5x2x3 prism has surface area62 and volume30. Diagram faces match the worked prism."
+    },
+    {
+      "id": "lesson:5:example:1",
+      "content_sha256": "5c62fb68e1c739a0e992af896b9aa1ff397760504b68e862f44a431364e3b7f2",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Face areas, net pairing and units checked: 4x3x2 prism has surface area52 and volume24; 5x2x3 prism has surface area62 and volume30. Diagram faces match the worked prism."
+    },
+    {
+      "id": "lesson:5:guided:1",
+      "content_sha256": "c3aa61938da074a319ad4704814650addf547d2a10ea02c3d4a635928e3dac73",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Face areas, net pairing and units checked: 4x3x2 prism has surface area52 and volume24; 5x2x3 prism has surface area62 and volume30. Diagram faces match the worked prism."
+    },
+    {
+      "id": "lesson:5:guided:2",
+      "content_sha256": "20dc898470b74f04b0a145fdf78b199c5c3bd16627bea7ddb3e1774446030cb0",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Face areas, net pairing and units checked: 4x3x2 prism has surface area52 and volume24; 5x2x3 prism has surface area62 and volume30. Diagram faces match the worked prism."
+    },
+    {
+      "id": "lesson:5:diagram",
+      "content_sha256": "f35962e509283d37e5b7300a8f89a39bb3ca79848da2bf360f8f2652b1cacd45",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Face areas, net pairing and units checked: 4x3x2 prism has surface area52 and volume24; 5x2x3 prism has surface area62 and volume30. Diagram faces match the worked prism."
+    },
+    {
+      "id": "lesson:6:concept",
+      "content_sha256": "e04389091f928b40d81db6975dfa38d8d7b66d17525d506b5024161a22c40f93",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Sorted median15, sum85, mean17, range15, frequency at15 equals2, absolute deviations7,2,2,3,8 total22 and MAD4.4 checked."
+    },
+    {
+      "id": "lesson:6:example:1",
+      "content_sha256": "87028afcccb7619affb8b41bbb2926c730176b3a5a6e9514ee1b7760ac66a4a5",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Sorted median15, sum85, mean17, range15, frequency at15 equals2, absolute deviations7,2,2,3,8 total22 and MAD4.4 checked."
+    },
+    {
+      "id": "lesson:6:guided:1",
+      "content_sha256": "0b304d7344ff8637d837783972bc4d1d50375bee05cf08b66408f59ce3ee8280",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Sorted median15, sum85, mean17, range15, frequency at15 equals2, absolute deviations7,2,2,3,8 total22 and MAD4.4 checked."
+    },
+    {
+      "id": "lesson:6:guided:2",
+      "content_sha256": "f9544c45fbb570f03911fee3345a5ee39fa4bcfd924ede66cdf95303a37a3beb",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Sorted median15, sum85, mean17, range15, frequency at15 equals2, absolute deviations7,2,2,3,8 total22 and MAD4.4 checked."
+    },
+    {
+      "id": "lesson:6:diagram",
+      "content_sha256": "9d8dadb226d27d0e13328e64dabdb6ea2e9e98c2b04880227a06958aa4194808",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
+      "notes": "Sorted median15, sum85, mean17, range15, frequency at15 equals2, absolute deviations7,2,2,3,8 total22 and MAD4.4 checked."
     }
   ],
-  "remaining_item_ids": [
-    "repair:1:1.1",
-    "repair:1:1.F",
-    "repair:2:2.1",
-    "repair:2:2.P",
-    "repair:3:3.1",
-    "repair:3:3.I",
-    "repair:4:4.1",
-    "repair:4:4.C",
-    "repair:5:5.1",
-    "repair:5:5.V",
-    "repair:6:6.1",
-    "repair:6:6.S",
-    "lesson:1:concept",
-    "lesson:1:example:1",
-    "lesson:1:guided:1",
-    "lesson:1:guided:2",
-    "lesson:1:diagram",
-    "lesson:2:concept",
-    "lesson:2:example:1",
-    "lesson:2:guided:1",
-    "lesson:2:guided:2",
-    "lesson:2:diagram",
-    "lesson:3:concept",
-    "lesson:3:example:1",
-    "lesson:3:guided:1",
-    "lesson:3:guided:2",
-    "lesson:3:diagram",
-    "lesson:4:concept",
-    "lesson:4:example:1",
-    "lesson:4:guided:1",
-    "lesson:4:guided:2",
-    "lesson:4:diagram",
-    "lesson:5:concept",
-    "lesson:5:example:1",
-    "lesson:5:guided:1",
-    "lesson:5:guided:2",
-    "lesson:5:diagram",
-    "lesson:6:concept",
-    "lesson:6:example:1",
-    "lesson:6:guided:1",
-    "lesson:6:guided:2",
-    "lesson:6:diagram"
-  ]
+  "remaining_item_ids": []
 }
