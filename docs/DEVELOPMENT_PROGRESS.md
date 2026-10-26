@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-artwork-preflight`. Resume this branch,
+Current working branch: `development/v4-review-dates`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -149,3 +149,13 @@ comprehensive Grade 6 standards workbook. No KDP upload was performed.
 5. Preserve answers at the back, both themes, native page numbers, matching covers,
    no publication, and the $0 budget. Update this record after every meaningful
    verified milestone so live and scheduled sessions can resume consistently.
+
+## Overnight review-date validation checkpoint
+
+Parent: 30e04a08ce96d2a2dead094b0493bbef7e797b08. Branch:
+`development/v4-review-dates`. Review attestations with future timestamps now
+remain INVALID rather than being accepted as completed reviews. Regression
+coverage includes year-2999 timestamps alongside malformed and timezone-free
+dates. All 28 v4 tests pass. PDF rendering/content is unchanged, so no new PDF
+inspection is claimed. No approvals generated. Next: substantive statistics
+instruction or reviewer usability; v4 remains in progress.

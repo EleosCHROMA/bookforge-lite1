@@ -48,7 +48,7 @@ class ReviewPacketTests(unittest.TestCase):
     def test_missing_metadata_naive_dates_and_bad_decisions_are_invalid(self):
         item=self.packet['items'][0]
         for changes in ({'reviewer':''},{'reviewed_at':'2026-10-25T23:00:00'},
-                        {'reviewed_at':'not a date'},{'decision':True},{'content_sha256':'bad'}):
+                        {'reviewed_at':'not a date'},{'reviewed_at':'2999-01-01T00:00:00Z'},{'decision':True},{'content_sha256':'bad'}):
             with self.subTest(changes=changes):
                 result=audit(self.packet,{item['id']:self.attestation(item,**changes)})
                 self.assertEqual(result['counts']['INVALID'],1)

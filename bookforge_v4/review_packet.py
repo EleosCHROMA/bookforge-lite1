@@ -2,7 +2,7 @@
 import hashlib
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def fingerprint(content):
@@ -74,7 +74,8 @@ def audit(packet,reviews):
                 if valid:
                     try:
                         reviewed_at=datetime.fromisoformat(entry['reviewed_at'].replace('Z','+00:00'))
-                        valid=reviewed_at.utcoffset() is not None
+                        valid=(reviewed_at.utcoffset() is not None
+                               and reviewed_at <= datetime.now(timezone.utc))
                     except ValueError:valid=False
                 if valid:
                     if entry['content_sha256']!=current:
