@@ -1,13 +1,13 @@
 # BookForge development handoff
 
-Updated: October 25, 2026 (America/Los_Angeles).
+Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 
 ## Current state
 
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-review-tracking`. Resume this branch,
+Current working branch: `development/v4-model-practice`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -37,6 +37,33 @@ inspected first v4 checkpoint; both candidate builds still pass all structural,
 answer-key and glyph-geometry checks. Next: make the guided questions explicitly
 use the visual models and improve diagram usability without adding repetitive
 computation. Preserve v3 and main.
+
+
+### Third v4 checkpoint: model-based guided activities
+
+Verified parent: `93f6de4853ea184be2b758f5605e12be52821678` on
+`development/v4-review-tracking`. The commit containing this section updates
+six guided tasks to use the model representations, revises the strict/inclusive
+boundary comparison, and updates their back-of-book explanations. Each lesson's
+first writing box is now 72 points high; the second stays 48 points. Diagram
+placement is measured against the remaining example-card space. Both interiors
+remain 64 pages and pass the manuscript, exact-solution, font/trim, paired-cover,
+and actual-glyph margin checks. All six changed lessons plus the guided answer
+page were visually inspected in each theme. Local tests: 23 v4 + 116 v3 + 21 v2
+(all passing). No real reviews were supplied; 174 content items remain PENDING.
+The new v4 Actions workflow is manual only and has not been run remotely.
+
+The daily automation must resume this branch (or a newer verified descendant).
+Two additional finite overnight runs were configured for 12:15 and 1:15 a.m.
+Pacific on October 26, with instructions to save progress and stop by 2 a.m.
+They are scheduled sessions, not a claim of continuous execution. Fetch latest
+remote heads before edits; avoid overwriting live or other scheduled work.
+
+Next meaningful work: improve diagram usability and extend geometry preflight to
+vector bounds where reliable; audit and improve shallow statistics instruction
+and real visual tasks. Keep source-bound review evidence, both themes, answer
+privacy, no spending, no changes to main and no KDP publication. V4 remains
+IN_PROGRESS and the workbook is not independently editorially approved.
 
 ## Preserved v3 baseline
 

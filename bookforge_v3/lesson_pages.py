@@ -47,6 +47,10 @@ def validate_lessons(data):
             model(lesson['diagram'])
             if len(examples) != 1:
                 raise ValueError('Diagram lessons require exactly one worked example')
+        heights=lesson.get('guided_workspace_heights')
+        if heights is not None and (not isinstance(heights,list) or len(heights)!=len(guided)
+                or any(type(height) is not int or not 48<=height<=120 for height in heights)):
+            raise ValueError('Workspace heights must match guided tasks and be 48..120 points')
         for example in examples:
             if not isinstance(example,dict) or not isinstance(example.get('problem'),str):
                 raise ValueError('Example requires a problem')
@@ -83,7 +87,7 @@ def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None):
         draw(c,'LEARN BY EXAMPLE',M+14,584,W-2*M-30,11,bold=True,color='#FFFFFF')
         y=560
         for j,example in enumerate(lesson['examples'],1):
-            height=155 if len(lesson['examples'])==2 else (240 if 'diagram' in lesson else 220)
+            height=155 if len(lesson['examples'])==2 else 220
             c.setFillColor(HexColor(surface));c.roundRect(M,y-height,W-2*M,height-9,12,stroke=0,fill=1)
             yy=draw(c,f'Example {j}: {example["problem"]}',M+14,y-26,W-2*M-28,10,15,True,ink,2)-9
             for idx,step in enumerate(example['steps'],1):
@@ -91,7 +95,7 @@ def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None):
             if yy<y-height+11:raise ValueError('Example exceeds card')
             if 'diagram' in lesson:
                 from bookforge_v4.diagrams import render as render_diagram
-                if yy < y-height+98:
+                if yy < y-height+88:
                     raise ValueError('Worked text leaves insufficient space for diagram')
                 render_diagram(c,lesson['diagram'],M+17,y-height+14,W-2*M-34,70,theme)
             y-=height+8
@@ -101,8 +105,9 @@ def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None):
         for j,prompt in enumerate(lesson['guided'],1):
             y=draw(c,f'{j}. {prompt}',M+5,y,W-2*M-10,9,13,True,ink,2)-17
             c.setStrokeColor(HexColor(accent));c.setDash(2,3)
-            c.roundRect(M+5,y-48,W-2*M-10,48,9,stroke=1,fill=0);c.setDash()
-            y-=62
+            workspace=lesson.get('guided_workspace_heights',[48]*len(lesson['guided']))[j-1]
+            c.roundRect(M+5,y-workspace,W-2*M-10,workspace,9,stroke=1,fill=0);c.setDash()
+            y-=workspace+14
         if y<54:raise ValueError('Guided answers exceed safe area')
         draw(c,'DRAFT • Educational and typesetting review required',M,29,W-2*M,7,color=ink)
         draw(c,str(page_numbers[i-1] if page_numbers is not None else i),W-M-15,29,15,8,bold=True,color=primary)

@@ -93,3 +93,19 @@ Additional verification: six review-tracking tests cover missing evidence,
 changed answers, changed diagram/example pairings, incomplete metadata,
 timezone-free dates, rejected decisions, orphaned IDs, and packet tampering.
 Total local checkpoint: 21 v4, 116 v3 and 21 v2 tests pass.
+
+## Model-based guided practice checkpoint
+
+Each chapter's first guided task now asks students to use the corresponding
+representation: fraction grouping, a double number line, inequality boundaries,
+coordinate movement, a prism net, or a dot plot. Matching explanations are kept
+at the back. The first writing box is 72 points high, giving one inch for a
+sketch or explanation; the second stays 48 points high. The measured layout
+rejects oversized writing-box requests and protects diagram/text separation.
+Both themes stay at 64 pages, with answers starting on page 45.
+
+Current local validation: **23 v4 + 116 v3 + 21 v2 tests pass**. All changed lesson
+pages and guided answer pages were visually inspected in both styles. Actual
+writing-box dimensions and their bottom bounds are regression-tested. The
+manually triggered `v4-candidate.yml` workflow was added but not dispatched.
+V4 is still in progress; this is a saved development checkpoint.

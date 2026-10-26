@@ -102,3 +102,26 @@ class DiagramTests(unittest.TestCase):
                         overlap_width=min(a['x1'],b['x1'])-max(a['x0'],b['x0'])
                         overlap_height=min(a['bottom'],b['bottom'])-max(a['top'],b['top'])
                         self.assertFalse(overlap_width>0.01 and overlap_height>0.01)
+
+    def test_model_tasks_have_larger_writing_space(self):
+        import pdfplumber
+        with tempfile.TemporaryDirectory() as tmp:
+            output=Path(tmp)/'lessons.pdf'
+            render(self.lessons,output)
+            with pdfplumber.open(output) as pdf:
+                for page in pdf.pages:
+                    boxes=[curve for curve in page.curves if abs(curve['width']-518)<.1]
+                    self.assertEqual(sorted(round(box['height']) for box in boxes),[48,72])
+                    self.assertTrue(all(box['bottom']<=738 for box in boxes))
+
+    def test_invalid_and_oversized_workspace_requests_fail(self):
+        for heights in ([True,48],[47,48],[72], [121,48]):
+            lesson=copy.deepcopy(self.lessons['lessons'][0])
+            lesson['guided_workspace_heights']=heights
+            with self.subTest(heights=heights),self.assertRaises(ValueError):
+                validate_lessons({'lessons':[lesson]})
+        lesson=copy.deepcopy(self.lessons['lessons'][0])
+        lesson['guided_workspace_heights']=[120,120]
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaisesRegex(ValueError,'safe area'):
+                render({'lessons':[lesson]},Path(tmp)/'overflow.pdf')
