@@ -143,3 +143,13 @@ The candidate includes `model-editorial-review.json`: fixed findings for all
 make findings stale; they do not trigger automatic model reapproval. All 132
 exercise kinds and proposed standard codes are present. Proposals are not
 verified alignment and the book is not certified comprehensive Grade6 coverage.
+
+
+## Consolidated handoff status
+
+The current candidate status is `AWAITING_EXTERNAL_REVIEW`. The engineering
+and model-assisted inspection scope is complete for the current source snapshot.
+Reviewer HTML shows source-bound model findings beside the separate human status.
+Independent editorial decisions, resolution of noted limitations, KDP Previewer,
+print proof, final publishing details and explicit publication approval remain
+external blockers. Neither model inspection nor a passing test grants approval.

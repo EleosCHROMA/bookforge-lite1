@@ -2,7 +2,8 @@
 from html import escape
 
 
-def render(packet,report):
+def render(packet,report,model_findings=None):
+    model_by_id={item["id"]:item for item in (model_findings or {}).get("items",[])}
     statuses={item['id']:item['status'] for item in report['items']}
     cards=[]
     import json
@@ -11,9 +12,15 @@ def render(packet,report):
         title=f"Chapter {content['chapter']} | {content['kind']} | {item['id']}"
         body=json.dumps(content['source'],indent=2,ensure_ascii=False)
         status=statuses[item['id']]
-        cards.append(f'<article><h2>{escape(title)}</h2><p><strong>{escape(status)}</strong></p>'
+        model=model_by_id.get(item['id'])
+        model_html=''
+        if model is not None:
+            state=model['state']
+            notes=(model.get('finding') or {}).get('notes','No model finding recorded')
+            model_html=f'<section><h3>Model-assisted finding: {escape(state)}</h3><p>{escape(notes)}</p><p>Not independent human approval.</p></section>'
+        cards.append(f'<article><h2>{escape(title)}</h2><p><strong>Human review: {escape(status)}</strong></p>'
                      f'<details><summary>Source fingerprint</summary><code>{escape(item["content_sha256"])}</code></details>'
-                     f'<pre>{escape(body)}</pre></article>')
+                     f'<pre>{escape(body)}</pre>{model_html}</article>')
     return '''<!doctype html><html lang="en"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mistake Mechanics editorial review</title>

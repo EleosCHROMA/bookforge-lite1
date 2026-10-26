@@ -47,7 +47,7 @@ def build(output,reviews_path=None):
     from .model_review import report as model_review_report
     write_json(output/'model-editorial-review.json',model_review_report(packet))
     from .review_html import render as render_review_html
-    (output/'editorial-review.html').write_text(render_review_html(packet,reviewed),encoding='utf-8')
+    (output/'editorial-review.html').write_text(render_review_html(packet,reviewed,model_review_report(packet)),encoding='utf-8')
     from bookforge_v3.release_manifest import sha256
     for theme in result['themes']:
         handoff_path=output/theme/'handoff.json'
@@ -56,7 +56,7 @@ def build(output,reviews_path=None):
             path=output/name
             handoff['files'][name]={'sha256':sha256(path),'bytes':path.stat().st_size}
         write_json(handoff_path,handoff)
-    result.update(version=4,development_status='IN_PROGRESS',visual_models=len(models),
+    result.update(version=4,development_status='AWAITING_EXTERNAL_REVIEW',visual_models=len(models),
                   editorial_items=reviewed['total_items'],editorial_status_counts=reviewed['counts'])
     write_json(summary,result)
     return result

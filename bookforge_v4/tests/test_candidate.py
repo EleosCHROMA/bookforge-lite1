@@ -13,7 +13,7 @@ class VisualCandidateTests(unittest.TestCase):
             output=Path(tmp)/'candidate'
             result=build(output)
             self.assertEqual(result['version'],4)
-            self.assertEqual(result['development_status'],'IN_PROGRESS')
+            self.assertEqual(result['development_status'],'AWAITING_EXTERNAL_REVIEW')
             self.assertFalse(result['ready_for_publication'])
             self.assertEqual(result['visual_models'],6)
             self.assertEqual(result['editorial_items'],174)

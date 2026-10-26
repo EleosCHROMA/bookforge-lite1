@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-model-review-complete`. Resume this branch,
+Current working branch: `development/v4-review-handoff`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -257,3 +257,22 @@ approvals have been generated. Remaining external work: independent review of
 findings, official KDP Previewer, print proof, metadata/rights/barcode checks,
 and explicit publication approval. Continue other feasible improvements under
 the standing instruction; do not ask for continue at routine checkpoints.
+
+## V4 consolidated external-review handoff
+
+Parent: c50eb995e3b34b3fb169b316f52bab5abd825e72. The reviewer HTML now
+shows current/stale model findings beside each source and explicitly labels
+human-review status separately. Candidate status is AWAITING_EXTERNAL_REVIEW.
+The agreed engineering and model-assisted source-review scope is complete for
+this snapshot: six visual lessons and guided activities, all132 exercise labels
+and proposed standard mappings, all174 source-bound model findings, searchable
+reviewer handoff, artifact integrity checks and full engineering preflight.
+No comprehensive standards alignment or human approval is claimed.
+
+Remaining publication blockers require external evidence: independent editorial
+review and resolution of documented limitations, KDP Previewer inspection,
+physical print-proof review, final metadata/rights/barcode checks and explicit
+user publication approval. Do not manufacture a new cosmetic milestone to hide
+these blockers. If reviewing new content or responding to supplied feedback,
+resume here and rerun relevant checks. Student PDF content is unchanged by this
+HTML/status update; no new visual PDF inspection is claimed.
