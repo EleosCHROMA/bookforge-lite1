@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-review-dates`. Resume this branch,
+Current working branch: `development/v4-review-browser`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -159,3 +159,14 @@ coverage includes year-2999 timestamps alongside malformed and timezone-free
 dates. All 28 v4 tests pass. PDF rendering/content is unchanged, so no new PDF
 inspection is claimed. No approvals generated. Next: substantive statistics
 instruction or reviewer usability; v4 remains in progress.
+
+## Reviewer browser checkpoint
+
+Parent: f97c652dc5e34c54db5aaa7b1122a42fea1b4e09. Branch:
+`development/v4-review-browser`. Candidate builds now include an offline searchable
+editorial-review.html with prompts, solutions, fingerprints and current statuses.
+All source strings are HTML-escaped; no approval actions or external network
+requests are included. The reviewer page is hashed in each handoff.
+29 v4 tests pass including full candidate integration and hostile-markup escaping.
+Student PDF generation is unchanged; no new PDF visual inspection is claimed.
+Next: substantive statistics instruction. V4 remains in progress.
