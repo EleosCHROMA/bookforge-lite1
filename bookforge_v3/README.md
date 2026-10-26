@@ -329,3 +329,21 @@ Local validation: 107 v3 tests and 21 v2 tests; both 61-page repair manuscripts
 pass structural manuscript/font/trim preflight. Rendered page contact sheets and
 the changed pages were inspected in both styles. These checks do not constitute
 human editorial approval or KDP Previewer approval. No publication is performed.
+
+
+### Finished-PDF guided-solution integrity
+
+When `manuscript_audit` receives `--lessons`, it now verifies the supplied
+`guided_answers` in the extracted final PDF, rather than checking only that
+the student lesson titles appear. Each solution section must appear once, each
+numbered answer must match the source and remain in order, and source solution
+text must not appear before the answer-key boundary. The report includes
+`guided_solutions_checked` (six for the bundled lessons). Missing source answers
+fail this check; older API callers that supply only title strings retain the
+original title-presence check.
+
+Local validation: 112 v3 tests pass, including deliberately missing, changed,
+reordered, duplicated, and disclosed solution fixtures. Both regenerated
+61-page repair workbooks pass the CLI audit with six guided answers checked.
+This compares source text to rendered text; it does not establish mathematical
+or pedagogical correctness.

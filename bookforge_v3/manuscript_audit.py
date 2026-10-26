@@ -9,7 +9,7 @@ HEADER="MASTER MECHANIC GUIDE"
 CHAPTER=re.compile(r"CHAPTER\s+(\d+)\s*[•|:–-]",re.I)
 ANSWER=re.compile(r"^\s*(\d+)\.\s+\S",re.M)
 
-def audit(pdf_path,project=None,expected_lessons=None):
+def audit(pdf_path,project=None,expected_lessons=None,lesson_data=None):
     pdf=PdfReader(str(pdf_path))
     texts=[p.extract_text(extraction_mode="plain") or "" for p in pdf.pages]
     if not texts:
@@ -38,6 +38,39 @@ def audit(pdf_path,project=None,expected_lessons=None):
         locations[title]=found
         if len(found)!=1:
             errors.append(f"Guided lesson {title!r} appears {len(found)} times before answers")
+    guided_checked = 0
+    if lesson_data is not None:
+        from .lesson_pages import validate_lessons
+        validate_lessons(lesson_data)
+        normalize = lambda text: " ".join(text.split())
+        student_text = normalize("\n".join(texts[:index]))
+        answer_text = normalize("\n".join(texts[index:]))
+        for lesson in lesson_data["lessons"]:
+            title = lesson["title"]
+            expected_answers = lesson.get("guided_answers")
+            if expected_answers is None:
+                errors.append(f"Guided lesson {title!r}: missing source solutions")
+                continue
+            heading = normalize(f"Lesson {lesson['chapter_number']}: {title}")
+            if answer_text.count(heading) != 1:
+                errors.append(f"Guided lesson {title!r}: expected exactly one solution heading")
+                continue
+            start = answer_text.index(heading) + len(heading)
+            following = re.search(r"Lesson \d+: ", answer_text[start:])
+            end = start + following.start() if following else len(answer_text)
+            block = answer_text[start:end]
+            previous = -1
+            for number, answer in enumerate(expected_answers, 1):
+                normalized = normalize(answer)
+                entry = f"{number}. {normalized}"
+                position = block.find(entry)
+                if position < 0 or position <= previous:
+                    errors.append(f"Guided lesson {title!r}: missing or reordered solution {number}")
+                else:
+                    guided_checked += 1
+                previous = position
+                if normalized in student_text:
+                    errors.append(f"Guided lesson {title!r}: student pages reveal solution {number}")
     if project is not None:
         for chapter in project.get("chapters",[]):
             number=chapter["chapter_number"]
@@ -67,6 +100,7 @@ def audit(pdf_path,project=None,expected_lessons=None):
     return {"ok":not errors,"pages":len(texts),"answer_key_starts_at":index+1,
             "student_pages":index,"answer_pages":len(texts)-index,
             "errors":errors,"warnings":warnings,"lesson_locations":locations,
+            "guided_solutions_checked":guided_checked,
             "status":"STRUCTURAL CHECK ONLY — human visual and editorial review required"}
 
 if __name__=="__main__":
@@ -79,7 +113,7 @@ if __name__=="__main__":
     project=json.loads(a.project.read_text(encoding="utf-8")) if a.project else None
     lesson_data=json.loads(a.lessons.read_text(encoding="utf-8")) if a.lessons else None
     titles=[x["title"] for x in lesson_data["lessons"]] if lesson_data else None
-    result=audit(a.pdf,project,titles)
+    result=audit(a.pdf,project,titles,lesson_data)
     output=json.dumps(result,indent=2)+"\n"
     if a.output:
         a.output.parent.mkdir(parents=True,exist_ok=True)
