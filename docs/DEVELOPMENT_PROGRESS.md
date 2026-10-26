@@ -7,7 +7,7 @@ Updated: October 25, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-lesson-diagrams`. Resume this branch,
+Current working branch: `development/v4-review-tracking`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -21,8 +21,22 @@ regression tests. See `bookforge_v4/README.md` for setup and remaining scope.
 
 The user explicitly authorized starting v4 in the current live session and wants
 to work toward 2 a.m. Pacific. Scheduled sessions must resume the latest verified
-v4 checkpoint without overwriting live work. Next: build source-hashed editorial
-review tracking and add student model-based activities. V4 is not complete.
+v4 checkpoint without overwriting live work. Next: add student model-based activities. V4 is not complete.
+
+### Second v4 checkpoint: review tracking
+
+Verified parent: `f3f3159ab0378374c98a4008ba66f7a775cab48a` on
+`development/v4-lesson-diagrams`. The commit containing this paragraph completes
+the source-bound review packet and candidate integration. It adds 174 review
+items covering all practice/repair/guided content, concepts, worked examples and
+diagrams. All 174 remain PENDING; zero approvals were generated. Changed sources
+invalidate prior evidence; diagrams and paired examples are bound together.
+The reviewer packet includes answer text and must stay outside student PDFs.
+Tests: 21 v4 + 116 v3 + 21 v2 pass. PDF content is unchanged from the visually
+inspected first v4 checkpoint; both candidate builds still pass all structural,
+answer-key and glyph-geometry checks. Next: make the guided questions explicitly
+use the visual models and improve diagram usability without adding repetitive
+computation. Preserve v3 and main.
 
 ## Preserved v3 baseline
 

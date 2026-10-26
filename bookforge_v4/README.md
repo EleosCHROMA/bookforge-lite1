@@ -55,3 +55,41 @@ The v3 baseline's unchanged practice/answer pages remain intact.
 - Improve statistical representations and any shallow curriculum areas without
   claiming comprehensive Grade 6 alignment.
 - Continue substantive editorial review and keep publication approval separate.
+
+## Source-bound editorial review packet
+
+The candidate now writes `editorial-review-items.json` with prompts, answers,
+context and source hashes for **174 items**: 132 practice questions, 12 repair
+tickets, 12 guided tasks, six lesson concepts, six worked examples and six
+paired diagrams. This packet contains answers and belongs with reviewer
+materials, not student pages.
+
+`review-attestations.json` starts as `{}`. A real reviewer may supply records
+keyed by item ID. Each record requires `reviewer`, timezone-aware `reviewed_at`,
+`notes`, `content_sha256`, and `decision` (`approve` or `reject`). The fingerprint
+must match the current source. Changing a diagram also invalidates its paired
+worked-example review. Review results distinguish PENDING, INVALID, STALE,
+REJECTED and APPROVED. Reviewer identity/expertise are not authenticated by this
+local tool; matching metadata is not publication approval.
+
+To reuse reviewer-supplied evidence during a fresh candidate build:
+
+```powershell
+py -m bookforge_v4.candidate --output NEW_DIRECTORY --reviews actual-reviews.json
+```
+
+To check existing evidence against regenerated current sources:
+
+```powershell
+py -m bookforge_v4.review_packet --project v4-candidate/manuscript.json --lessons v4-candidate/lessons.json --reviews actual-reviews.json --output review-status.json
+```
+
+The review command exits nonzero while anything is unapproved. The candidate
+builder still produces a development review package with pending items; it never
+changes `ready_for_publication` to true. The lesson, diagram and review source
+files are included in each exact-file handoff's fingerprints.
+
+Additional verification: six review-tracking tests cover missing evidence,
+changed answers, changed diagram/example pairings, incomplete metadata,
+timezone-free dates, rejected decisions, orphaned IDs, and packet tampering.
+Total local checkpoint: 21 v4, 116 v3 and 21 v2 tests pass.

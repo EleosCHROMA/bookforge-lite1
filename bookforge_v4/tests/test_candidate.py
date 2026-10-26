@@ -16,6 +16,9 @@ class VisualCandidateTests(unittest.TestCase):
             self.assertEqual(result['development_status'],'IN_PROGRESS')
             self.assertFalse(result['ready_for_publication'])
             self.assertEqual(result['visual_models'],6)
+            self.assertEqual(result['editorial_items'],174)
+            self.assertEqual(result['editorial_status_counts']['PENDING'],174)
+            self.assertEqual(json.loads((output/'review-attestations.json').read_text()),{})
             for theme,report in result['themes'].items():
                 self.assertEqual(report['pages'],64)
                 self.assertEqual(report['answer_key_page'],45)

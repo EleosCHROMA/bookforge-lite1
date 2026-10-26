@@ -1,3 +1,6 @@
+> V4 is in progress: [visual candidate and review tracking](bookforge_v4/README.md).
+> Resume the branch recorded in [the development handoff](docs/DEVELOPMENT_PROGRESS.md).
+
 > **Latest development handoff:** [docs/DEVELOPMENT_PROGRESS.md](docs/DEVELOPMENT_PROGRESS.md).
 > The complete v3 engineering candidate builds with
 > `python -m bookforge_v3.candidate --output v3-candidate`.
