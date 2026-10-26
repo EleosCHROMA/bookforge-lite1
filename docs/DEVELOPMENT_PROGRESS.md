@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-statistical-spread`. Resume this branch,
+Current working branch: `development/v4-package-verification`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -181,3 +181,15 @@ structural, glyph/artwork, and guided-solution checks; 29 v4 tests pass. Both
 revised lesson pages were rendered and visually inspected. All 174 reviews
 remain pending. Full completion is blocked on real editorial/print review;
 no human approvals may be fabricated. V4 remains a development candidate.
+
+## Candidate package integrity verification
+
+Parent: a7e2e1154968396219ad85988203e82792b174d0. Branch:
+`development/v4-package-verification`. Run `python -m
+bookforge_v4.verify_package CANDIDATE_DIRECTORY` to recheck both handoffs against
+current PDF, lesson and reviewer-file bytes. Missing inventory, modified or
+missing files and paths escaping the package fail verification. Handoffs remain
+unsigned, so this is integrity checking, not provenance or editorial approval.
+32 v4 tests pass; the actual V4_Spread_Checked package passes with 18 fingerprint
+records checked. PDF generation is unchanged; no new visual review claimed.
+Next: real editorial/print review and remaining usability improvements.

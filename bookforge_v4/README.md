@@ -124,3 +124,9 @@ inside the bottom margin. Their radii are now 10 rather than 11 points, leaving
 the text unchanged and meeting the configured boundary. Both full manuscripts
 pass: 823 clean and 2,307 playful vector objects checked; no raster images.
 Current local total: **28 v4 + 116 v3 + 21 v2 = 165 passing tests**.
+
+
+Recheck a saved package with `python -m bookforge_v4.verify_package DIRECTORY`.
+This detects missing/changed files and unsafe inventory paths against both
+handoffs. The manifests are unsigned; matching hashes do not prove editorial
+review or publication approval.
