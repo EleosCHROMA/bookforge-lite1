@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-package-verification`. Resume this branch,
+Current working branch: `development/v4-readiness-audit`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -193,3 +193,20 @@ unsigned, so this is integrity checking, not provenance or editorial approval.
 32 v4 tests pass; the actual V4_Spread_Checked package passes with 18 fingerprint
 records checked. PDF generation is unchanged; no new visual review claimed.
 Next: real editorial/print review and remaining usability improvements.
+
+## Combined engineering readiness checkpoint
+
+Parent: a2ddf67b872132556ab01dfcfb70c2645191070c. Branch:
+`development/v4-readiness-audit`. A single saved-package audit now reruns byte
+integrity, mathematical content checks, manuscript/solution checks, glyph and
+artwork bounds, image PPI and paired-cover checks. The actual saved 64-page
+candidate reports engineering_ready=true and ready_for_publication=false.
+34 v4 tests pass, including a complete candidate and changed-source rejection.
+The final readiness module also passed its two integration tests after adding
+content QA. No PDF rendering changes were made.
+
+Near-complete engineering candidate, not a completed published workbook: all
+174 editorial items remain pending; standards tags are unreviewed and 108
+exercise-kind labels are absent. Previewer/print-proof review and explicit
+publication approval remain required. Preserve these open findings in future
+work; do not turn computational passes into editorial attestations.

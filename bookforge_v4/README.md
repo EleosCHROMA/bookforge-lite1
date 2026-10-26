@@ -130,3 +130,9 @@ Recheck a saved package with `python -m bookforge_v4.verify_package DIRECTORY`.
 This detects missing/changed files and unsafe inventory paths against both
 handoffs. The manifests are unsigned; matching hashes do not prove editorial
 review or publication approval.
+
+
+Run `python -m bookforge_v4.readiness DIRECTORY --output readiness.json` to
+recheck integrity, content QA, manuscript answers, print geometry and paired
+covers together. A zero exit means engineering checks passed, not publication
+approval. The report separately lists outstanding editorial and print work.
