@@ -80,8 +80,7 @@ def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None):
         for j,example in enumerate(lesson['examples'],1):
             height=155 if len(lesson['examples'])==2 else 220
             c.setFillColor(HexColor(surface));c.roundRect(M,y-height,W-2*M,height-9,12,stroke=0,fill=1)
-            draw(c,f'Example {j}: {example["problem"]}',M+14,y-26,W-2*M-28,10,15,True,ink,2)
-            yy=y-50
+            yy=draw(c,f'Example {j}: {example["problem"]}',M+14,y-26,W-2*M-28,10,15,True,ink,2)-9
             for idx,step in enumerate(example['steps'],1):
                 yy=draw(c,f'{idx}. {step}',M+17,yy,W-2*M-34,9,14,False,ink,3)-8
             if yy<y-height+11:raise ValueError('Example exceeds card')

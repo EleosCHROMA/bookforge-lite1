@@ -1,3 +1,37 @@
+# BookForge v3 engineering candidate
+
+Build the complete candidate from the repository root:
+
+```powershell
+py -m pip install -r bookforge_v3/requirements.txt
+py -m bookforge_v3.candidate --output v3-candidate
+```
+
+Use a new output directory for every build; existing directories are preserved.
+DejaVu Sans regular and bold must be installed (see the v2 setup instructions).
+The command builds both themes with six chapter-local worked lessons, 132 practice
+questions, 12 repair tickets, and 12 guided solutions. Each interior is 64 pages,
+with answers beginning on page 45. Matching covers use the actual final page count.
+
+The output includes manuscript and lesson source JSON, both interiors and covers,
+per-theme structural audits, exact-file hashes, an editorial review queue, release
+blockers, and a final `candidate-summary.json`. Hash paths inside handoff reports
+are relative to the candidate root (one directory above each handoff report).
+A failed build has no final summary and must not be treated as a verified candidate.
+
+Engineering completion means the reproducible candidate builds, automated checks
+pass, and rendered output has been inspected. It does **not** mean publication
+approval: human editorial review, KDP Previewer, final metadata/rights, barcode
+placement, and print proof remain open. The tool never uploads or publishes.
+The manually triggered `v3-candidate.yml` workflow can reproduce the checks; its
+remote run status must be verified separately. No workflow run is implied by a
+local pass. See `docs/DEVELOPMENT_PROGRESS.md` for the current handoff and v4 queue.
+
+The sections below document earlier milestones and smaller demonstration builds.
+Their page counts and commands apply to those inputs, not the complete candidate.
+
+---
+
 # BookForge v3 — complete six-chapter workbook assembly
 
 The v3 pipeline builds on the existing v2 renderer. It supports two themes, sequential chapters, repair tickets, answer keys at the end and PDF preflight.

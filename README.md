@@ -1,3 +1,8 @@
+> **Latest development handoff:** [docs/DEVELOPMENT_PROGRESS.md](docs/DEVELOPMENT_PROGRESS.md).
+> The complete v3 engineering candidate builds with
+> `python -m bookforge_v3.candidate --output v3-candidate`.
+> See [v3 setup and release scope](bookforge_v3/README.md).
+
 # BookForge Lite - Vehicle Maintenance Logbook Generator
 
 A command-line Python application that builds printable, professional PDF logbooks for tracking vehicle service history, mileage, and maintenance records.

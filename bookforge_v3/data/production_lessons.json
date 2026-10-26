@@ -1,0 +1,142 @@
+{
+  "lessons": [
+    {
+      "title": "Fraction Division: Reciprocal Repair",
+      "concept": "To divide by a nonzero fraction, multiply by its reciprocal.",
+      "examples": [
+        {
+          "problem": "3/4 divided by 1/2",
+          "steps": [
+            "Start with 3/4 divided by 1/2.",
+            "Multiply 3/4 by 2/1: 6/4.",
+            "Simplify 6/4 to 3/2, or 1 1/2."
+          ]
+        }
+      ],
+      "guided": [
+        "Find 2/3 divided by 1/6.",
+        "A mechanic has 3/4 liter of coolant; each bottle holds 1/4 liter. How many bottles?"
+      ],
+      "chapter_number": 1,
+      "guided_answers": [
+        "4. Multiply 2/3 by 6/1 to get 12/3 = 4.",
+        "3 bottles. Divide 3/4 by 1/4: three quarter-liter portions fit."
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "title": "Ratios: Find the Unit Rate",
+      "concept": "A unit rate compares an amount with one unit. Divide first, then scale to the amount you need.",
+      "examples": [
+        {
+          "problem": "Three identical oil filters cost $27. What do five cost?",
+          "steps": [
+            "Divide $27 by 3 filters to find $9 per filter.",
+            "Multiply 5 filters by $9 per filter to get $45.",
+            "Check: the cost per filter stays $9 when the quantity changes."
+          ]
+        }
+      ],
+      "guided": [
+        "Four identical belts cost $32. At the same rate, what do seven belts cost? Show the unit rate.",
+        "A student says six filters cost $30 because 27 + 3 = 30. Use the example to explain and correct the error."
+      ],
+      "guided_answers": [
+        "$56. The unit rate is $32 / 4 = $8 per belt; 7 x $8 = $56.",
+        "$54. Six filters are twice as many as three, so double $27. Adding $3 does not keep the $9-per-filter rate."
+      ]
+    },
+    {
+      "title": "Inequalities: Weight Limits",
+      "concept": "At most includes the boundary; greater than does not include it.",
+      "examples": [
+        {
+          "problem": "A lift supports at most 2,000 pounds.",
+          "steps": [
+            "Let w represent vehicle weight in pounds.",
+            "Write w <= 2000 because 2,000 is permitted.",
+            "On a number line, use a filled circle at 2,000 and shade left."
+          ]
+        }
+      ],
+      "guided": [
+        "A workshop tool requires more than 12 volts. Write an inequality for v.",
+        "Decide whether 2,000 pounds is allowed by w <= 2000 and explain."
+      ],
+      "chapter_number": 3,
+      "guided_answers": [
+        "v > 12. Exactly 12 volts does not satisfy more than 12.",
+        "Yes. The <= symbol includes equality, so 2,000 pounds is allowed."
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "title": "Coordinates: Move and Reflect",
+      "concept": "In (x, y), x measures horizontal position and y measures vertical position. Reflection across the x-axis keeps x and reverses the sign of y.",
+      "examples": [
+        {
+          "problem": "A cart is at (-3, 2). Move it 5 units right, then reflect across the x-axis.",
+          "steps": [
+            "Moving right increases x: -3 + 5 = 2. The cart is now at (2, 2).",
+            "Reflecting across the x-axis changes y from 2 to -2: (2, -2).",
+            "The reflected point is 2 units below the x-axis; x is unchanged."
+          ]
+        }
+      ],
+      "guided": [
+        "Start at (-4, 3) and move 6 units right. Give the new coordinates and explain which coordinate changes.",
+        "Reflect (-2, -5) across the x-axis. A student gets (2, -5). Explain and correct the error."
+      ],
+      "guided_answers": [
+        "(2, 3). Moving right adds 6 to x: -4 + 6 = 2. The y-coordinate stays 3.",
+        "(-2, 5). Reflection across the x-axis changes the sign of y, not x. The student reflected across the y-axis."
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "title": "Geometry: Surface Area or Volume?",
+      "concept": "Surface area measures the outside faces in square units. Volume measures the space inside in cubic units.",
+      "examples": [
+        {
+          "problem": "A closed rectangular box is 4 in long, 3 in wide, and 2 in high. Find surface area and volume.",
+          "steps": [
+            "Opposite faces come in pairs: two 4 x 3 faces, two 4 x 2 faces, and two 3 x 2 faces.",
+            "Add face areas: 2 x 12 + 2 x 8 + 2 x 6 = 52 square inches.",
+            "Multiply the three dimensions for volume: 4 x 3 x 2 = 24 cubic inches."
+          ]
+        }
+      ],
+      "guided": [
+        "A closed rectangular box measures 5 cm by 2 cm by 3 cm. Find its surface area; show the three pairs of faces.",
+        "A student adds 5 + 2 + 3 and reports a volume of 10 cubic centimeters. Explain the error and find the volume."
+      ],
+      "guided_answers": [
+        "62 square centimeters. The three face pairs have areas 2 x (5 x 2), 2 x (5 x 3), and 2 x (2 x 3); add 20 + 30 + 12.",
+        "30 cubic centimeters. Volume counts unit cubes and requires multiplication: 5 x 2 x 3 = 30. Adding lengths does not measure volume."
+      ]
+    },
+    {
+      "title": "Statistics: Read the Repair Times",
+      "concept": "The median is the middle sorted value; the mean is the sum divided by the count.",
+      "examples": [
+        {
+          "problem": "Repair times: 10, 15, 15, 20, 25 minutes",
+          "steps": [
+            "The values are sorted: 10, 15, 15, 20, 25.",
+            "The middle value (median) is 15 minutes.",
+            "The mean is (10+15+15+20+25)/5 = 17 minutes."
+          ]
+        }
+      ],
+      "guided": [
+        "Find the range of 10, 15, 15, 20, 25.",
+        "Explain why a very long repair may make the mean larger than the median."
+      ],
+      "chapter_number": 6,
+      "guided_answers": [
+        "15 minutes. Subtract the minimum from the maximum: 25 - 10 = 15.",
+        "An unusually long repair adds to the total used for the mean. The median depends on the middle position, so it may change less."
+      ]
+    }
+  ]
+}
