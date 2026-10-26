@@ -16,7 +16,7 @@ CONTEXTUAL = (
  (4,"modeling","A car is parked at (-3, 2). It moves 5 units right. What are its new coordinates?","(2, 2)","Increase the x-coordinate by 5: -3 + 5 = 2. The y-coordinate remains 2.","6.NS.8"),
  (4,"explanation","Which value is colder, -6 degrees or -2 degrees? Explain using a number line.","-6 degrees","-6 is farther left on the number line than -2, so -6 is smaller.","6.NS.7"),
  (5,"word_problem","A storage crate is 2.5 feet long, 1.5 feet wide, and 2 feet tall. Find its volume.","7.5 cubic feet","Multiply length x width x height: 2.5 x 1.5 x 2 = 7.5 cubic feet.","6.G.2"),
- (5,"error_analysis","A mechanic measures a triangle with a 10-inch base and a 6-inch height, then reports 60 square inches. Diagnose and correct.","30 square inches","Area of a triangle is half the base times the height: 1/2 x 10 x 6 = 30.","6.G.1"),
+ (5,"error_analysis","A triangle has base 10 in and height 6 in. A mechanic reports 60 square inches. Diagnose and correct.","30 square inches","Area of a triangle is half the base times the height: 1/2 x 10 x 6 = 30.","6.G.1"),
  (6,"word_problem","Five repair jobs took 10, 15, 15, 20, and 25 minutes. What is their mean time?","17 minutes","Add times to obtain 85, then divide by 5 jobs: 85 / 5 = 17 minutes.","6.SP.3"),
  (6,"explanation","A dot plot has 1 dot at 2, 3 dots at 3, and 2 dots at 4. What is the mode and why?","3","The mode is 3 because it occurs three times, more often than 2 or 4.","6.SP.4"),
 )

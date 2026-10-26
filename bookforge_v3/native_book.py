@@ -8,6 +8,7 @@ from pypdf import PdfReader, PdfWriter
 from .pipeline import validate_project, V2_ROOT
 from .quality import analyze
 from .lesson_pages import render, validate_lessons
+from .guided_answers import render_answers
 from .kdp_preflight import audit_pdf
 
 def assemble(project_path, lessons_path, output_path, theme="clean-premium"):
@@ -29,6 +30,8 @@ def assemble(project_path, lessons_path, output_path, theme="clean-premium"):
         if type(number) is not int or number not in numbers:
             raise ValueError("Each lesson needs a valid chapter_number")
         by_chapter.setdefault(number,[]).append(lesson)
+    if any("guided_answers" not in lesson for lesson in spec["lessons"]):
+        raise ValueError("Native workbook requires guided_answers for every lesson")
     fonts()
     dest=Path(output_path);dest.parent.mkdir(parents=True,exist_ok=True)
     pages=[];number=1
@@ -59,6 +62,10 @@ def assemble(project_path, lessons_path, output_path, theme="clean-premium"):
             render_section(chapter,p,theme,"answers",number)
             group=PdfReader(str(p)).pages
             pages.extend(group);number+=len(group)
+        p=root/"guided-answers.pdf"
+        render_answers(spec,p,theme,number)
+        group=PdfReader(str(p)).pages
+        pages.extend(group);number+=len(group)
         writer=PdfWriter()
         for page in pages:writer.add_page(page)
         for page in writer.pages:

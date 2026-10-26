@@ -32,7 +32,7 @@ class GuidedLessonTests(unittest.TestCase):
     def test_workbook_answers_stay_last(self):
         with tempfile.TemporaryDirectory() as tmp:
             result=create(PROJECT,LESSONS,Path(tmp)/'book.pdf','clean-premium')
-            self.assertEqual(result['pages'],27)
+            self.assertEqual(result['pages'],28)
             self.assertEqual(result['answer_key_page'],22)
             pdf=PdfReader(str(result['output']))
             self.assertIn('MASTER MECHANIC GUIDE',pdf.pages[-1].extract_text())

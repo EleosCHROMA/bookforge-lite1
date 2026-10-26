@@ -15,7 +15,7 @@ class NativeBookTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t:
             for theme in ("clean-premium","playful-illustrated"):
                 result=assemble(BASE,LESSONS,Path(t)/(theme+".pdf"),theme)
-                self.assertEqual(result["pages"],27)
+                self.assertEqual(result["pages"],28)
                 self.assertEqual(result["answer_key_page"],22)
                 pdf=PdfReader(result["output"])
                 self.assertIn("Fraction Division",pdf.pages[1].extract_text())

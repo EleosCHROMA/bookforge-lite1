@@ -16,7 +16,7 @@ class ChapterPlacementTests(unittest.TestCase):
             output=Path(folder)/'book.pdf'
             result=create(PROJECT,LESSONS,output,'playful-illustrated')
             reader=PdfReader(result['output'])
-            self.assertEqual(result['pages'],27)
+            self.assertEqual(result['pages'],28)
             self.assertEqual(result['answer_key_page'],22)
             self.assertIn('Fraction Division',reader.pages[1].extract_text())
             self.assertIn('Inequalities',reader.pages[8].extract_text())
@@ -31,4 +31,4 @@ class ChapterPlacementTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             result=create(PROJECT,LESSONS,Path(folder)/'book.pdf','clean-premium')
             self.assertTrue(result['kdp_preflight']['ok'])
-            self.assertEqual(len(PdfReader(result['output']).pages),27)
+            self.assertEqual(len(PdfReader(result['output']).pages),28)

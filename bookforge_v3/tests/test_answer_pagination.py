@@ -42,6 +42,9 @@ class AdaptiveAnswerTests(unittest.TestCase):
         project = sample()
         for chapter in project['chapters']:
             for p in chapter['problems']:
+                original_id = p['id']
+                p['id'] = 'layout-' + original_id
+                chapter['answers'][p['id']] = chapter['answers'].pop(original_id)
                 chapter['answers'][p['id']] += ' Explanation: ' + ('Check each operation carefully. ' * 12)
         project['math_checks'] = []
         with tempfile.TemporaryDirectory() as temp:

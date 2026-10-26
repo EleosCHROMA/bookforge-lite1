@@ -61,7 +61,7 @@ def audit(pdf_path,project=None,expected_lessons=None):
                     errors.append(f"Chapter {number}: no back-of-book solution ID for repair ticket {key}")
             if not any(s["chapter"]==number for s in summaries[:index]):
                 errors.append(f"Chapter {number}: missing student pages")
-        ordered=[s["chapter"] for s in summaries[index:] if s["answer"]]
+        ordered=[s["chapter"] for s in summaries[index:] if s["answer"] and s["chapter"] is not None]
         if ordered!=sorted(ordered):
             errors.append("Answer-key chapters out of order")
     return {"ok":not errors,"pages":len(texts),"answer_key_starts_at":index+1,

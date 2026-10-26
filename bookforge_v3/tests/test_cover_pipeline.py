@@ -22,6 +22,8 @@ class CoverPipelineTests(unittest.TestCase):
             c.showPage()
         c.save()
         self.meta=json.loads(CONFIG.read_text(encoding='utf-8'))
+        # This synthetic fixture intentionally remains 60 pages.
+        self.meta['expected_pages']=60
     def tearDown(self):
         self.tmp.cleanup()
     def test_actual_page_count(self):

@@ -38,6 +38,10 @@ def validate_lessons(data):
             raise ValueError('Each lesson requires 1-2 guided exercises')
         if any(not isinstance(g,str) or not g.strip() for g in guided):
             raise ValueError('Guided exercise must be nonempty text')
+        answers=lesson.get('guided_answers')
+        if answers is not None and (not isinstance(answers,list) or len(answers)!=len(guided)
+                or any(not isinstance(a,str) or not a.strip() for a in answers)):
+            raise ValueError('guided_answers must match guided exercises with nonempty text')
         for example in examples:
             if not isinstance(example,dict) or not isinstance(example.get('problem'),str):
                 raise ValueError('Example requires a problem')

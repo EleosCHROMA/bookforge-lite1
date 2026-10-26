@@ -304,3 +304,28 @@ py -m bookforge_v3.manuscript_audit --pdf repair-clean.pdf --project draft-repai
 The audit checks chapter/answer-key order, contiguous numbered answers in each chapter, repair-ticket solution ID presence, expected guided-lesson locations, and unintended diagnosis disclosure. The older 60-page Playful Illustrated PDF produced before the fix failed the new audit with six diagnosis disclosures, one in each chapter. It otherwise passed the structural answer-key order and answer count checks.
 
 This audit is based on PDF text extraction; it does **not** detect visual overlap, cropped vector art, accessibility issues, typos, print color problems, incorrect math reasoning, or incomplete CCSS coverage. Use image inspection and real editorial review in addition. CI now runs this audit against both re-generated 132-exercise repair-ticket workbooks.
+
+
+## Complete guided-lesson answer keys
+
+Native assembly now requires one nonempty `guided_answers` entry for every
+`guided` question. All six bundled Your Turn tasks have back-of-book solutions,
+appended after the chapter answer keys with native page numbers. Long solution
+groups paginate together; oversized groups fail instead of clipping. Legacy
+standalone lesson rendering still accepts lesson specifications without answers.
+
+The repair-enriched 132-question build is now **61 pages** in both styles, with
+answers beginning on page 42 and guided solutions on page 61. The paired cover
+configuration expects 61 pages; regenerate any earlier 60-page cover. The sample
+36-question native build is 28 pages.
+
+This update also fits the two-line fraction chapter title inside the playful
+banner and shortens the triangle error-analysis prompt while preserving its
+measurements and units, allowing both expanded manuscripts to build. Layout
+stress tests use synthetic exercise IDs so their intentionally expanded answers
+are not mistaken for the canonical arithmetic fixtures.
+
+Local validation: 107 v3 tests and 21 v2 tests; both 61-page repair manuscripts
+pass structural manuscript/font/trim preflight. Rendered page contact sheets and
+the changed pages were inspected in both styles. These checks do not constitute
+human editorial approval or KDP Previewer approval. No publication is performed.
