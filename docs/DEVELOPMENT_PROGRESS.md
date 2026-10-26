@@ -4,9 +4,29 @@ Updated: October 25, 2026 (America/Los_Angeles).
 
 ## Current state
 
-**V3 engineering milestone: COMPLETE. Publication: NOT APPROVED.**
+**V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
+Publication: NOT APPROVED.**
 
-Continue from `development/complete-chapter-lessons`. The v3 engineering release
+Current working branch: `development/v4-lesson-diagrams`. Resume this branch,
+not a fresh branch from v3. The latest verified v3 parent is
+`2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
+
+The v4 visual-instruction checkpoint adds six computed vector diagrams, one in
+each worked lesson, plus extracted-glyph margin preflight and a one-command v4
+candidate builder. Both interiors remain 64 pages, answers start on page 45, and
+all 12 guided solutions remain at the back. Local checks: 15 v4 + 116 v3 + 21 v2
+tests. Changed lessons in both themes were visually inspected. Actual numeric
+axis spacing, net face area/topology and alternating inside margins have
+regression tests. See `bookforge_v4/README.md` for setup and remaining scope.
+
+The user explicitly authorized starting v4 in the current live session and wants
+to work toward 2 a.m. Pacific. Scheduled sessions must resume the latest verified
+v4 checkpoint without overwriting live work. Next: build source-hashed editorial
+review tracking and add student model-based activities. V4 is not complete.
+
+## Preserved v3 baseline
+
+The preserved v3 baseline is `development/complete-chapter-lessons`. The v3 engineering release
 commit is the commit containing this record; resolve its exact SHA with
 `git log -1 -- docs/DEVELOPMENT_PROGRESS.md`. Its verified remote parent is
 `43ebb4d0d80dd9e980f328da68da4d72d4c682cc` on
@@ -50,11 +70,11 @@ metadata/rights/barcode verification and print proof remain open. The cover is a
 draft and the interiors retain draft notices. The content is not certified as a
 comprehensive Grade 6 standards workbook. No KDP upload was performed.
 
-## Next daily session: v4
+## Original v4 starting plan (now underway)
 
 1. Fetch the branch above, check for other contributors' changes, inspect repo
    instructions, and rerun the candidate/test baseline as needed.
-2. Create a v4 development branch from the latest verified v3 commit.
+2. Resume the current v4 development branch noted above; it already starts from the verified v3 commit.
 3. Prioritize actual teaching representations: put fraction models, coordinate
    diagrams, geometry nets, and statistical plots beside the relevant lessons.
    Existing standalone visual modules can be reused after review; do not merely

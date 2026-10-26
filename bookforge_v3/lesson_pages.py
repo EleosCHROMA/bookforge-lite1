@@ -42,6 +42,11 @@ def validate_lessons(data):
         if answers is not None and (not isinstance(answers,list) or len(answers)!=len(guided)
                 or any(not isinstance(a,str) or not a.strip() for a in answers)):
             raise ValueError('guided_answers must match guided exercises with nonempty text')
+        if 'diagram' in lesson:
+            from bookforge_v4.diagrams import model
+            model(lesson['diagram'])
+            if len(examples) != 1:
+                raise ValueError('Diagram lessons require exactly one worked example')
         for example in examples:
             if not isinstance(example,dict) or not isinstance(example.get('problem'),str):
                 raise ValueError('Example requires a problem')
@@ -78,12 +83,17 @@ def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None):
         draw(c,'LEARN BY EXAMPLE',M+14,584,W-2*M-30,11,bold=True,color='#FFFFFF')
         y=560
         for j,example in enumerate(lesson['examples'],1):
-            height=155 if len(lesson['examples'])==2 else 220
+            height=155 if len(lesson['examples'])==2 else (240 if 'diagram' in lesson else 220)
             c.setFillColor(HexColor(surface));c.roundRect(M,y-height,W-2*M,height-9,12,stroke=0,fill=1)
             yy=draw(c,f'Example {j}: {example["problem"]}',M+14,y-26,W-2*M-28,10,15,True,ink,2)-9
             for idx,step in enumerate(example['steps'],1):
                 yy=draw(c,f'{idx}. {step}',M+17,yy,W-2*M-34,9,14,False,ink,3)-8
             if yy<y-height+11:raise ValueError('Example exceeds card')
+            if 'diagram' in lesson:
+                from bookforge_v4.diagrams import render as render_diagram
+                if yy < y-height+98:
+                    raise ValueError('Worked text leaves insufficient space for diagram')
+                render_diagram(c,lesson['diagram'],M+17,y-height+14,W-2*M-34,70,theme)
             y-=height+8
         y-=14
         if y<177:raise ValueError('Insufficient space for guided questions')

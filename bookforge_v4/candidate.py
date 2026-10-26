@@ -1,0 +1,42 @@
+"""Build a v4 development candidate with diagrams and measured text margins."""
+import argparse
+import json
+from pathlib import Path
+from bookforge_v3.candidate import build as build_v3, write_json
+from .diagrams import model, KINDS
+from .print_geometry import audit as geometry_audit
+
+ROOT=Path(__file__).resolve().parent
+
+
+def build(output):
+    lessons_path=ROOT/'data/lessons.json'
+    lessons=json.loads(lessons_path.read_text(encoding='utf-8'))
+    models=[{'chapter':lesson['chapter_number'],**model(lesson.get('diagram'))}
+            for lesson in lessons['lessons']]
+    if sorted(item['kind'] for item in models)!=sorted(KINDS):
+        raise ValueError('V4 candidate requires all six visual model types')
+    result=build_v3(output,lessons_path=lessons_path)
+    output=Path(output).resolve()
+    summary=output/'candidate-summary.json'
+    # A v3 pass is insufficient: no success summary survives a failed v4 check.
+    summary.unlink()
+    for theme,report in result['themes'].items():
+        geometry=geometry_audit(output/theme/'interior.pdf')
+        write_json(output/theme/'text-geometry.json',geometry)
+        if not geometry['ok']:
+            raise ValueError(f'{theme}: text geometry preflight failed')
+        report['text_geometry_passed']=True
+        report['glyphs_checked']=geometry['glyphs_checked']
+    write_json(output/'diagram-models.json',{'models':models,
+        'note':'Computed model parameters, not independent approval of the paired instructional text.'})
+    result.update(version=4,development_status='IN_PROGRESS',visual_models=len(models))
+    write_json(summary,result)
+    return result
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--output',type=Path,required=True)
+    args=parser.parse_args()
+    print(json.dumps(build(args.output),indent=2))
