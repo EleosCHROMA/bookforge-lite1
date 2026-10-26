@@ -928,10 +928,10 @@
     },
     {
       "id": "repair:1:1.1",
-      "content_sha256": "5be8214f48b214ac42ef27472173f3f3b17d6d459e932ec82760074074d46251",
+      "content_sha256": "42b8367157d395c51f7298a6f0d97183d1a1f63e4d1156e6d93393b07224eff1",
       "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
       "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
-      "notes": "2.7 is correct. Regrouping is a plausible diagnosis, but the faulty final answer alone cannot establish the exact mental error."
+      "notes": "Re-inspected after editorial correction: regrouping is explicitly a possible cause, not an inferred certainty."
     },
     {
       "id": "repair:1:1.F",
@@ -1082,38 +1082,38 @@
     },
     {
       "id": "lesson:3:concept",
-      "content_sha256": "bf048ea186049d1ad48b4b1b95e2dd776f134a84fd4f631aa49f1d7c4b7025db",
+      "content_sha256": "6ea914eccaa02b00b3b84531ac29e611a18899fba3e5b22670bbdf15ca82d089",
       "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
       "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
-      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+      "notes": "Re-inspected physical-domain correction: 0 <= w <= 2000 includes zero and the upper limit, with a bounded shaded segment. The separate v > 12 example excludes 12 and shades right."
     },
     {
       "id": "lesson:3:example:1",
-      "content_sha256": "82d9a8a04c28ece457540e8ac8cfa558370298c82b2d811790d459e19817ca14",
+      "content_sha256": "4e3963240727ff9ceb8d8e3758a8134e91680ad17ae919c5936678e26419d639",
       "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
       "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
-      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+      "notes": "Re-inspected physical-domain correction: 0 <= w <= 2000 includes zero and the upper limit, with a bounded shaded segment. The separate v > 12 example excludes 12 and shades right."
     },
     {
       "id": "lesson:3:guided:1",
-      "content_sha256": "b21b671a43191a3cd444957849ab6cea61c3664d241d14ddd24dad6accd57492",
+      "content_sha256": "bf265eb598fd57b170d22eb96406b589311c680b9a0456bb8f884fbb18682a2c",
       "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
       "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
-      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+      "notes": "Re-inspected physical-domain correction: 0 <= w <= 2000 includes zero and the upper limit, with a bounded shaded segment. The separate v > 12 example excludes 12 and shades right."
     },
     {
       "id": "lesson:3:guided:2",
-      "content_sha256": "475b6bd92cfa1aefaaf33f5976f7b351caf182b727d16474fb3015d851d6f51f",
+      "content_sha256": "af3f139ad78ad309a59a0c4989e63f41082c77063ae7fa1206a2e5b4550d7f62",
       "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
       "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
-      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+      "notes": "Re-inspected physical-domain correction: 0 <= w <= 2000 includes zero and the upper limit, with a bounded shaded segment. The separate v > 12 example excludes 12 and shades right."
     },
     {
       "id": "lesson:3:diagram",
-      "content_sha256": "05813a5ed12ab0d88f45353f3ef27bb59d00cf9145d97cb43d9d8dc2deb44663",
+      "content_sha256": "cac7e8e490bca150f37a2f88c0416628f6d9075f3867aa1badb6094f35155aeb",
       "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
       "status": "INSPECTED_WITH_NOTED_LIMITATIONS",
-      "notes": "Strict versus inclusive boundaries checked: v > 12 excludes 12; w <= 2000 includes 2000. Weight context also implicitly requires nonnegative w; the left arrow is an algebraic inequality representation, not a full physical-domain model."
+      "notes": "Re-inspected physical-domain correction: 0 <= w <= 2000 includes zero and the upper limit, with a bounded shaded segment. The separate v > 12 example excludes 12 and shades right."
     },
     {
       "id": "lesson:4:concept",

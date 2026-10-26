@@ -23,4 +23,8 @@ def annotate(project):
             problem['alignment_proposal']={'method':'model-assisted content inspection',
                 'status':'PROPOSED_NOT_VERIFIED',
                 'scope_note':'Related skill only; an isolated computation does not establish complete standard coverage.'}
+    for chapter in result['chapters']:
+        for ticket in chapter['repair_tickets']:
+            if chapter['chapter_number']==1 and ticket['id']=='1.1':
+                ticket['diagnosis']='One possible cause is incorrect regrouping; ask the student to show the subtraction steps.'
     return result

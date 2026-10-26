@@ -44,7 +44,11 @@ def model(spec):
         boundary = integer(spec.get('boundary'), 1, 10000)
         if spec.get('operator') not in ('<', '<=', '>', '>='):
             raise ValueError('Invalid inequality operator')
-        return dict(kind=kind, boundary=boundary, operator=spec['operator'],
+        if spec.get('nonnegative',False) not in (True,False):
+            raise ValueError('Invalid physical domain')
+        if spec.get('nonnegative',False) and spec['operator']!='<=':
+            raise ValueError('Bounded physical model supports an inclusive upper limit')
+        return dict(kind=kind, nonnegative=spec.get('nonnegative',False), boundary=boundary, operator=spec['operator'],
                     included='=' in spec['operator'], left=spec['operator'].startswith('<'))
     if kind == 'coordinates':
         start = pair(spec.get('start'), -3, 3)
@@ -137,11 +141,15 @@ def render(c, spec, x, y, width, height, theme):
         values=(0, Fraction(boundary,2), boundary, Fraction(3*boundary,2))
         for px,n in zip((start,(start+pivot)/2,pivot,end),values):
             line(px,base-4,px,base+4);text(max(0,px-12),12,n,7)
-        arrow(pivot-7 if left else pivot+7,base,start if left else end,base)
+        if data['nonnegative']:
+            line(start,base,pivot,base,accent,2)
+            c.setFillColor(accent);c.circle(start,base,4,fill=1,stroke=0)
+        else:
+            arrow(pivot-7 if left else pivot+7,base,start if left else end,base)
         c.setStrokeColor(accent);c.setFillColor(accent if data['included'] else pale)
         c.circle(pivot,base,4,fill=1,stroke=1)
         text(350,43,'Boundary included' if data['included'] else 'Boundary excluded',bold=True)
-        text(350,24,f"w {data['operator']} {boundary}")
+        text(350,24,f"0 <= w <= {boundary}" if data['nonnegative'] else f"w {data['operator']} {boundary}")
     elif kind == 'coordinates':
         ox,oy,step=95,35,9
         for n in range(-4,5):line(ox+n*step,oy-27,ox+n*step,oy+27,HexColor('#C6D3DF'),.4)

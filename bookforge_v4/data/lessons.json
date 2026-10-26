@@ -73,14 +73,14 @@
     },
     {
       "title": "Inequalities: Weight Limits",
-      "concept": "At most includes the boundary; greater than does not include it.",
+      "concept": "Weight is nonnegative. At most includes the upper boundary; greater than excludes its boundary.",
       "examples": [
         {
           "problem": "A lift supports at most 2,000 pounds.",
           "steps": [
             "Let w represent vehicle weight in pounds.",
             "Write w <= 2000 because 2,000 is permitted.",
-            "On a number line, use a filled circle at 2,000 and shade left."
+            "For weight, graph 0 <= w <= 2000: filled circles at 0 and 2,000, with the segment between them shaded."
           ]
         }
       ],
@@ -96,7 +96,8 @@
       "diagram": {
         "kind": "inequality",
         "boundary": 2000,
-        "operator": "<="
+        "operator": "<=",
+        "nonnegative": true
       },
       "guided_workspace_heights": [
         72,

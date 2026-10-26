@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-review-handoff`. Resume this branch,
+Current working branch: `development/v4-editorial-resolution`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -276,3 +276,21 @@ user publication approval. Do not manufacture a new cosmetic milestone to hide
 these blockers. If reviewing new content or responding to supplied feedback,
 resume here and rerun relevant checks. Student PDF content is unchanged by this
 HTML/status update; no new visual PDF inspection is claimed.
+
+## Consolidated editorial finding resolution
+
+Parent: ef42ea51403ac1c2df7d5a35816b17eb3b00204f. Resolved the two
+actionable model-review findings rather than deferring them: the weight model
+now represents the physical domain 0<=w<=2000 with closed endpoints and a bounded
+segment; the original subtraction repair diagnosis explicitly identifies only
+a possible cause and requests shown work. All changed lesson/repair sources
+were re-inspected and only affected source-bound findings refreshed.
+Both revised inequality pages were rendered and visually inspected. Numeric
+axis spacing is tested independently of repeated numbers in paragraph text.
+All 174 model findings remain separate from human attestations.
+
+Standing work rule: use consolidated editorial/build/verification blocks, not
+cosmetic commits as stopping points. Report only completed scope, genuine
+user-action blockers or execution limits. Current external blockers remain
+KDP account/Previewer access and physical proof review plus independent human
+attestation if claimed; do not fabricate access, reviews or publication.

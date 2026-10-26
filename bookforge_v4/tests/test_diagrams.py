@@ -88,7 +88,7 @@ class DiagramTests(unittest.TestCase):
             render(self.lessons,output)
             with pdfplumber.open(output) as pdf:
                 words=pdf.pages[2].extract_words()
-                tick_top=next(w['top'] for w in words if w['text']=='0')
+                tick_top=max(w['top'] for w in words if w['text']=='0')
                 ticks=[next(w for w in words if w['text']==value and abs(w['top']-tick_top)<1)
                        for value in ('0','1000','2000','3000')]
                 gaps=[b['x0']-a['x0'] for a,b in zip(ticks,ticks[1:])]
@@ -126,3 +126,9 @@ class DiagramTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaisesRegex(ValueError,'safe area'):
                 render({'lessons':[lesson]},Path(tmp)/'overflow.pdf')
+
+    def test_weight_model_includes_zero_and_rejects_unsupported_domain(self):
+        spec={'kind':'inequality','boundary':2000,'operator':'<=','nonnegative':True}
+        self.assertTrue(model(spec)['nonnegative'])
+        spec['operator']='>'
+        with self.assertRaises(ValueError):model(spec)
