@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-readiness-audit`. Resume this branch,
+Current working branch: `development/v4-content-metadata`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -210,3 +210,27 @@ Near-complete engineering candidate, not a completed published workbook: all
 exercise-kind labels are absent. Previewer/print-proof review and explicit
 publication approval remain required. Preserve these open findings in future
 work; do not turn computational passes into editorial attestations.
+
+## Autonomous content review checkpoint
+
+Parent: 8e5d30c468c07f08e3fe2edb2e2848aa7dbf0c90. All 132 exercises
+now have valid exercise-kind labels and candidate standard codes in the v4
+build. Existing audited contextual tags are preserved; proposed tags are never
+marked reviewed. Zero standards are claimed verified. Model-assisted numeric
+and clarity inspection of all 132 prompt/answer pairs is recorded with exact
+content hashes in bookforge_v4/data/model_review_notes.json. Scope limitations
+are explicit, particularly isolated surface-area calculations without nets and
+integer-edge volume questions. This is not independent human approval.
+
+35 v4 and 116 v3 tests pass; both 64-page candidates pass all checks. All
+128 rendered pages are pixel-identical to the previously inspected statistics
+build. No new visual changes are claimed. The scheduled task was updated with
+the user standing instruction: checkpoints are not stopping points; proceed
+until scope complete, a genuine user-action blocker, or execution limits.
+
+RESUME NEXT: inspect the remaining 42 non-practice items listed in
+model_review_notes.json (repairs, concepts, examples, guided tasks, diagrams).
+Then integrate fixed model review findings into the reviewer package, treating
+source-hash mismatches as stale. Improve per-item standards rationale and
+partial-coverage notes. Do not regenerate model review pass labels for changed
+unread source. No human approvals are recorded; publication stays blocked.

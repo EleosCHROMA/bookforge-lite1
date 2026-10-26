@@ -20,7 +20,8 @@ def build(output,reviews_path=None):
             for lesson in lessons['lessons']]
     if sorted(item['kind'] for item in models)!=sorted(KINDS):
         raise ValueError('V4 candidate requires all six visual model types')
-    result=build_v3(output,lessons_path=lessons_path)
+    from .content_metadata import annotate
+    result=build_v3(output,lessons_path=lessons_path,project_transform=annotate)
     output=Path(output).resolve()
     summary=output/'candidate-summary.json'
     # A v3 pass is insufficient: no success summary survives a failed v4 check.

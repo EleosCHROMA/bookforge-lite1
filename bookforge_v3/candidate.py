@@ -17,7 +17,7 @@ def write_json(path, data):
     Path(path).write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
 
 
-def build(output, lessons_path=None):
+def build(output, lessons_path=None, project_transform=None):
     """Refuse existing destinations; write summary only after structural success."""
     output = Path(output).resolve()
     if output.exists():
@@ -25,6 +25,8 @@ def build(output, lessons_path=None):
     lessons_path = Path(lessons_path or ROOT/'data/production_lessons.json')
     lessons = json.loads(lessons_path.read_text(encoding='utf-8'))
     project = create(json.loads((ROOT/'data/mistake_mechanics_six_chapters.json').read_text(encoding='utf-8')))
+    if project_transform is not None:
+        project = project_transform(project)
     chapters = [chapter['chapter_number'] for chapter in project['chapters']]
     if sorted(lesson.get('chapter_number', -1) for lesson in lessons['lessons']) != sorted(chapters):
         raise ValueError('Candidate requires exactly one guided lesson for every chapter')

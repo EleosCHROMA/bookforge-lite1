@@ -1,0 +1,974 @@
+{
+  "reviewed_on": "2026-10-26",
+  "method": "Model inspection of all 132 prompt/answer pairs, supported by existing automated arithmetic checks. Not independent human approval.",
+  "items": [
+    {
+      "id": "practice:c1p1",
+      "content_sha256": "5dd87b3cf9526cd4e287b8a818f32ebd5e0c47b6b5a3498f24abb7442b96f800",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p2",
+      "content_sha256": "38ad3f2c7cfc5ce0018bd300ddd9e69d054e89b9af5ffb807057225c2ad79a0d",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p3",
+      "content_sha256": "7516ea19da58e0ddf438e6b5725a0220b0d547af7f8fbb453f3e8a03796727f1",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p4",
+      "content_sha256": "bf75ec40f12ab3cc091fa4dddad1d429bfcd06c798447becf2fddfd835a66633",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p5",
+      "content_sha256": "ca7edb2cf735b86c446c23ec8c8b43de0413e153e701d1d71579b4f611dc3eb5",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p6",
+      "content_sha256": "c02a805a6bfb8689f70b6ba2de4cde010af97ffae4dbaeee31b79d4bac2df3de",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p7",
+      "content_sha256": "f4c6c1409046e20153b609d08a17165af54d1ad01361811af56c3e4a0c8657d4",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p8",
+      "content_sha256": "d2120f4df087f1575528e2253553e7a0fc5ebd0d9fc9cbe57c7424e8d5aeeea6",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p9",
+      "content_sha256": "0c63cd8ea58de944936d4c9d8f8eecefa40b9016e6304293a4a1bff56f1045ad",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p10",
+      "content_sha256": "82878681cac1821b661df113f3b1ff6ab4a153145637c3f7ba954b5989abe988",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p11",
+      "content_sha256": "47328554511ef6bcb8f7f3a26251b7c5ab783ca76254e3c888f3fc7241b04bf3",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p12",
+      "content_sha256": "73b432069eb8e1a785539d2f4ac12a7dc79cfeb52e9fa8a0b442cce9e9abf8e1",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p13",
+      "content_sha256": "e7f44522ffd3d80f5487a47ec90492f1ebea0b2f19932e4afe3381359d1457d2",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p14",
+      "content_sha256": "3184a8ec6da01c15a9b9537cfb00fc0db758f99f285636cec083c7cd0ecf2a66",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p15",
+      "content_sha256": "82bffda015e8dd079bceaccd8b9cccb9ac886dad32100f453d7fc1d09aa50b70",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p16",
+      "content_sha256": "e2697e03f2104f00b44bac0f8aaa7b7bec7ab0bf9bf11eaad09c428a1148e24b",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p17",
+      "content_sha256": "9aed0911ccacfe70ee9d5a764d7d80bc795cc305834f3351013f01a269be163a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c1p18",
+      "content_sha256": "9b98a9b9e890daaf7518e627ad2759b227ed5e63385a19b07fd9e991f20ae56d",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_01",
+      "content_sha256": "aedff53f938f30fe7d2b333330cf873b8c231cd908203a2622737cc552d09eba",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_02",
+      "content_sha256": "f14030b3dc9e9e9eec2408912970f40c28554bd81a2113ae18bb886acb28839f",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_03",
+      "content_sha256": "72f9e284fd23163697bf5f4eb960a4263dcf02ebcc7bdd0f57e10d8604c3c013",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_04",
+      "content_sha256": "250d83c27de3dadc739e9668e831bafa83c0421b5aa3d933859048294251b428",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_05",
+      "content_sha256": "1a6691007244a852cb2c1fa05afef1df44fb0f38c3abe262154a0d9ea8a7f557",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_06",
+      "content_sha256": "f7310261525f47343deda622461158699b24b106a573d7a4127faf8cd46006ac",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_07",
+      "content_sha256": "90d3b2566f5e77cd5a7647edadef3f661dfe51f52585aa000886edb14c9df498",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_08",
+      "content_sha256": "eef79fe6afc2c6cb27cceda0771ba7e2f9db9dad617f8b461b1bbec8a7ab7e2a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_09",
+      "content_sha256": "c7454e391ba14d18a8edc48446cf43bfc30f72f79cc84a5fdf2250ccfb8914c3",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_10",
+      "content_sha256": "c7a36997c1b6c4dfbaf4eff090697d08c8ad1cbbdd288f81d6f58d5e4c94b033",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_11",
+      "content_sha256": "9a4fe44f94e470f05db55b4423648174419681a224f476891565c2b576225b3b",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:fraction_division_12",
+      "content_sha256": "9f0ff75d3b175a023ee9b7f76292b50761d4e725fcb6371d4ca7e7687a4345b8",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:context_1_01",
+      "content_sha256": "30bb7dca76888c3f8dd39f95fe46ffdd574a8b5689fb9602630dfedde2d565c3",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:context_1_02",
+      "content_sha256": "f18742b2ba36513b9601db5fe9a2c8a62b5fd65139f58d6b138427a76e250d13",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Numeric results inspected; decimal and fraction calculations agree with the answer key. Calculation practice alone does not establish modeling mastery."
+    },
+    {
+      "id": "practice:c2p1",
+      "content_sha256": "c7f6167dc65847ebc83fb69490b741ef54ed36797cba95e53e28752ba4efe5cf",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p2",
+      "content_sha256": "e8060850198df3184d5be1842d5b598bee38e8fc32a05acb11421b052b9bc1a7",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p3",
+      "content_sha256": "6763f4faee717ce0b8fd5e799ea28e1da639436baf405266810bfc559165538f",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p4",
+      "content_sha256": "c2b9eafe332f4af596788e131cf8c84ddee17acc3659a7d2051d529cb0fc0344",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p5",
+      "content_sha256": "bc97a2dd3bdf2109dd2daae2e828bfbde5f529390e1f059136052f5003ef2e4c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p6",
+      "content_sha256": "b1defb0b504f368ce2b0e3192c9237d273174e63da9f6d8dd796745c82cd1935",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p7",
+      "content_sha256": "4eecb425341bf35f6b90eb2e1ead6a0b0265a54b593656b0209635f1fd95dbe6",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p8",
+      "content_sha256": "122e6bb1380c1f7fd2a02a56c0f573b9930b5386da68c2cdbad28863a6cee111",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p9",
+      "content_sha256": "fe737bc9e7be8d063c301ff513d9b824c2d5ea5a9b96c4854dad5cff3ddd2709",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p10",
+      "content_sha256": "428d1b83415f838e90a0d406f4d047d40345324195091041bf5178ce4547aac7",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p11",
+      "content_sha256": "efd6a1f4e23bc079d0034cdbaeb03e020f58ab8df6572c5f78d6c7f46409e086",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p12",
+      "content_sha256": "965b45bd2334b5e7ede4e7fa137ed09ff78c3812b779e9d7557554d2f45a7704",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p13",
+      "content_sha256": "4fb5411d338d43c0a8895d24f6a21aa4ca74f7887173cad6ebd3ba05284907d0",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p14",
+      "content_sha256": "ca8b5fee2f8c1d262612645b3cc04abefb61b65d36700b1908911a2a63693bac",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p15",
+      "content_sha256": "792caf160850d081ecf3288be9b91fb80e826a9c52ca9b8290c08205a4914ed4",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p16",
+      "content_sha256": "026cf14fd7324247968e33ec7d28a2d9a43c56a0879764fc23c91382ad28fa70",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p17",
+      "content_sha256": "0f9f5a992d515fdbed348b964e0e11044df6f9792275fa0aa9fdf4c8d3f0538d",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c2p18",
+      "content_sha256": "145adfd8d30aaa310259c3e7f6bd405f015fc3bbfdee7e3f3a6dbf4505bd4731",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:context_2_01",
+      "content_sha256": "c3074f456fd352842e3dad9f217e89ade2eff374b270d1b3782298c2aa324467",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:context_2_02",
+      "content_sha256": "9c1315a2e26548b3dc48a642fba5b54d8ce2e08aa88abe76a82c496c3e12ebf5",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Rates, ratios and percent results inspected. Multi-step reasoning is limited in the computational bank; retain contextual explanations."
+    },
+    {
+      "id": "practice:c3p1",
+      "content_sha256": "b56b281d6486e38fac783c4e85c9f4662a86e7a23e429a65cddb8ff4e6a8870d",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p2",
+      "content_sha256": "e765f368e986076510128ab0820159173c8346979177501b92ac85def43818e7",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p3",
+      "content_sha256": "8f42073b5c1b1591ce5aa6aabdfb6d1ef25f3f93c59b8f11c9afc5ee50c7ccb8",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p4",
+      "content_sha256": "6a22a954862883c5cdd7e3f4fd074d968eef181dd3c7861bafac42ddf2577c77",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p5",
+      "content_sha256": "8615b320af2fe940cfc0f3b1a0811bcebb76eb3458eab3799465de80f0c46b2c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p6",
+      "content_sha256": "fe7e2d849f5c20334693c3c83598b0e503bc929d575127032235a173010bd179",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p7",
+      "content_sha256": "9004872c85834ae2bf5571be5c690aaddd8452c9dea4fec2e48578d7184ce478",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p8",
+      "content_sha256": "ed5e8ab10c333cc31d617727726c86b6d1617cf9a5804111b8bcc186df5b626b",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p9",
+      "content_sha256": "6af098fb0e6d2066d3f1f386a067d31a9aacccf4a495976b14445a9483969553",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p10",
+      "content_sha256": "2310d7fac1a2b1ab4ed2665e200ed72d6797c9b162393728163aec1d895fa992",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p11",
+      "content_sha256": "efd439051c51f98b5b29e09ada478ae41c53259c24e9f22048e5bd65debe73f4",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p12",
+      "content_sha256": "7217beb84b04c4b1b27ff5ca504ad8db71af08b3d4addab8f6311d9867fea540",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p13",
+      "content_sha256": "eef4061aaaa635f2777fab20200d4c8f9e40d41b201dab075c990af3f3d916f8",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p14",
+      "content_sha256": "c6a6ade5c9468681270cfcedf637e076bb1d4ca521c39c8b45964df5da17e1e3",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p15",
+      "content_sha256": "719216c2532708a4228c1006f6256948656c16ae642d617f2f543a5943bee16e",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p16",
+      "content_sha256": "8508fc4640fe152d71861aa10aa180e64a40bdea4e010587a88dbe125260ddbc",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p17",
+      "content_sha256": "f8ffb3f7308f8e67bafc644e518f448e1fb571673dfef353cc5c66613f0ccfcc",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c3p18",
+      "content_sha256": "612c3b38632534d6ed8422293334102857597470a12cf739c810aab00d4ca1af",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:context_3_01",
+      "content_sha256": "24fd3aa5785fcbe1f7083cf51dc5a3d3b192222b05757e759a18322e8a9c4e31",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:context_3_02",
+      "content_sha256": "cc91db0769f7d4ef6f72360a98c5c4b48c8b18bab5fca0e3b8ef3b7b28515c06",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Expression simplification, evaluation and equation results inspected. Inequality boundary reasoning appears in the contextual and guided material."
+    },
+    {
+      "id": "practice:c4p1",
+      "content_sha256": "de4206c444aaf19bbacb71b3014eeebae9e61e9652a5b7eac7dea9faaa1d5b8e",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p2",
+      "content_sha256": "c6ae6d66f071f048370e28614c790a3fd0761e3dc54b41e23c648fe99a5cbfcf",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p3",
+      "content_sha256": "453aa55bd18281e62f2a8966a48165a3e305a7d09eca98e3546ee7b047b675e4",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p4",
+      "content_sha256": "530c1353fa35e8be4e89cc44e4e31303853e4f782a741cd4c0d30d2bcea35d58",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p5",
+      "content_sha256": "a8e748b1cdf681274553d9f8d5059bc35e1ffc693eddc51c3952d40ebda93b02",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p6",
+      "content_sha256": "2111a49edfd5a30977d5da4f422a338cbbd9e7e5fab07dd0e85ab7268a15eeda",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p7",
+      "content_sha256": "13952ebe96209f651cb8855994fafa808b09506db1e1078044420703d1046f43",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p8",
+      "content_sha256": "14285205ec8d14d45accdb45a5011971bf1ef4df12128112e4dca71bebf54b03",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p9",
+      "content_sha256": "cd5f338e6fea2a87422921b01886a997e0d082d3b23062d527bbd9159d094757",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p10",
+      "content_sha256": "a7b17b526359f433afc18dc48557eaeb1b9d23ca0a38bb282d280ca59e25d939",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p11",
+      "content_sha256": "8beca233b814827e617d2df7bff5fc56af4dbf1ca7d49a086592430d555dad24",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p12",
+      "content_sha256": "76a34a7a613be6845189624ff42fa1a4d247d91678035e47924f84ec6cc3b601",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p13",
+      "content_sha256": "ceabf541fd0b8f3f49b3eb14402c838765dccaf37ed48ceb113cb520c281c3a5",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p14",
+      "content_sha256": "8350698666c736f7a4f002b80f4fc7c8e7f283b8d8972958966397ef8365abd9",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p15",
+      "content_sha256": "2988d8795e423ae00bc4603301d9cde5628e9335fafcc8201f355ec9cead9473",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p16",
+      "content_sha256": "8dd7655dda978ffc84a6abf020eebb5cc970eb59cfea6ae46cc0d77a3a01665a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p17",
+      "content_sha256": "c7b573c51ace978e324aef3defe1160c44fffb8e7ce351d46f4c801e292c2b13",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c4p18",
+      "content_sha256": "458ab078f696e173f0db3fa1990d9b15607b424ccc0f1887233fea59452921a9",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:context_4_01",
+      "content_sha256": "a3575750af3b32046cdcb08c1e2d7c857797b38615edaf7b4aa776561e3b1ac7",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:context_4_02",
+      "content_sha256": "777607600a350d0d17e3980ebce4ae6c9bc0ada42116783a278e7e96fb445959",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Signs, absolute values, reflections and axis-aligned distances inspected. Reflection changes the coordinate perpendicular to the named axis."
+    },
+    {
+      "id": "practice:c5p1",
+      "content_sha256": "b664c9bff216454c4417069483a0a664eddd43c95946b9d5ce8d806748f40635",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p2",
+      "content_sha256": "0cb7a1481fff0f31e27d8b3332035191275a524acff6b178da13785e59528745",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p3",
+      "content_sha256": "d63674523021eed9a3916b90a147cdc1002f9d080cc2a828791f3ba6e501ab5e",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p4",
+      "content_sha256": "824e808d3e85e86bef648a85060bd99872a39bab40ef120a30b7ad51f344d353",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p5",
+      "content_sha256": "85d390e8baa9e95993267231ba946a345b3e1747860612402aca71e719924042",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p6",
+      "content_sha256": "d87f421ea78d7f5c530614b44abaf88d4c84039706ea2fcd07597c2558aa990c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p7",
+      "content_sha256": "550cf559a5ca8973c1163efaf9b6a474c3f27b23928c2435c2cb47dce2b78055",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p8",
+      "content_sha256": "6aeacb4ae76338275ac33b15112d4e8ab1149b7b0712a903fef1fe38f5302791",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p9",
+      "content_sha256": "29ccef8c0c5650ae9663d33040360fd2e3e82890c3fccc94553469f36bf07b4a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p10",
+      "content_sha256": "df73751d29c038a3aa495b1e42a5671164e3c5da69b192f9a5cacfacfc0fefc6",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p11",
+      "content_sha256": "84fa736d1eda8831a5d9aace07c96d72cd86aa5eacef70b51407ae2a9f249fe9",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p12",
+      "content_sha256": "a9c8e5fdd4165f3820ab143966197d00cc8e2f0bf13de25f135d7898ee23f112",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p13",
+      "content_sha256": "aee977fc86b5ea0027cb9ca65352f0f69cd5abf4c7cf5990507054c20ab944e2",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p14",
+      "content_sha256": "ff680ad6715263e1582af0d817a050d3c329a684e22c619cb05428974809c33c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p15",
+      "content_sha256": "34ef66e1fb32ec289a80942955714cebce77693a48ffa04287430fcca929635c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p16",
+      "content_sha256": "53f8085b5f74ddf2bb26774801567fb89b73064785e27f2097c99e71e63df8d4",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p17",
+      "content_sha256": "7858fe4519ffb984ec47f624f479154253fa68d0732dfa51698eec7838507d4f",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c5p18",
+      "content_sha256": "11eb39c67a332b7b90d7c32a0e1a4f5c2330666f2b283df1dc2acce7b88a454a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:context_5_01",
+      "content_sha256": "4b822304c4549cbee0d39f047b390c715800cbb462d0e27cebbd49ab9165497b",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:context_5_02",
+      "content_sha256": "0a66a1a5941dfcb9e31feddb5ddb395cb9f269f687a56ff9e8b0b5af01bec72a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Area, volume and surface-area results inspected. Bare surface-area computations are only partial evidence for a standard requiring nets; integer-edge volume is partial evidence for fractional-edge volume."
+    },
+    {
+      "id": "practice:c6p1",
+      "content_sha256": "680d8222360e7d72845994da045861d28b9532913cfca87578c8e33641c78a17",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p2",
+      "content_sha256": "74512cca5c8c846fb6a8a486dc72794a684873b8b588b07eada8e703844b014a",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p3",
+      "content_sha256": "79e7b04bc82674c3c14e3864aabab8fbb41608e706fbabf8a2f654daba2fee54",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p4",
+      "content_sha256": "7bfd36d7fa6e787257423ec5e7e4fc2b3ddbac0ad05adf4ff02992069ba676a4",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p5",
+      "content_sha256": "2d9a28784d48e0b43759fdbf678961e79d93cff089ce2c9a373674a6b1d3ca6f",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p6",
+      "content_sha256": "68174edfd376503cc653ce01a32933c8eb80e0445240b0f396aa2d0465394025",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p7",
+      "content_sha256": "4da1ff58e9db4f2fca5e7ecd9b0de227f77ebf6d95966a69609bd689e329e7ea",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p8",
+      "content_sha256": "16857fb2aaf3a4c0b99ea7ff9bdb6b7399ef1740ba55608ebae7ecb9fab2e7a2",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p9",
+      "content_sha256": "1210573e68dcedf578dcd2b9b7b11b9b346a016d55367ed7ac4761900ed460e9",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p10",
+      "content_sha256": "7ff9f22f5405b0dcf4372136518933e3b73046a8699ddd3c99d34f297db80f04",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p11",
+      "content_sha256": "6513ea377683b1af9900c7cd230a911b1ed4983d5f26a046480483fd061be9f6",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p12",
+      "content_sha256": "a48be027444b46818396080bc024d0a2839677732d5d075e9d713829fd3ff12c",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p13",
+      "content_sha256": "16db0891d3404a756c886592b3b4f78b271439af3da1df4fb461be21f83d8fb0",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p14",
+      "content_sha256": "21fb5d0c2cd9a378966ca850f1478710ae57a87a317bf0a69e292ac54ae2e939",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p15",
+      "content_sha256": "a3bc794575a567983a419ba1643e437b84a6caf5c951ac7a721e742ffe84e29f",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p16",
+      "content_sha256": "99984842c5d944ec53dd9bd15c5368658885c237330abd9605793020436434fb",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p17",
+      "content_sha256": "98bdf4f309a82d140eb9e3d12b3ec906a37835c24be815490cc993157aaf6a83",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:c6p18",
+      "content_sha256": "a05573d9b1d0ed88107efd62db95e105dc43ec15880a294951fc80b1ecc83787",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:context_6_01",
+      "content_sha256": "21ab279d573fe70632952065c14bb841dee2bfb3eda231162da79360e34c2d97",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    },
+    {
+      "id": "practice:context_6_02",
+      "content_sha256": "bb6b04c23c718be40fc46bb0d7c1852a7c4844e703ff7b9fae9ae08b2badbe80",
+      "review_type": "MODEL_ASSISTED_NOT_HUMAN_APPROVAL",
+      "status": "NUMERIC_AND_CLARITY_PASS_WITH_SCOPE_LIMITATIONS",
+      "notes": "Means, medians, ranges and supplied-quartile IQR differences inspected. Computing IQR from supplied quartiles does not teach constructing quartiles or box plots."
+    }
+  ],
+  "remaining_item_ids": [
+    "repair:1:1.1",
+    "repair:1:1.F",
+    "repair:2:2.1",
+    "repair:2:2.P",
+    "repair:3:3.1",
+    "repair:3:3.I",
+    "repair:4:4.1",
+    "repair:4:4.C",
+    "repair:5:5.1",
+    "repair:5:5.V",
+    "repair:6:6.1",
+    "repair:6:6.S",
+    "lesson:1:concept",
+    "lesson:1:example:1",
+    "lesson:1:guided:1",
+    "lesson:1:guided:2",
+    "lesson:1:diagram",
+    "lesson:2:concept",
+    "lesson:2:example:1",
+    "lesson:2:guided:1",
+    "lesson:2:guided:2",
+    "lesson:2:diagram",
+    "lesson:3:concept",
+    "lesson:3:example:1",
+    "lesson:3:guided:1",
+    "lesson:3:guided:2",
+    "lesson:3:diagram",
+    "lesson:4:concept",
+    "lesson:4:example:1",
+    "lesson:4:guided:1",
+    "lesson:4:guided:2",
+    "lesson:4:diagram",
+    "lesson:5:concept",
+    "lesson:5:example:1",
+    "lesson:5:guided:1",
+    "lesson:5:guided:2",
+    "lesson:5:diagram",
+    "lesson:6:concept",
+    "lesson:6:example:1",
+    "lesson:6:guided:1",
+    "lesson:6:guided:2",
+    "lesson:6:diagram"
+  ]
+}
