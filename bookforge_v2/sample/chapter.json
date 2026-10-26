@@ -1,0 +1,21 @@
+{
+  "series": "Mistake Mechanics",
+  "grade": "Grade 6 Math",
+  "chapter_number": 1,
+  "chapter_title": "Decimal Diagnostics",
+  "introduction": "Precision mechanics inspect every small detail. In math, decimal place value matters just as much. Learn to spot calculation mistakes, explain what went wrong, and make the correct repair.",
+  "objectives": [
+    "Align decimal places correctly when adding and subtracting.",
+    "Multiply decimals and place the decimal point accurately.",
+    "Divide decimals using equivalent whole-number divisors.",
+    "Diagnose and repair common decimal errors."
+  ],
+  "problems": [
+    {"id": "p1", "prompt": "Find the sum: 12.4 + 8.75", "hint": "Align decimal points vertically."},
+    {"id": "p2", "prompt": "Find the difference: 15 − 4.62", "hint": "Rewrite 15 as 15.00."},
+    {"id": "p3", "prompt": "Find the product: 2.5 × 0.48"},
+    {"id": "p4", "prompt": "Find the quotient: 9.36 ÷ 0.3"},
+    {"id": "p5", "prompt": "Calculate 0.85 + 14.392"},
+    {"id": "p6", "prompt": "A mechanic buys 4 spark plugs at $3.75 each and oil for $8.50. What is the total?"}
+  ]
+}
