@@ -87,7 +87,7 @@ def header_footer(c, data, page, color):
     c.setFont('BFRegular', 8)
     c.drawString(MARGIN, 25, f"{data['series']}  •  {data['grade']}")
     c.setFillColor(color)
-    c.circle(W-MARGIN-9, 28, 11, fill=1, stroke=0)
+    c.circle(W-MARGIN-9, 28, 10, fill=1, stroke=0)
     c.setFillColor(HexColor('#FFFFFF'))
     c.setFont('BFBold', 8)
     c.drawCentredString(W-MARGIN-9, 25, str(page))

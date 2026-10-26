@@ -27,11 +27,14 @@ def build(output,reviews_path=None):
     summary.unlink()
     for theme,report in result['themes'].items():
         geometry=geometry_audit(output/theme/'interior.pdf')
-        write_json(output/theme/'text-geometry.json',geometry)
+        write_json(output/theme/'print-geometry.json',geometry)
         if not geometry['ok']:
-            raise ValueError(f'{theme}: text geometry preflight failed')
+            raise ValueError(f'{theme}: print geometry preflight failed')
         report['text_geometry_passed']=True
         report['glyphs_checked']=geometry['glyphs_checked']
+        report['artwork_geometry_passed']=True
+        report['vector_objects_checked']=geometry['vector_objects_checked']
+        report['images_checked']=geometry['images_checked']
     write_json(output/'diagram-models.json',{'models':models,
         'note':'Computed model parameters, not independent approval of the paired instructional text.'})
     project=json.loads((output/'manuscript.json').read_text(encoding='utf-8'))

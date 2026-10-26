@@ -109,3 +109,18 @@ pages and guided answer pages were visually inspected in both styles. Actual
 writing-box dimensions and their bottom bounds are regression-tested. The
 manually triggered `v4-candidate.yml` workflow was added but not dispatched.
 V4 is still in progress; this is a saved development checkpoint.
+
+
+## Artwork bounds and placed-image preflight
+
+`print-geometry.json` now supersedes `text-geometry.json`. Alongside glyph
+margins, it measures conservative vector bounds (including half the stroke
+width), filled shapes, placed images, and effective image PPI (minimum 300).
+Clipped/translucent paths and rotated/sheared images still need visual review.
+It does not detect arbitrary text/art collisions or certify physical printing.
+
+The first real artwork scan caught the footer badge circles extending one point
+inside the bottom margin. Their radii are now 10 rather than 11 points, leaving
+the text unchanged and meeting the configured boundary. Both full manuscripts
+pass: 823 clean and 2,307 playful vector objects checked; no raster images.
+Current local total: **28 v4 + 116 v3 + 21 v2 = 165 passing tests**.

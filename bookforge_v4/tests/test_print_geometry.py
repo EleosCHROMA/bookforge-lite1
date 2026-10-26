@@ -45,3 +45,50 @@ class GeometryTests(unittest.TestCase):
     def test_margin_cannot_be_disabled(self):
         self.make_pdf([(42,700)])
         with self.assertRaises(ValueError):audit(self.path,outside_pt=0)
+
+    def test_stroke_width_is_included_in_artwork_margins(self):
+        c=canvas.Canvas(str(self.path),pagesize=(612,792))
+        c.drawString(42,700,'Safe text')
+        c.setLineWidth(4)
+        c.line(28,100,28,300)  # Center is inside the 27pt gutter; stroke extends to 26pt.
+        c.showPage();c.save()
+        result=audit(self.path)
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['page_reports'][0]['violations'],0)
+        self.assertEqual(result['page_reports'][0]['artwork_violations'],1)
+
+    def test_filled_shapes_outside_margin_are_detected(self):
+        c=canvas.Canvas(str(self.path),pagesize=(612,792))
+        c.drawString(42,700,'Safe text')
+        c.rect(20,100,30,30,stroke=0,fill=1)
+        c.showPage();c.save()
+        self.assertFalse(audit(self.path)['ok'])
+
+    def test_low_resolution_image_is_rejected(self):
+        from PIL import Image
+        from reportlab.lib.utils import ImageReader
+        c=canvas.Canvas(str(self.path),pagesize=(612,792))
+        c.drawString(42,700,'Safe text')
+        c.drawImage(ImageReader(Image.new('RGB',(100,100),'red')),42,500,width=144,height=144)
+        c.showPage();c.save()
+        result=audit(self.path)
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['images_checked'],1)
+        self.assertEqual(result['page_reports'][0]['image_details'][0]['effective_minimum_ppi'],50)
+
+    def test_high_resolution_image_passes_without_rasterizing_vectors(self):
+        from PIL import Image
+        from reportlab.lib.utils import ImageReader
+        c=canvas.Canvas(str(self.path),pagesize=(612,792))
+        c.drawString(42,700,'Safe text')
+        c.drawImage(ImageReader(Image.new('RGB',(600,600),'blue')),42,500,width=144,height=144)
+        c.setLineWidth(1);c.rect(42,100,40,40)
+        c.showPage();c.save()
+        result=audit(self.path)
+        self.assertTrue(result['ok'],result['errors'])
+        self.assertEqual(result['images_checked'],1)
+        self.assertEqual(result['vector_objects_checked'],1)
+
+    def test_image_resolution_requirement_cannot_be_disabled(self):
+        self.make_pdf([(42,700)])
+        with self.assertRaises(ValueError):audit(self.path,minimum_image_ppi=0)

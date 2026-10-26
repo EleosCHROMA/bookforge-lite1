@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-model-practice`. Resume this branch,
+Current working branch: `development/v4-artwork-preflight`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -64,6 +64,30 @@ vector bounds where reliable; audit and improve shallow statistics instruction
 and real visual tasks. Keep source-bound review evidence, both themes, answer
 privacy, no spending, no changes to main and no KDP publication. V4 remains
 IN_PROGRESS and the workbook is not independently editorially approved.
+
+### Fourth v4 checkpoint: artwork preflight and footer repair
+
+Parent: `2ef89e1cd01fdfdafce0469fd9163ceac524ee4d` on
+`development/v4-model-practice`. The commit containing this section extends print
+preflight to conservative vector bounds including half-stroke width, filled
+shapes, placed image bounds, and minimum 300 effective PPI. The actual scan found
+the page-number badge circles entered the bottom margin by one point. Their
+radius was reduced from 11 to 10 points, preserving number alignment while
+bringing their fill to the 18-point boundary. The new report is named
+`print-geometry.json` and covers text plus artwork.
+
+Verified: 28 v4 + 116 v3 + 21 v2 tests pass (165 total). Both 64-page candidates
+pass all checks; 823 clean-theme and 2,307 playful-theme vector objects were
+checked, with zero raster images. Render comparison confirms all content above
+the footer is unchanged on all 128 pages. Both repaired footer styles were
+visually inspected. No reviews were invented; 174 items remain pending.
+
+Next run: resume this branch or a newer verified descendant. Priority candidates
+are improving substantive statistics lessons, checking diagram/text collisions,
+or making reviewer packets easier to inspect. Do not weaken the new checks to
+make drafts pass. Conservative artwork bounds do not interpret clipping or
+transparency; rotated/sheared image PPI and physical proofs need manual review.
+V4 remains IN_PROGRESS. Main and the v3 baseline are preserved.
 
 ## Preserved v3 baseline
 
