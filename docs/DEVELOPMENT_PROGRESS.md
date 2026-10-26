@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-editorial-resolution`. Resume this branch,
+Current working branch: `development/v4-preview-review-record`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -294,3 +294,14 @@ cosmetic commits as stopping points. Report only completed scope, genuine
 user-action blockers or execution limits. Current external blockers remain
 KDP account/Previewer access and physical proof review plus independent human
 attestation if claimed; do not fabricate access, reviews or publication.
+
+## User KDP visual preview review
+
+On October26 the user reported all pages reviewed and looking good. The attached
+summary visibly confirms 64 pages, 8.5x11, Premium Color/white paper, No Bleed and
+Matte. Evidence and known review-package fingerprints are recorded separately
+in docs/reviews/kdp-preview-2026-10-26.json. The screenshot does not prove exact
+uploaded byte identity. This is a real user visual-review statement, not an
+invented mathematical/editorial signoff. Physical proof and publication approval
+remain ungranted. Draft notices and final metadata still need attention before
+a publication file set; repeat preview after any such file changes.

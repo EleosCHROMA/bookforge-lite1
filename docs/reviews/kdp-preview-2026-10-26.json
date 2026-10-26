@@ -1,0 +1,34 @@
+{
+  "review_date": "2026-10-26",
+  "review_type": "USER_REPORTED_KDP_VISUAL_PREVIEW",
+  "user_statement": "all pages were reviewed and look good",
+  "result": "VISUAL_REVIEW_PASSED_BY_USER_REPORT",
+  "observed_summary": {
+    "pages": 64,
+    "trim_inches": [
+      8.5,
+      11
+    ],
+    "ink": "Premium color",
+    "paper": "white",
+    "bleed": false,
+    "finish": "Matte",
+    "amazon_com_print_cost_shown_usd": 6.12
+  },
+  "review_package_local_fingerprints": {
+    "interior.pdf": "954ccb198258f18e714ac4caa09c44d113c2fad340a1a28bd64a18f71617ab2d",
+    "cover.pdf": "e2a4d7e1ae6fdb2dc89d2d5220877943909e83acb08822f5b47339365a4a23ba"
+  },
+  "binding_limitation": "Screenshot confirms settings and page count, not exact uploaded file hashes. Association with supplied playful review package is user-reported, not cryptographically authenticated.",
+  "not_granted": [
+    "Independent mathematical or curriculum approval",
+    "Physical printed proof approval",
+    "Publication permission"
+  ],
+  "remaining": [
+    "Physical proof if user elects to order one",
+    "Resolve draft labels and final publication metadata before final release",
+    "Repeat preview if final files change",
+    "Explicit publication approval"
+  ]
+}
