@@ -143,6 +143,11 @@ command. The report accepts the statement only when the local interior and cover
 match both recorded package hashes. The uploaded bytes are not independently
 authenticated, and this status does not grant editorial or publication approval.
 
+To verify the delivered final review ZIP without extracting it, run
+`python -m bookforge_v4.review_archive PACKAGE.zip --evidence docs/reviews/final-files-user-review-2026-10-26.json`.
+The command checks both PDF fingerprints and rejects missing or duplicate
+entries. It does not prove what was uploaded to KDP or who reviewed it.
+
 
 The candidate includes `model-editorial-review.json`: fixed findings for all
 174 inspected source items, separate from human review status. Source changes

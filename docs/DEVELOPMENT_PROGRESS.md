@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: user reports submitting the new edition; live status not verified.**
 
-Current working branch: `development/v4-release-manifest-safeguards`. Resume this branch,
+Current working branch: `development/v4-shipping-package-verification`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -395,3 +395,14 @@ entry and still pass byte-integrity verification. Unsigned manifests still do
 not authenticate provenance. No PDF content is changed by this checkpoint.
 Validation: 40 v4 tests passed; the saved candidate verified 20 fingerprints
 across both themes. This checkpoint did not generate or alter a PDF.
+
+## Delivered review archive fingerprint check
+
+Parent: d0090f1f81f37ea13ba55e212b0ce903c259d985. Added a standalone check
+for the delivered final-review ZIP: it compares both PDF hashes to the recorded
+user-review package, and rejects missing, duplicate, altered, or oversized PDF
+entries and invalid review evidence without extracting the archive. The actual
+delivered ZIP matched both recorded hashes. This does not authenticate KDP's
+uploaded bytes or imply independent editorial review. No PDF was changed.
+All 43 v4 tests passed, including matching, tampered, missing and duplicate ZIP
+entries and invalid evidence. Both previously inspected PDFs remain unchanged.
