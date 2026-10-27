@@ -21,7 +21,11 @@ def build(output,reviews_path=None):
     if sorted(item['kind'] for item in models)!=sorted(KINDS):
         raise ValueError('V4 candidate requires all six visual model types')
     from .content_metadata import annotate
-    result=build_v3(output,lessons_path=lessons_path,project_transform=annotate)
+    def clean_cover(config):
+        config['back_blurb']=config['back_blurb'].replace('This draft workbook', 'This workbook')
+        return config
+    result=build_v3(output,lessons_path=lessons_path,project_transform=annotate,
+                    show_draft_notice=False,cover_transform=clean_cover)
     output=Path(output).resolve()
     summary=output/'candidate-summary.json'
     # A v3 pass is insufficient: no success summary survives a failed v4 check.

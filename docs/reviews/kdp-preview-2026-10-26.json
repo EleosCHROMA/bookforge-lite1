@@ -26,7 +26,7 @@
     "Publication permission"
   ],
   "remaining": [
-    "Physical proof if user elects to order one",
+    "Physical proof declined by user if online preview looks good; no physical proof was performed",
     "Resolve draft labels and final publication metadata before final release",
     "Repeat preview if final files change",
     "Explicit publication approval"

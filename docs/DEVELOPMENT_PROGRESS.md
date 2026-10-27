@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-preview-review-record`. Resume this branch,
+Current working branch: `development/v4-final-copy-cleanup`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -305,3 +305,19 @@ uploaded byte identity. This is a real user visual-review statement, not an
 invented mathematical/editorial signoff. Physical proof and publication approval
 remain ungranted. Draft notices and final metadata still need attention before
 a publication file set; repeat preview after any such file changes.
+
+## User proof preference and final-copy cleanup
+
+The user chose to skip a physical print proof if the online preview looks good.
+No physical proof was performed or approved. The previous online visual review
+remains valid only for the files the user reviewed, whose uploaded hashes were not
+verified. The v4 candidate removes draft notices from student lesson and guided
+answer footers and the cover blurb; v3 retains its draft wording by default.
+This is a new file set and requires a fresh online preview before publication.
+Editorial attestations and publication approval remain separate and are not
+implied by the removal of draft text. Preserve the $0 budget and do not publish.
+Parent e3c31d98094f207ba25f852333fe40ae7ffd079b. Both 64-page styles and covers
+were rebuilt; lesson, answer-guide and cover pages were visually inspected in
+both styles. All 38 v4 and 116 v3 tests passed, including text checks against
+draft wording. Automated geometry and manuscript checks passed. Candidate
+readiness no longer incorrectly requires a physical proof against user wishes.

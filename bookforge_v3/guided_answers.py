@@ -5,7 +5,7 @@ from reportlab.lib.utils import simpleSplit
 from .lesson_pages import fonts, validate_lessons, PALETTES, W, H, M
 
 
-def render_answers(spec, output, theme, first_page):
+def render_answers(spec, output, theme, first_page, footer_notice='DRAFT - Educational and typesetting review required'):
     validate_lessons(spec)
     fonts()
     primary, _, _, ink = PALETTES[theme]
@@ -23,7 +23,8 @@ def render_answers(spec, output, theme, first_page):
     def finish():
         c.setFillColor(HexColor(ink))
         c.setFont('LessonRegular', 7)
-        c.drawString(M, 29, 'DRAFT - Educational and typesetting review required')
+        if footer_notice:
+            c.drawString(M, 29, footer_notice)
         c.drawRightString(W - M, 29, str(number))
         c.showPage()
 

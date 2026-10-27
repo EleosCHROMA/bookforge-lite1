@@ -28,6 +28,9 @@ class VisualCandidateTests(unittest.TestCase):
                 pdf=PdfReader(output/theme/'interior.pdf')
                 self.assertIn('GUIDED LESSON SOLUTIONS',pdf.pages[-1].extract_text())
                 self.assertIn('4x3',pdf.pages[31].extract_text())
+                self.assertNotIn('DRAFT', ' '.join(page.extract_text() or '' for page in pdf.pages).upper())
+                cover=PdfReader(output/theme/'cover.pdf')
+                self.assertNotIn('DRAFT', ' '.join(page.extract_text() or '' for page in cover.pages).upper())
 
     def test_geometry_failure_removes_v3_success_summary(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -11,7 +11,7 @@ from .lesson_pages import render, validate_lessons
 from .guided_answers import render_answers
 from .kdp_preflight import audit_pdf
 
-def assemble(project_path, lessons_path, output_path, theme="clean-premium"):
+def assemble(project_path, lessons_path, output_path, theme="clean-premium", *, show_draft_notice=True):
     project=validate_project(json.loads(Path(project_path).read_text(encoding="utf-8")))
     qa=analyze(project)
     if not qa["ready_for_build"]:
@@ -46,7 +46,8 @@ def assemble(project_path, lessons_path, output_path, theme="clean-premium"):
             assigned=by_chapter.get(chno,[])
             if assigned:
                 p=root/f"lesson-{chno}.pdf"
-                render({"lessons":assigned},p,theme,page_numbers=list(range(number,number+len(assigned))))
+                kwargs={} if show_draft_notice else {'footer_notice': None}
+                render({"lessons":assigned},p,theme,page_numbers=list(range(number,number+len(assigned))),**kwargs)
                 pages.extend(PdfReader(str(p)).pages);number+=len(assigned)
             p=root/f"practice-{chno}.pdf"
             c=canvas.Canvas(str(p),pagesize=(W,H))
@@ -63,7 +64,8 @@ def assemble(project_path, lessons_path, output_path, theme="clean-premium"):
             group=PdfReader(str(p)).pages
             pages.extend(group);number+=len(group)
         p=root/"guided-answers.pdf"
-        render_answers(spec,p,theme,number)
+        kwargs={} if show_draft_notice else {'footer_notice': None}
+        render_answers(spec,p,theme,number,**kwargs)
         group=PdfReader(str(p)).pages
         pages.extend(group);number+=len(group)
         writer=PdfWriter()

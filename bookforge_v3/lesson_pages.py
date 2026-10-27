@@ -68,7 +68,7 @@ def draw(c,text,x,y,width,size=9,leading=14,bold=False,color='#18283A',limit=4):
         c.drawString(x,y,line);y-=leading
     return y
 
-def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None):
+def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None,footer_notice='DRAFT • Educational and typesetting review required'):
     validate_lessons(data)
     if theme not in PALETTES:raise ValueError('Invalid lesson theme')
     if page_numbers is not None and (len(page_numbers)!=len(data['lessons']) or any(type(n) is not int or n<1 for n in page_numbers)):
@@ -109,7 +109,8 @@ def render(data,output,theme='clean-premium',font_dir=None,page_numbers=None):
             c.roundRect(M+5,y-workspace,W-2*M-10,workspace,9,stroke=1,fill=0);c.setDash()
             y-=workspace+14
         if y<54:raise ValueError('Guided answers exceed safe area')
-        draw(c,'DRAFT • Educational and typesetting review required',M,29,W-2*M,7,color=ink)
+        if footer_notice:
+            draw(c,footer_notice,M,29,W-2*M,7,color=ink)
         draw(c,str(page_numbers[i-1] if page_numbers is not None else i),W-M-15,29,15,8,bold=True,color=primary)
         c.showPage()
     c.save()

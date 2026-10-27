@@ -17,7 +17,7 @@ def write_json(path, data):
     Path(path).write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
 
 
-def build(output, lessons_path=None, project_transform=None):
+def build(output, lessons_path=None, project_transform=None, *, show_draft_notice=True, cover_transform=None):
     """Refuse existing destinations; write summary only after structural success."""
     output = Path(output).resolve()
     if output.exists():
@@ -44,7 +44,7 @@ def build(output, lessons_path=None, project_transform=None):
         folder = output/theme
         folder.mkdir()
         interior, cover = folder/'interior.pdf', folder/'cover.pdf'
-        built = assemble(project_path, output/'lessons.json', interior, theme)
+        built = assemble(project_path, output/'lessons.json', interior, theme, show_draft_notice=show_draft_notice)
         checked = audit(interior, project, [l['title'] for l in lessons['lessons']], lessons)
         write_json(folder/'manuscript-audit.json', checked)
         if not checked['ok']:
@@ -52,6 +52,8 @@ def build(output, lessons_path=None, project_transform=None):
         config = json.loads((ROOT/'data/cover_config.json').read_text(encoding='utf-8'))
         config.update(theme=theme, expected_pages=built['pages'])
         config['back_blurb'] = config['back_blurb'].replace('visual lessons', 'worked lessons')
+        if cover_transform is not None:
+            config = cover_transform(config)
         config_path = folder/'cover-config.json'
         write_json(config_path, config)
         cover_report = make_cover(interior, config, cover)

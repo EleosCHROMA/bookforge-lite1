@@ -45,8 +45,9 @@ def audit(root):
         if not reviews['all_items_approved']:
             pending=reviews['total_items']-reviews['counts']['APPROVED']
             result['blockers'].append(f'{pending} content items lack current valid editorial approvals')
-        result['blockers'].extend(['KDP Previewer and print proof require actual review',
+        result['blockers'].extend(['KDP Previewer review is needed for the final file set',
                                   'Explicit user publication approval is required'])
+        result['print_proof_note']='User elected to skip physical proof if the online preview looks good; no physical proof is recorded.'
     except (OSError,ValueError,TypeError,KeyError) as exc:
         result['engineering_ready']=False
         result['blockers'].append('Readiness audit failed: '+str(exc))
