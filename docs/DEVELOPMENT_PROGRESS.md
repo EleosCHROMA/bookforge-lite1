@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-final-copy-cleanup`. Resume this branch,
+Current working branch: `development/v4-final-review-handoff`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -321,3 +321,16 @@ were rebuilt; lesson, answer-guide and cover pages were visually inspected in
 both styles. All 38 v4 and 116 v3 tests passed, including text checks against
 draft wording. Automated geometry and manuscript checks passed. Candidate
 readiness no longer incorrectly requires a physical proof against user wishes.
+
+## Revised-file user feedback
+
+Parent: 71ddbfb8d0d19cb2d4c457819087c2d5e78e84b0. After receiving the
+revised v4 review package and a request to inspect it online, the user said
+"Looks good, now continue automatically and tell me when complete". See
+docs/reviews/final-files-user-review-2026-10-26.json for package hashes and
+limits: the review tool and uploaded bytes were not confirmed. Do not treat the
+statement as publication authorization or human editorial approval. The user
+requested the daily schedule paused; do not claim runs continue in the background.
+Remaining: final metadata and rights verification, actual KDP Previewer result
+for these files if not established, and explicit publication approval. Physical
+proof is declined unless the user changes their preference.
