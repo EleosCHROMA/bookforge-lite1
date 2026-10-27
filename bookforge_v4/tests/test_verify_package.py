@@ -9,7 +9,7 @@ class PackageTests(unittest.TestCase):
     def fixture(self,root):
         for theme in ('clean-premium','playful-illustrated'):
             (root/theme).mkdir()
-            names=('manuscript.json','lessons.json',f'{theme}/interior.pdf',f'{theme}/cover.pdf',
+            names=('manuscript.json','lessons.json',f'{theme}/interior.pdf',f'{theme}/cover.pdf',f'{theme}/cover-config.json',
                    'editorial-review-items.json','review-attestations.json','editorial-review.html',
                    'diagram-models.json','model-editorial-review.json')
             files={}
@@ -48,3 +48,15 @@ class PackageTests(unittest.TestCase):
             del report['files']['model-editorial-review.json']
             path.write_text(json.dumps(report))
             self.assertTrue(any('missing inventory entry model-editorial-review.json' in e for e in verify(root)['errors']))
+
+    def test_cover_configuration_must_be_bound_to_handoff(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.fixture(root)
+            path=root/'playful-illustrated/handoff.json'
+            report=json.loads(path.read_text())
+            del report['files']['playful-illustrated/cover-config.json']
+            path.write_text(json.dumps(report))
+            (root/'playful-illustrated/cover-config.json').write_text('{"paper_stock":"bw-white"}')
+            result=verify(root)
+            self.assertFalse(result['ok'])
+            self.assertTrue(any('missing inventory entry playful-illustrated/cover-config.json' in e for e in result['errors']))

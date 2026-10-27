@@ -16,7 +16,7 @@ def verify(root):
             files=report['files']
             if not isinstance(files,dict) or not files:
                 raise ValueError('Empty or invalid file inventory')
-            for required in ('manuscript.json','lessons.json',f'{theme}/interior.pdf',f'{theme}/cover.pdf',
+            for required in ('manuscript.json','lessons.json',f'{theme}/interior.pdf',f'{theme}/cover.pdf',f'{theme}/cover-config.json',
                              'editorial-review-items.json','review-attestations.json','editorial-review.html',
                              'diagram-models.json','model-editorial-review.json'):
                 if required not in files:errors.append(f'{theme}: missing inventory entry {required}')

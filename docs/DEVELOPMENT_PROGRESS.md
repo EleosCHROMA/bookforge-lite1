@@ -5,9 +5,9 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 ## Current state
 
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
-Publication: NOT APPROVED.**
+Publication: user reports submitting the new edition; live status not verified.**
 
-Current working branch: `development/v4-pricing-handoff`. Resume this branch,
+Current working branch: `development/v4-release-manifest-safeguards`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -375,3 +375,23 @@ using the $6.12 printing cost shown in the earlier user-provided KDP screenshot
 and official paperback royalty rules checked October 26, 2026. It identifies
 the assumptions and calls for verifying the current listing cost. No price
 was chosen and no KDP account or listing was changed.
+
+## User-reported new edition and manifest safeguard
+
+Parent: 6b03f9c9abe06be9a5c938ee817ff81983a19b25. The user approved proceeding
+with the new edition, proposed a $12.99 U.S. price and said "I published it".
+This records a user report of submission; KDP review/live status, actual
+uploaded byte identity and listing details were not independently verified.
+The user says the previous book is already available and wants both editions
+available. Do not modify or unpublish either listing. Physical proof was declined
+if the online preview looked good. No independent human editorial attestation or
+standards certification is implied. User has since expressed interest in a new
+project; preserve this snapshot and do not initiate new BookForge publishing.
+
+The package verifier now requires each theme's cover-config.json to appear in
+its handoff inventory. Readiness uses its paper stock for paired-cover checks;
+without this fix the configuration could be changed after removing its manifest
+entry and still pass byte-integrity verification. Unsigned manifests still do
+not authenticate provenance. No PDF content is changed by this checkpoint.
+Validation: 40 v4 tests passed; the saved candidate verified 20 fingerprints
+across both themes. This checkpoint did not generate or alter a PDF.

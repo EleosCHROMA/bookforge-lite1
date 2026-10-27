@@ -4,6 +4,11 @@ Candidate: playful-illustrated, 64-page paperback, 8.5 x 11 inches, premium
 color ink on white paper, no interior bleed, matte cover. The cover is paired
 with this page count and stock. Do not substitute files from another build.
 
+On October 26, 2026 the user reported submitting the new edition to KDP and
+requested that both it and the previous book remain available. The new edition's
+live status, exact uploaded hashes and final listing metadata were not independently
+verified. Preserve both listings; do not publish or unpublish on this report.
+
 The user reports the final online preview passed. The supplied package is
 identified in `reviews/final-files-user-review-2026-10-26.json`; the exact
 uploaded bytes were not independently authenticated. The user chose to skip
