@@ -10,7 +10,8 @@ class PackageTests(unittest.TestCase):
         for theme in ('clean-premium','playful-illustrated'):
             (root/theme).mkdir()
             names=('manuscript.json','lessons.json',f'{theme}/interior.pdf',f'{theme}/cover.pdf',
-                   'editorial-review-items.json','review-attestations.json','editorial-review.html')
+                   'editorial-review-items.json','review-attestations.json','editorial-review.html',
+                   'diagram-models.json','model-editorial-review.json')
             files={}
             for name in names:
                 path=root/name;path.write_bytes(b'fixture')
@@ -38,3 +39,12 @@ class PackageTests(unittest.TestCase):
 
     def test_missing_handoffs_are_not_a_pass(self):
         with tempfile.TemporaryDirectory() as tmp:self.assertFalse(verify(tmp)['ok'])
+
+    def test_review_evidence_cannot_be_removed_from_inventory(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.fixture(root)
+            path=root/'playful-illustrated/handoff.json'
+            report=json.loads(path.read_text())
+            del report['files']['model-editorial-review.json']
+            path.write_text(json.dumps(report))
+            self.assertTrue(any('missing inventory entry model-editorial-review.json' in e for e in verify(root)['errors']))

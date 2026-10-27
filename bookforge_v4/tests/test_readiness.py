@@ -26,6 +26,22 @@ class ReadinessTests(unittest.TestCase):
             evidence['cover_sha256']='0'*64
             preview.write_text(json.dumps(evidence))
             self.assertEqual(audit(root,preview)['preview_status'],'STALE_OR_INVALID')
+            model_path=root/'model-editorial-review.json'
+            model=json.loads(model_path.read_text());model['human_approvals_granted']=174
+            model_path.write_text(json.dumps(model))
+            for theme in ('clean-premium','playful-illustrated'):
+                handoff=root/theme/'handoff.json'; data=json.loads(handoff.read_text())
+                data['files']['model-editorial-review.json']={'bytes':model_path.stat().st_size,'sha256':sha256(model_path)}
+                handoff.write_text(json.dumps(data))
+            self.assertTrue(any('Saved model review differs' in x for x in audit(root)['blockers']))
+            packet_path=root/'editorial-review-items.json'
+            packet=json.loads(packet_path.read_text());packet['total_items']=0
+            packet_path.write_text(json.dumps(packet))
+            for theme in ('clean-premium','playful-illustrated'):
+                handoff=root/theme/'handoff.json'; data=json.loads(handoff.read_text())
+                data['files']['editorial-review-items.json']={'bytes':packet_path.stat().st_size,'sha256':sha256(packet_path)}
+                handoff.write_text(json.dumps(data))
+            self.assertTrue(any('Saved editorial packet differs' in x for x in audit(root)['blockers']))
             (root/'lessons.json').write_text('{}')
             changed=audit(root)
             self.assertFalse(changed['engineering_ready'])

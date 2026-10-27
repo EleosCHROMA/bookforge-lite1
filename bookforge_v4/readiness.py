@@ -27,8 +27,12 @@ def audit(root, preview=None):
         if not quality['ready_for_build']:
             result['blockers'].extend(quality['errors'])
         packet=create(project,lessons)
+        if load('editorial-review-items.json') != packet:
+            result['blockers'].append('Saved editorial packet differs from current manuscript and lessons')
         from .model_review import report as model_review_report
         result['model_assisted_review']=model_review_report(packet)
+        if load('model-editorial-review.json') != result['model_assisted_review']:
+            result['blockers'].append('Saved model review differs from current source-bound findings')
         reviews=review_audit(packet,load('review-attestations.json'))
         result['editorial_review']=reviews
         for theme in ('clean-premium','playful-illustrated'):

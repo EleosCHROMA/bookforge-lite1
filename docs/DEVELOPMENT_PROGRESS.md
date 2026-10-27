@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-preview-evidence`. Resume this branch,
+Current working branch: `development/v4-review-integrity`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -351,3 +351,18 @@ the exact saved candidate reports engineering ready and user-reported preview
 pass, while keeping publication false. `docs/v4-publishing-handoff.md` supplies
 a restrained listing description and the unresolved ownership, ISBN, listing,
 price and approval details. No PDF bytes were changed by this checkpoint.
+
+## Review evidence integrity
+
+Parent: d45b5359239641656ce2f1cf6579c511bfe21408. Package verification now
+requires the diagram-model and model-review inventory entries. Readiness also
+compares saved editorial and model-review reports to the current source-derived
+reports, including when handoff hashes have been rewritten. This catches stale
+or inconsistent review evidence; unsigned handoffs still cannot establish who
+reviewed content. The publishing handoff clarifies that standards labels are
+rule-generated proposals, not per-item standards verification. PDF content and
+the user's reported online preview remain unchanged.
+Validation: all 39 v4 tests passed; the final six focused readiness and package
+tests passed, including missing inventory and inconsistent saved-review data.
+The previously saved candidate still passed engineering checks with the user's
+reported preview evidence. No PDF was modified or rebuilt in this checkpoint.
