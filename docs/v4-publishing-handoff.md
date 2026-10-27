@@ -39,3 +39,24 @@ No physical proof was performed. No independent human mathematical, pedagogical,
 or copyediting attestations are recorded. The source generator has automated
 answer and layout checks and a model-assisted review, which do not establish
 ownership, independently verified standards coverage, or guaranteed print quality.
+
+## U.S. pricing estimate (checked October 26, 2026)
+
+The prior KDP screenshot showed a $6.12 Amazon.com printing cost for 64 pages,
+8.5 x 11, premium color on white paper. This is the observed estimate, not a
+guarantee that the current listing retains identical settings or cost. KDP's
+[paperback royalty rules](https://kdp.amazon.com/en_US/help/topic/G201834330)
+say Amazon.com paperbacks priced at $9.99 or higher use a 60% rate before
+subtracting printing cost. On that basis, for Amazon.com sales:
+
+| List price | Estimated royalty per copy |
+| --- | --- |
+| $12.99 | $1.67 |
+| $14.99 | $2.87 |
+| $16.99 | $4.07 |
+
+These are arithmetic estimates, not sales or income forecasts, and exclude
+other channels, taxes, advertising, and changes to print cost. Verify the exact
+listing's preview and royalty screen before choosing a price. The estimated
+break-even price at the 60% tier and $6.12 cost is $10.20. Pricing remains a
+choice; no listing or price was changed.

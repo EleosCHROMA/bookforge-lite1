@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-review-integrity`. Resume this branch,
+Current working branch: `development/v4-pricing-handoff`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -366,3 +366,12 @@ Validation: all 39 v4 tests passed; the final six focused readiness and package
 tests passed, including missing inventory and inconsistent saved-review data.
 The previously saved candidate still passed engineering checks with the user's
 reported preview evidence. No PDF was modified or rebuilt in this checkpoint.
+
+## Pricing handoff
+
+Parent: af4d3841b3d74867cce0d66b5e67589cbd6b196c. The publishing handoff
+now gives transparent Amazon.com royalty estimates at three price points,
+using the $6.12 printing cost shown in the earlier user-provided KDP screenshot
+and official paperback royalty rules checked October 26, 2026. It identifies
+the assumptions and calls for verifying the current listing cost. No price
+was chosen and no KDP account or listing was changed.
