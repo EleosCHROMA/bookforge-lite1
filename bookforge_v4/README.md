@@ -137,6 +137,12 @@ recheck integrity, content QA, manuscript answers, print geometry and paired
 covers together. A zero exit means engineering checks passed, not publication
 approval. The report separately lists outstanding editorial and print work.
 
+For the user's reported final online preview, pass
+`--preview docs/reviews/final-files-user-review-2026-10-26.json` to the readiness
+command. The report accepts the statement only when the local interior and cover
+match both recorded package hashes. The uploaded bytes are not independently
+authenticated, and this status does not grant editorial or publication approval.
+
 
 The candidate includes `model-editorial-review.json`: fixed findings for all
 174 inspected source items, separate from human review status. Source changes

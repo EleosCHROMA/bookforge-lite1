@@ -1,0 +1,39 @@
+# Mistake Mechanics v4 publishing handoff
+
+Candidate: playful-illustrated, 64-page paperback, 8.5 x 11 inches, premium
+color ink on white paper, no interior bleed, matte cover. The cover is paired
+with this page count and stock. Do not substitute files from another build.
+
+The user reports the final online preview passed. The supplied package is
+identified in `reviews/final-files-user-review-2026-10-26.json`; the exact
+uploaded bytes were not independently authenticated. The user chose to skip
+a physical proof if the online preview looks good.
+
+## Suggested listing description
+
+Put on your mechanic's hat and investigate math mistakes. Mistake Mechanics
+combines guided examples, visual models, practice questions, and repair tickets
+that invite students to find errors and explain how to fix them. Six sections
+cover decimal and fraction calculations, ratios, equations and inequalities,
+coordinate movement, geometry, and statistics. Answers and guided solutions
+appear at the back of the book.
+
+The material supports practice in selected Grade 6 topics. Do not describe the
+book as covering all Grade 6 standards: the candidate mappings are proposals,
+not verified comprehensive coverage. The 174 model-assisted source reviews
+are not independent editorial signoffs.
+
+## Details requiring confirmation before publication
+
+- Author or publisher name and rights to all source text and assets, including
+  material adapted from the supplied earlier workbook.
+- ISBN and whether this release is a new edition or an update to an existing
+  KDP listing; do not replace or publish an existing live book without approval.
+- Listing title and subtitle must match the selected cover and KDP entry.
+- Marketplace, list price, and royalty after checking current KDP costs.
+- Explicit permission to publish. Do not treat preview approval as permission.
+
+No physical proof was performed. No independent human mathematical, pedagogical,
+or copyediting attestations are recorded. The source generator has automated
+answer and layout checks and a model-assisted review, which do not establish
+ownership, independently verified standards coverage, or guaranteed print quality.

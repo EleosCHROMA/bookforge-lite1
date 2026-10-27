@@ -7,5 +7,8 @@
   "package_source_commit": "71ddbfb8d0d19cb2d4c457819087c2d5e78e84b0",
   "interior_sha256": "0ecff4340cee11c140c4046daa7f1b516e7b1f682376f18fdb5bf804808b7b95",
   "cover_sha256": "284197cf91b3add5d1f984f93cd70b640e5590d5560e9262574af85e93fae4db",
-  "limitations": "User did not specify the review tool or confirm uploaded byte hashes. Do not represent the statement as independently verified KDP Previewer acceptance, editorial signoff, a physical proof, or publication permission."
+  "subsequent_user_statement": "It passes everything, now keep running and whenever you stop when hitting a milestone, continue again as this is our final sprint",
+  "review_type": "USER_REPORTED_FINAL_ONLINE_PREVIEW_PASS",
+  "theme": "playful-illustrated",
+  "limitations": "User reports the final online check passed; uploaded byte hashes were not independently authenticated. This is not independent editorial signoff, a physical proof, or publication permission."
 }

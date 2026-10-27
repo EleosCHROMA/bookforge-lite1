@@ -7,7 +7,7 @@ Updated: late-night October 25-26, 2026 (America/Los_Angeles).
 **V4 development: IN PROGRESS. V3 engineering milestone: COMPLETE.
 Publication: NOT APPROVED.**
 
-Current working branch: `development/v4-final-review-handoff`. Resume this branch,
+Current working branch: `development/v4-preview-evidence`. Resume this branch,
 not a fresh branch from v3. The latest verified v3 parent is
 `2beb40d9cdf6f9aad13beb40d732f4aef2f5b4c4`.
 
@@ -334,3 +334,20 @@ requested the daily schedule paused; do not claim runs continue in the backgroun
 Remaining: final metadata and rights verification, actual KDP Previewer result
 for these files if not established, and explicit publication approval. Physical
 proof is declined unless the user changes their preference.
+
+## Final online review confirmation
+
+Parent: 662cc375c149534080ad71d16e35bb8cfd3eb226. Following the request
+to confirm the revised package's online check, the user said "It passes
+everything". This is recorded as the user's report of a successful final online
+preview for the supplied playful package; uploaded bytes were not independently
+authenticated. No independent editorial, physical proof or publication approval
+is implied. Readiness can optionally accept that evidence and checks the local
+interior and cover hashes against it; a changed package or absent evidence does
+not inherit the pass. The report continues to require explicit publication
+approval and identifies missing independent editorial attestations honestly.
+All 38 v4 tests passed, including matching and stale preview evidence. Rechecking
+the exact saved candidate reports engineering ready and user-reported preview
+pass, while keeping publication false. `docs/v4-publishing-handoff.md` supplies
+a restrained listing description and the unresolved ownership, ISBN, listing,
+price and approval details. No PDF bytes were changed by this checkpoint.
